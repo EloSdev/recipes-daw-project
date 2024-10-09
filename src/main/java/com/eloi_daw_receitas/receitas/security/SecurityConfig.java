@@ -39,6 +39,13 @@ import org.springframework.security.web.SecurityFilterChain;
 
         @Bean
         public UserDetailsService userDetailsService() {
+
+            return new CustomUserDetailsService();
+        }
+
+        /*
+        @Bean
+        public UserDetailsService userDetailsService() {
             UserDetails user =
                     (User.withDefaultPasswordEncoder()
                             .username("user")
@@ -48,6 +55,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 
             return new InMemoryUserDetailsManager(user);
-        }
+        }*/
 
     }

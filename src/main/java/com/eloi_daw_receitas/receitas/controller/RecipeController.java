@@ -1,7 +1,5 @@
 package com.eloi_daw_receitas.receitas.controller;
 
-
-
 import com.eloi_daw_receitas.receitas.model.Recipe;
 import com.eloi_daw_receitas.receitas.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,9 +47,9 @@ public class RecipeController {
 
     @PostMapping("/recipes/upload-recipe") // COMPROBAR BEN ESTE ENDPOINT
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
-    public Recipe crearReceta(@RequestBody Recipe receta, Authentication authentication) {
-        receta.setAutor(authentication.getName());
-        return recipeService.crearReceta(receta);
+    public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
+        receita.setAutor(authentication.getName());
+        return recipeService.crearReceta(receita);
     }
 
     // cambios a realziar para permitir a subida local de imaxes-> VOLVER A MIRAR
