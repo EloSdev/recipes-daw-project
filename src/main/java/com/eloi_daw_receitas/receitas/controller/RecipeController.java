@@ -45,7 +45,7 @@ public class RecipeController {
         return recipeService.listarRecetas(orden, pageable);
     }
 
-    @PostMapping(value = "/recetas", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT
+    @PostMapping(value = "/recetas/crear-receta", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
         receita.setAutor(authentication.getName()); //si no post meto autor User1, cambiao a User2, BEN!!
