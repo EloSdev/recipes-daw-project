@@ -2,6 +2,7 @@ package com.eloi_daw_receitas.receitas.model;
 
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -23,7 +24,8 @@ public class Recipe {
     private int likes;
     @Column(name = "imagen_url")
     private String imagenUrl;  // Nuevo campo
-    @Column(nullable = false)
+    @Column(name = "fecha", nullable = false) //, columnDefinition = "DATE DEFAULT CURRENT_TIMESTAMP")
+    @CreationTimestamp // Esto asegura que Hibernate ponga la fecha actual automáticamente si no se especifica.
     private Date fecha;
 
 

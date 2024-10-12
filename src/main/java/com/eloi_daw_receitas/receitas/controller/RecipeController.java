@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/recipes")
+@RequestMapping("/api")
 public class RecipeController {
 
     @Autowired
@@ -27,7 +27,7 @@ public class RecipeController {
 
     }
 
-    @GetMapping("/{id}")
+    @GetMapping( value = "/recetas/{id}")
     public ResponseEntity<Recipe> obtenerRecetaPorId(@PathVariable Long id) {
         Recipe receita = recipeService.obtenerRecetaPorId(id);
         if (receita != null) {
@@ -37,7 +37,7 @@ public class RecipeController {
         }
     }
 
-    @GetMapping
+    @GetMapping(value = "/recetas")
     public Page<Recipe> listarRecetas(@RequestParam(defaultValue = "fechaDesc") String orden,
                                       @RequestParam(defaultValue = "0") int page,
                                       @RequestParam(defaultValue = "6") int size) {
@@ -45,10 +45,11 @@ public class RecipeController {
         return recipeService.listarRecetas(orden, pageable);
     }
 
-    @PostMapping("/recipes/upload-recipe") // COMPROBAR BEN ESTE ENDPOINT
+    @PostMapping(value = "/recetas", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
-        receita.setAutor(authentication.getName());
+        receita.setAutor(authentication.getName()); //si no post meto autor User1, cambiao a User2, BEN!!
+        //Deberai valiar o id do usario, agora mesmo o User2 pode facer post referenciando o User1(id usuario =1)
         return recipeService.crearReceta(receita);
     }
 
