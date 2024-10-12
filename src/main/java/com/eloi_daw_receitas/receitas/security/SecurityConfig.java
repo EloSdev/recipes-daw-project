@@ -31,7 +31,7 @@ import org.springframework.security.web.SecurityFilterChain;
                             .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios/**").permitAll()
                             .requestMatchers("/api/recetas/crear-receta").authenticated()  // Requiere autenticación para crear receta
                             .requestMatchers("/api/recetas", "/api/recetas/**").permitAll()  // Permitir acceso a /api/recetas y /api/recetas/{id}
-                            .requestMatchers("/css/**", "/js/**").permitAll()
+                            .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                             .anyRequest().authenticated()
                     )
                     .formLogin((form) -> form
