@@ -20,14 +20,18 @@ import org.springframework.security.web.SecurityFilterChain;
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
             http
                     .authorizeHttpRequests((requests) -> requests
-                            .requestMatchers("/", "/index.html", "/public-views/**").permitAll()
+                            .requestMatchers("/", "/index.html", "/public-views/**","/api/**").permitAll()
+                            .requestMatchers("/css/**", "/js/**").permitAll()
                             .anyRequest().authenticated()
                     )
                     .formLogin((form) -> form
                             .loginPage("/public-views/login.html")
                             .permitAll()
                     )
-                    .logout((logout) -> logout.permitAll());
+                    .logout((logout) -> logout.permitAll()
+                    )
+
+                    .csrf(csrf->csrf.disable());
 
             return http.build();
         }

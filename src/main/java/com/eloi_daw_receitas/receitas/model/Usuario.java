@@ -14,6 +14,8 @@ public class Usuario {
     private String nickname;
     @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
+    private String email;
     @Enumerated(EnumType.STRING)
     private Rol rol; // Enum con valores USER, ADMIN
 
@@ -56,6 +58,14 @@ public class Usuario {
 
     public void setRol(Rol rol) {
         this.rol = rol;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<Recipe> getRecipes() {
