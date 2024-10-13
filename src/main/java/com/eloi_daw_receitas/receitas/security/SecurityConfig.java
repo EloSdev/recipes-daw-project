@@ -28,10 +28,11 @@ import org.springframework.security.web.SecurityFilterChain;
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
             http
                     .authorizeHttpRequests((requests) -> requests
-                            .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios/**").permitAll()
+                            .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
+                            .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios","/api/usuarios/**").permitAll()
                             .requestMatchers("/api/recetas/crear-receta").authenticated()  // Requiere autenticación para crear receta
                             .requestMatchers("/api/recetas", "/api/recetas/**").permitAll()  // Permitir acceso a /api/recetas y /api/recetas/{id}
-                            .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
+
                             .anyRequest().authenticated()
                     )
                     .formLogin((form) -> form

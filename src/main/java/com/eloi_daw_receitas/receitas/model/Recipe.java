@@ -1,6 +1,7 @@
 package com.eloi_daw_receitas.receitas.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -33,7 +34,7 @@ public class Recipe {
     //Al incluir la dependencia jpa no seria necesario mapear esta relacion pero la incluyo igual a modo educativo
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false) //usuario_id referencia a la columna en la bbdd
-    @JsonManagedReference // Maneja la serialización en el lado "hijo"
+    @JsonBackReference // Maneja la serialización en el lado "hijo"
     private Usuario usuario; // Relación muchos a uno
 
 

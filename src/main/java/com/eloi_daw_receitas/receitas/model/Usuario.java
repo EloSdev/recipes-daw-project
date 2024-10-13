@@ -3,6 +3,7 @@ package com.eloi_daw_receitas.receitas.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class Usuario {
 
     //Al incluir la dependencia jpa no seria necesario mapear esta relacion pero la incluyo igual a modo educativo
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true) //usuario referencia a la tabla en la bbdd
-    @JsonBackReference // Ignora esta propiedad al serializar
+    @JsonManagedReference // Ignora esta propiedad al serializar
     private List<Recipe> recipes; // Relación uno a muchos
 
     //constructor

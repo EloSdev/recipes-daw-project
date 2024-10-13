@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api") //check a ruta!!!!!
+@RequestMapping("/api")
 public class UsuarioController {
 
     @Autowired
@@ -24,7 +24,9 @@ public class UsuarioController {
     }
 
     // Endpoint para registrar un nuevo usuario
-    @PostMapping(value ="/usuarios" , consumes = "application/json")//ver si e necesario este valor
+    //@PostMapping(value ="/usuarios" , consumes = "application/json")//ver si e necesario este valor
+   //@PostMapping("/usuarios")
+    @PostMapping(value ="/usuarios",consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario) {
         try {
             usuarioService.registrarUsuario(usuario);
