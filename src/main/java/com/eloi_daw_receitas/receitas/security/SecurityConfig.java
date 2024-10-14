@@ -42,7 +42,7 @@ import org.springframework.security.web.SecurityFilterChain;
                     .logout((logout) -> logout.permitAll()
                     )
 
-                    .httpBasic(Customizer.withDefaults())
+                  //  .httpBasic(Customizer.withDefaults())
                     .csrf(csrf->csrf.disable());
 
 
