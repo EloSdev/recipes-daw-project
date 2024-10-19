@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -53,6 +54,19 @@ public class RecipeController {
             @PageableDefault(size = 6) Pageable pageable) {
         Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
         return pageRecetas.getContent(); // Devuelve solo el contenido (las recetas)
+    }
+
+    // Endpoint para incrementar el número de likes
+    @PostMapping ("recetas/{recetaId}/like")
+    public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
+        Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
+
+        // Verifica si se actualizó la receta
+        if (recetaActualizada != null) {
+            return ResponseEntity.ok(recetaActualizada); // Asegúrate de que esto devuelva un JSON válido
+        } else {
+            return ResponseEntity.notFound().build(); // Devuelve 404 si la receta no se encuentra
+        }
     }
 
     @PostMapping(value = "/recetas/crear-receta", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT

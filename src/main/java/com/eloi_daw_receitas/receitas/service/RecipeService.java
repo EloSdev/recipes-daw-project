@@ -1,12 +1,15 @@
 package com.eloi_daw_receitas.receitas.service;
 
 
+import com.eloi_daw_receitas.receitas.exception.ResourceNotFoundException;
 import com.eloi_daw_receitas.receitas.model.Recipe;
 import com.eloi_daw_receitas.receitas.repository.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class RecipeService {
@@ -38,6 +41,15 @@ public class RecipeService {
                 return recipeRepository.findAll(pageable);
         }
     }
+
+    // Método para incrementar los likes de una receta
+    public Recipe incrementarLikes(Long recetaId) {
+        Recipe receta = recipeRepository.findById(recetaId)
+                .orElseThrow(() -> new ResourceNotFoundException("Receta no encontrada"));
+        receta.setLikes(receta.getLikes() + 1);
+        return recipeRepository.save(receta); // Asegúrate de que se está guardando correctamente
+    }
+
 
     //@PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public Recipe crearReceta(Recipe receta) {

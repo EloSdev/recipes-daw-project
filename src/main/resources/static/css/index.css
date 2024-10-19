@@ -266,19 +266,49 @@ footer {
 }
 
 /* Adaptar el grid en pantallas más pequeñas */
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
     .recipes-center {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .recipes-center {
         grid-template-columns: 1fr;
     }
 }
 
+/* Estilo para la sección de "Like" */
+.like-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
 
+.like-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.like-btn i {
+    margin-right: 0.5rem;
+    color: #007bff; /* Color azul para el pulgar */
+}
+
+.like-btn:hover i {
+    color: #0056b3; /* Cambiar el color al hacer hover */
+}
+
+.like-count {
+    font-size: 1.1rem;
+    color: #333;
+}
 
 /* Featured Recipes */
 .section {
