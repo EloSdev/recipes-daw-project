@@ -402,3 +402,25 @@ footer {
         display: none;
     }
 }
+
+
+/*Pagination*/
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-container button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination-container button:disabled {
+    background-color: #cccccc;
+    cursor: default;
+}

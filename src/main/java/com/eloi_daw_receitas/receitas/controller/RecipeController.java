@@ -48,12 +48,22 @@ public class RecipeController {
         Pageable pageable = PageRequest.of(page, size);
         return recipeService.listarRecetas(orden, pageable);
     }*/
-    @GetMapping(value = "/recetas")
+    /*@GetMapping(value = "/recetas")
     public List<Recipe> listarRecetas(
             @RequestParam(defaultValue = "fechaDesc") String orden,
             @PageableDefault(size = 6) Pageable pageable) {
         Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
         return pageRecetas.getContent(); // Devuelve solo el contenido (las recetas)
+    }*/
+
+    @GetMapping(value = "/recetas")
+    public Page<Recipe> listarRecetas(
+            @RequestParam(defaultValue = "fechaDesc") String orden,
+            @PageableDefault(size = 6) Pageable pageable) {
+        //return recipeService.listarRecetas(orden, pageable);
+        Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
+        return pageRecetas; // Devuelve la página completa
+
     }
 
     // Endpoint para incrementar el número de likes

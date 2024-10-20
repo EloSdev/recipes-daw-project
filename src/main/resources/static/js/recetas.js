@@ -1,24 +1,78 @@
- async function cargarRecetas() {
-            try {
-                const response = await fetch('/api/recetas'); // Ajusta la URL según tu API
-                if (!response.ok) {
-                    throw new Error('Error al cargar las recetas');
-                }
-                const recetas = await response.json();
-                console.log('Recetas:', recetas); // Imprimir la respuesta
+ //pagination 2
+let currentPage = 0;
+const pageSize = 6;
 
-                // Verificar el tipo de datos que se recibe
-                if (Array.isArray(recetas)) {
-                    mostrarRecetas(recetas);
-                } else {
-                    console.error('La respuesta no es un array:', recetas);
-                    document.getElementById('recetas-list').innerHTML = '<p>Error: los datos no son válidos.</p>';
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('recetas-list').innerHTML = '<p>Error al cargar las recetas.</p>';
-            }
+async function cargarRecetas(page = 0) {
+    try {
+        const response = await fetch(`/api/recetas?page=${page}&size=${pageSize}`);
+        if (!response.ok) {
+            throw new Error(`Error al cargar las recetas: ${response.status} ${response.statusText}`);
         }
+
+        const data = await response.json();
+
+        // Verifica que la respuesta sea un objeto con la estructura esperada
+        if (data && data.content) {
+            const recetas = data.content; // Contenido de la página actual
+            const totalPages = data.totalPages; // Total de páginas
+
+            console.log('Recetas:', recetas);
+            mostrarRecetas(recetas);
+            actualizarPaginacion(totalPages, page);
+        } else {
+            console.error('La respuesta no contiene las recetas esperadas:', data);
+            document.getElementById('recetas-list').innerHTML = '<p>Error: los datos no son válidos.</p>';
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('recetas-list').innerHTML = `<p>${error.message}</p>`;
+    }
+}
+
+// Llamar a cargarRecetas para la página inicial
+//cargarRecetas(currentPage);
+
+
+
+function actualizarPaginacion(totalPages, currentPage) {
+    const paginationContainer = document.querySelector('.pagination-container');
+    paginationContainer.innerHTML = ''; // Limpiamos la paginación anterior
+
+    // Crear botón "Anterior"
+    if (currentPage > 0) {
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Anterior';
+        prevButton.addEventListener('click', () => {
+            cargarRecetas(currentPage - 1); // Ir a la página anterior
+        });
+        paginationContainer.appendChild(prevButton);
+    }
+
+    // Crear botones de páginas numeradas
+    for (let i = 0; i < totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i + 1;
+        if (i === currentPage) {
+            pageButton.disabled = true; // Deshabilitar el botón de la página actual
+        }
+        pageButton.addEventListener('click', () => {
+            cargarRecetas(i); // Cargar la página seleccionada
+        });
+        paginationContainer.appendChild(pageButton);
+    }
+
+    // Crear botón "Siguiente"
+    if (currentPage < totalPages - 1) {
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Siguiente';
+        nextButton.addEventListener('click', () => {
+            cargarRecetas(currentPage + 1); // Ir a la página siguiente
+        });
+        paginationContainer.appendChild(nextButton);
+    }
+}
+
+
 
         function mostrarRecetas(recetas) {
             const recetasList = document.getElementById('recetas-list');
@@ -89,6 +143,4 @@
         }
 
 
-
-
-        window.onload = cargarRecetas; // Cargar recetas al cargar la página
+        window.onload = cargarRecetas(currentPage); // Cargar recetas al cargar la página
