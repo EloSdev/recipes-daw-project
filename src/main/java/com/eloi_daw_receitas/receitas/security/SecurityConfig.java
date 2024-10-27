@@ -41,10 +41,17 @@ import org.springframework.security.web.SecurityFilterChain;
                             .defaultSuccessUrl("/home.html", true) // URL a la que redirigir tras el login exitoso
                             .permitAll()
                     )
-                    .logout((logout) -> logout.permitAll()
+                    .logout(logout ->
+                            logout
+                                    .logoutUrl("/logout") // Configura la URL para logout
+                                    .logoutSuccessUrl("/index.html") // Redirige a index.html tras cerrar sesión
+                                    .permitAll()
                     )
 
-                  //  .httpBasic(Customizer.withDefaults())
+
+
+
+            //  .httpBasic(Customizer.withDefaults())
                     .csrf(csrf->csrf.disable());
 
 

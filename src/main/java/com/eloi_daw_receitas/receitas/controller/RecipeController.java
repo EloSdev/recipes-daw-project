@@ -80,7 +80,7 @@ public class RecipeController {
     }
 
     @PostMapping(value = "/recetas/crear-receta", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT
-    @PreAuthorize("hasAnyRole('USER','ADMIN')")
+    //@PreAuthorize("hasAnyRole('USER','ADMIN')")
     public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
         receita.setAutor(authentication.getName()); //si no post meto autor User1, cambiao a User2, BEN!!
         //Deberai valiar o id do usario, agora mesmo o User2 pode facer post referenciando o User1(id usuario =1)

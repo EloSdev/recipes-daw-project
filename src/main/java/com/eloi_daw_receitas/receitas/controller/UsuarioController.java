@@ -4,10 +4,11 @@ import com.eloi_daw_receitas.receitas.model.Usuario;
 import com.eloi_daw_receitas.receitas.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 
 @RestController
@@ -49,6 +50,14 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales incorrectas");
         }
     }*/
+
+    //devolucion do usuario logueado
+    @GetMapping("/usuarios")
+    public Map<String, String> getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String nickname = authentication.getName();
+        return Map.of("username", nickname); // Devolvemos el nombre en JSON
+    }
 
     //crear método para ver todolos usuarios? -> iso melhor na bbdd non??
 

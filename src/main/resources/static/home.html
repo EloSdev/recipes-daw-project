@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles css -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Home | Recetas Deliciosas</title>
 </head>
 <body>
-<h1>HOME</h1>
+<!-- navbar -->
+<nav class="navbar">
+    <div class="nav-center">
+        <!-- links -->
+        <div>
+            <button class="toggle-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="nav-link">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="/public-views/recetas.html" class="nav-link">
+                        recetas
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link">
+                        about
+                    </a>
+                </li>
+                <li>
+                    <a href="crear-receta.html" class="nav-link">
+                        crear receta
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- logo -->
+        <img src="/images/logo.jpg" class="nav-logo" alt="logo" />
+        <!-- auth links -->
+        <div class="toggle-container">
+            <span id="user-nickname" class="nav-link" ></span>
+            <a href="/logout" class="nav-link">Logout</a>
+        </div>
+    </div>
+</nav>
+<!-- hero section with cooking theme -->
+<section class="hero" style="background-image: url('./images/cooking-hero.jpg');">
+    <div class="hero-container">
+        <h1 class="text-slanted">
+            Descubre, cocina y comparte
+        </h1>
+        <h3>Las mejores recetas de nuestra comunidad</h3>
+        <br>
+        <a href="recetas.html" class="hero-btn">
+            Ver Recetas
+        </a>
+    </div>
+</section>
+<!-- sidebar -->
+<div class="sidebar-overlay">
+    <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+            <li>
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-home fa-fw"></i>
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="recetas.html" class="sidebar-link">
+                    <i class="fas fa-utensils fa-fw"></i>
+                    recetas
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle fa-fw"></i>
+                    about
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
+<!-- featured recipes -->
+<section class="section featured">
+    <div class="title">
+        <h2><span>/</span> Recetas Destacadas</h2>
+        <!--amosar receitas ordenass por likes???-->
+    </div>
+    <div class="featured-center section-center">
+        <h2 class="section-loading">
+            cargando...
+        </h2>
+    </div>
+    <a href="recetas.html" class="btn">
+        Ver Recetas Destacadas
+    </a>
+</section>
+
+<script src="/js/usuario_logueado.js"></script>
 </body>
 </html>
