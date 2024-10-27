@@ -100,6 +100,9 @@ public class RecipeController {
     }*/
 
     //corregir problema de que si se sube unha receta con nome colhido reescribese
+    //outro problema> unha vez logueado, si vou recetas.html sae login e registrar
+    //nickname e logout so aparece en home.html
+    //ten que aparecer en home.html,recetas,html. e about .html si login ok
     @PostMapping("recetas/subir-receta") // Asegúrate de que la URL coincida con la de tu formulario
     public ResponseEntity<Recipe> crearReceta(
             @RequestParam("nombre") String nombre,
@@ -154,7 +157,9 @@ public class RecipeController {
             // Guarda la receta en la base de datos usando tu servicio
             recipeService.crearReceta(nuevaReceta);
 
-            return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
+
+
+           return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // Usuario no encontrado
         }
