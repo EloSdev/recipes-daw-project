@@ -19,9 +19,9 @@
 <section>
     <div class="container">
         <!-- Columna del formulario -->
-        <form class="form-column" id="registro-form" method="POST"  >
+        <form class="form-column" id="registro-form" action="/api/recetas/subir-receta" method="POST" enctype="multipart/form-data"  >
             <h1>Crear receta</h1>
-            <input type="hidden" id="user-nickname" name="autor" value="data.username">
+            <input type="hidden" id="user-nickname" name="autor" >
             <input type="hidden" id="likes" name="likes" value="0">
             <input type="hidden" id="fecha" name="fecha">
 
@@ -56,22 +56,10 @@
 
         <!-- Columna de la imagen -->
         <div class="image-column">
-            <img src="/images/logo.jpg" alt="Sample image">
+            <img src="/images/cocinera.jpg" alt="Sample image">
         </div>
     </div>
 </section>
-
-<script>
-    // Configuración inicial del formulario
-            document.addEventListener("DOMContentLoaded", () => {
-
-                // Establecer la fecha actual para el campo 'fecha'
-                const fecha = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
-                document.getElementById("fecha").value = fecha;
-            });
-
-
-</script>
 
 <script src="/js/usuario_logueado.js"></script>
 </body>

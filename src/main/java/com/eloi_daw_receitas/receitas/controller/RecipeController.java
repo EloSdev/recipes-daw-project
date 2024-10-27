@@ -1,6 +1,8 @@
 package com.eloi_daw_receitas.receitas.controller;
 
 import com.eloi_daw_receitas.receitas.model.Recipe;
+import com.eloi_daw_receitas.receitas.model.Usuario;
+import com.eloi_daw_receitas.receitas.repository.UsuarioRepository;
 import com.eloi_daw_receitas.receitas.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,9 +13,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -21,6 +30,9 @@ public class RecipeController {
 
     @Autowired
     private final RecipeService recipeService;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository; // Repositorio para obtener el usuario
 
     // private final String UPLOAD_DIR = "uploads/"; // Directorio donde se guardarán las imágenes
 
@@ -31,7 +43,7 @@ public class RecipeController {
 
     }
 
-    @GetMapping( value = "/recetas/{id}")
+    @GetMapping(value = "/recetas/{id}")
     public ResponseEntity<Recipe> obtenerRecetaPorId(@PathVariable Long id) {
         Recipe receita = recipeService.obtenerRecetaPorId(id);
         if (receita != null) {
@@ -67,7 +79,7 @@ public class RecipeController {
     }
 
     // Endpoint para incrementar el número de likes
-    @PostMapping ("recetas/{recetaId}/like")
+    @PostMapping("recetas/{recetaId}/like")
     public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
         Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
 
@@ -79,70 +91,73 @@ public class RecipeController {
         }
     }
 
-    @PostMapping(value = "/recetas/crear-receta", consumes = "application/json") // COMPROBAR BEN ESTE ENDPOINT
-    //@PreAuthorize("hasAnyRole('USER','ADMIN')")
+    /*@PostMapping(value = "/recetas/subir-receta", consumes = "application/json")
+    @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
-        receita.setAutor(authentication.getName()); //si no post meto autor User1, cambiao a User2, BEN!!
-        //Deberai valiar o id do usario, agora mesmo o User2 pode facer post referenciando o User1(id usuario =1)
+        receita.setAutor(authentication.getName());
+
         return recipeService.crearReceta(receita);
+    }*/
+
+    //corregir problema de que si se sube unha receta con nome colhido reescribese
+    @PostMapping("recetas/subir-receta") // Asegúrate de que la URL coincida con la de tu formulario
+    public ResponseEntity<Recipe> crearReceta(
+            @RequestParam("nombre") String nombre,
+            @RequestParam("ingredientes") String ingredientes,
+            @RequestParam("elaboracion") String elaboracion,
+            @RequestParam("imagen") MultipartFile imagen, // Cambiado para recibir la imagen
+            @RequestParam("autor") String autor,
+            @RequestParam("likes") int likes) {
+
+        // Obtener el usuario autenticado
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName(); // Obtener el nombre de usuario
+
+        // Buscar el usuario por nickname y manejar el caso opcional
+        Optional<Usuario> optionalUsuario = usuarioRepository.findByNickname(username);
+
+        if (optionalUsuario.isPresent()) {
+            Usuario usuario = optionalUsuario.get(); // Obtener el usuario
+
+            // Lógica para guardar la receta
+            Recipe nuevaReceta = new Recipe();
+            nuevaReceta.setNombre(nombre);
+            nuevaReceta.setIngredientes(ingredientes);
+            nuevaReceta.setElaboracion(elaboracion);
+            nuevaReceta.setAutor(usuario.getNickname());
+            nuevaReceta.setLikes(likes);
+            nuevaReceta.setFecha(new Date()); // Establecer la fecha actual
+            nuevaReceta.setUsuario(usuario);
+
+            // Maneja el archivo de imagen
+            if (imagen != null && !imagen.isEmpty()) {
+                try {
+                    // Definir la ruta donde se guardará la imagen
+                    String rutaImagen = "src/main/resources/static/images/recetas/" + imagen.getOriginalFilename();
+                    File file = new File(rutaImagen);
+
+                    // Escribir la imagen en la ruta especificada
+                    try (FileOutputStream fos = new FileOutputStream(file)) {
+                        fos.write(imagen.getBytes());
+                    }
+
+                    // Almacenar la URL relativa de la imagen en la base de datos
+                    String imagenUrl = "/images/recetas/" + imagen.getOriginalFilename(); // URL que se guardará en la base de datos
+                    nuevaReceta.setImagenUrl(imagenUrl); // Asigna la URL a la receta
+
+                } catch (IOException e) {
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                            .body(null); // Manejo de errores si la imagen no se puede procesar
+                }
+            }
+
+            // Guarda la receta en la base de datos usando tu servicio
+            recipeService.crearReceta(nuevaReceta);
+
+            return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // Usuario no encontrado
+        }
     }
-
-    // cambios a realziar para permitir a subida local de imaxes-> VOLVER A MIRAR
-    /*
-     * @PostMapping
-     *
-     * @PreAuthorize("hasRole('USER')")
-     * public ResponseEntity<Receta> crearReceta(
-     *
-     * @RequestParam("nombre") String nombre,
-     *
-     * @RequestParam("ingredientes") String ingredientes,
-     *
-     * @RequestParam("elaboracion") String elaboracion,
-     *
-     * @RequestParam("imagen") MultipartFile imagen) throws IOException {
-     *
-     * // Guardar la imagen en el servidor
-     * String imagenUrl = guardarImagen(imagen);
-     *
-     * Receta receta = new Receta();
-     * receta.setNombre(nombre);
-     * receta.setIngredientes(ingredientes);
-     * receta.setElaboracion(elaboracion);
-     * receta.setImagenUrl(imagenUrl);
-     * Receta nuevaReceta = recetaService.guardarReceta(receta);
-     *
-     * return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
-     * }
-     *
-     * private String guardarImagen(MultipartFile imagen) throws IOException {
-     * if (imagen.isEmpty()) {
-     * throw new IOException("No se seleccionó ninguna imagen");
-     * }
-     *
-     * String nombreArchivo = imagen.getOriginalFilename();
-     * String rutaCompleta = UPLOAD_DIR + nombreArchivo;
-     *
-     * File directorio = new File(UPLOAD_DIR);
-     * if (!directorio.exists()) {
-     * directorio.mkdirs(); // Crear el directorio si no existe
-     * }
-     *
-     * File archivo = new File(rutaCompleta);
-     * imagen.transferTo(archivo); // Guardar la imagen en el directorio
-     *
-     * return rutaCompleta; // Devolver la ruta de la imagen
-     * }
-     */
-
-    // Otros métodos de la API (e.g., valorar recetas, eliminar recetas, actualizar
-    // recetas)
-
-
-
-
-
-
-
 
 }
