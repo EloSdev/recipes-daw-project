@@ -24,7 +24,7 @@
             </button>
             <ul class="nav-links">
                 <li>
-                    <a href="index.html" class="nav-link">
+                    <a href="/home.html" class="nav-link">
                         home
                     </a>
                 </li>
@@ -44,11 +44,25 @@
         <img src="/images/cocinera.jpg" class="nav-logo" alt="logo" />
         <!-- auth links -->
         <div class="toggle-container">
-            <a href="/public-views/login.html" class="nav-link">Login</a>
-            <a href="/public-views/registro.html" class="nav-link">Registrarse</a>
+            <a href="/public-views/login.html" id="login" class="nav-link">Login</a>
+            <a href="/public-views/registro.html" id = "registro" class="nav-link">Registrarse</a>
+            <span id="user-nickname" class="nav-link "  style="display: none" ></span>
+            <a href="/logout" class="nav-link " id= "logout" style="display: none" >Logout</a>
         </div>
     </div>
 </nav>
+<!--select de receitas-->
+<section>
+    <!-- Agregar menú desplegable de orden -->
+    <label for="orden-recetas">Ordenar por:</label>
+    <select id="orden-recetas">
+        <option value="fechaDesc">Novedades</option>
+        <option value="fechaAsc">Antiguas</option>
+        <option value="likeDesc">Mejor Valoradas</option>
+        <option value="likeAsc">Peor Valoradas</option>
+    </select>
+
+</section>
 
 <!-- hero section for recipes -->
 <section  >
@@ -96,6 +110,7 @@
     </aside>
 </div>
 
-<script src="/js/recetas.js"></script> <!-- Vincula tu archivo JavaScript aquí -->
+<script src="/js/recetas-orden.js"></script> <!-- Vincula tu archivo JavaScript aquí -->
+<script src="/js/auth.js"></script>
 </body>
 </html>

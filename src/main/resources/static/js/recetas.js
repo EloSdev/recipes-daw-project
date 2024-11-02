@@ -14,7 +14,7 @@ async function cargarRecetas(page = 0) {
         // Verifica que la respuesta sea un objeto con la estructura esperada
         if (data && data.content) {
             const recetas = data.content; // Contenido de la página actual
-            const totalPages = data.totalPages; // Total de páginas
+            const totalPages = data.totalPages; // Total de páginass
 
             console.log('Recetas:', recetas);
             mostrarRecetas(recetas);
@@ -29,8 +29,7 @@ async function cargarRecetas(page = 0) {
     }
 }
 
-// Llamar a cargarRecetas para la página inicial
-//cargarRecetas(currentPage);
+
 
 
 

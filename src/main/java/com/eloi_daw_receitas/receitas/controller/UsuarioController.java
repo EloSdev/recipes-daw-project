@@ -3,6 +3,7 @@ package com.eloi_daw_receitas.receitas.controller;
 import com.eloi_daw_receitas.receitas.model.Usuario;
 import com.eloi_daw_receitas.receitas.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -59,7 +60,15 @@ public class UsuarioController {
         return Map.of("username", nickname); // Devolvemos el nombre en JSON
     }
 
-    //crear método para ver todolos usuarios? -> iso melhor na bbdd non??
+
+    //METODO PARA SABER SI USUARIO ESTA AUTENTICADO PARA POR NICKNAME E LOGOUT EN HOME,ABOUT E RECETAS
+    @GetMapping("/usuarios/autenticado")
+    public ResponseEntity<?> obtenerUsuarioAutenticado(Authentication authentication) {
+        if (authentication != null && authentication.isAuthenticated()) {
+            return ResponseEntity.ok(authentication.getName());
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario no autenticado");
+    }
 
 
 
