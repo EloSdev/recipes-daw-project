@@ -68,6 +68,7 @@ public class RecipeController {
         return pageRecetas.getContent(); // Devuelve solo el contenido (las recetas)
     }*/
 
+    /*
     @GetMapping(value = "/recetas")
     public Page<Recipe> listarRecetas(
             @RequestParam(defaultValue = "fechaDesc") String orden,
@@ -76,7 +77,33 @@ public class RecipeController {
         Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
         return pageRecetas; // Devuelve la página completa
 
+    }*/
+    @GetMapping(value = "/recetas")
+    public Page<Recipe> listarRecetas(
+            @RequestParam(defaultValue = "fechaDesc") String orden,
+            @RequestParam(required = false) String search, // Parámetro de búsqueda opcional
+            @PageableDefault(size = 6) Pageable pageable) {
+
+        if (search != null && !search.isEmpty()) {
+            // Si hay un término de búsqueda, llama a un método de servicio que filtre por nombre
+            return recipeService.buscarRecetasPorNombre(search, orden, pageable);
+        } else {
+            // Si no hay búsqueda, devuelve la lista completa ordenada
+            return recipeService.listarRecetas(orden, pageable);
+        }
     }
+
+    @GetMapping("/recetas/all")
+    public List<Recipe> listarTodasLasRecetas() {
+        return recipeService.listarTodasLasRecetas(); // Devuelve todas las recetas
+    }
+
+    @GetMapping(value = "/recetas/search")
+    public ResponseEntity<List<Recipe>> buscarRecetasPorNombre(@RequestParam String nombre) {
+        List<Recipe> recetas = recipeService.buscarRecetasPorNombre(nombre);
+        return ResponseEntity.ok(recetas); // Devuelve una lista, puede ser vacía
+    }
+
 
     // Endpoint para incrementar el número de likes
     @PostMapping("recetas/{recetaId}/like")

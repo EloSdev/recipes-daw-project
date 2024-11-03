@@ -5,7 +5,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
+
+    List<Recipe> findByNombreContainingIgnoreCase(String nombre);
+
+    // Método para búsqueda por nombre (contiene, sin importar mayúsculas/minúsculas)
+    Page<Recipe> findByNombreContainingIgnoreCase(String nombre, Pageable pageable);
 
     // Métodos para ordenar recetas por fechas y  likes
     Page<Recipe> findAllByOrderByFechaAsc(Pageable pageable);

@@ -424,3 +424,27 @@ footer {
     background-color: #cccccc;
     cursor: default;
 }
+
+
+/*search*/
+.search-input {
+  padding: 0.5rem;
+  background: hsl(210, 36%, 96%);
+  border-radius: 0.25rem;
+  border-color: transparent;
+  border
+  letter-spacing: 0.1rem;;
+}
+.search-input::placeholder {
+  text-transform: capitalize;
+}
+
+.filter-error {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+}
+

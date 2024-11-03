@@ -31,7 +31,7 @@ import org.springframework.security.web.SecurityFilterChain;
                             .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                             .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios","/api/usuarios/**").permitAll()
                             .requestMatchers("/api/recetas/subir-receta", "/home.html").authenticated()  // Requiere autenticación para crear receta
-                            .requestMatchers("/api/recetas", "/api/recetas/**", "/api/usuarios/autenticado").permitAll()  // Permitir acceso a /api/recetas y /api/recetas/{id}
+                            .requestMatchers("/api/recetas", "/api/recetas/search", "/api/recetas/**", "/api/usuarios/autenticado").permitAll()  // Permitir acceso a /api/recetas y /api/recetas/{id}
 
                             .anyRequest().authenticated()
                     )
