@@ -4,16 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
     @Configuration
@@ -21,7 +16,7 @@ import org.springframework.security.web.SecurityFilterChain;
     public class SecurityConfig {
 
         @Autowired
-        private CustomUserDetailsService customUserDetailsService; // Inyectamos el servicio
+        private CustomUserDetailsService customUserDetailsService;
 
 
         @Bean
@@ -30,28 +25,24 @@ import org.springframework.security.web.SecurityFilterChain;
                     .authorizeHttpRequests((requests) -> requests
                             .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                             .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios","/api/usuarios/**").permitAll()
-                            .requestMatchers("/api/recetas/subir-receta", "/home.html").authenticated()  // Requiere autenticación para crear receta
-                            .requestMatchers("/api/recetas", "/api/recetas/search", "/api/recetas/**", "/api/usuarios/autenticado").permitAll()  // Permitir acceso a /api/recetas y /api/recetas/{id}
+                            .requestMatchers("/api/recetas/subir-receta", "/home.html").authenticated()  // Require autenticación para acceder o home e poder crear receita e
+                            .requestMatchers("/api/recetas", "/api/recetas/search", "/api/recetas/**", "/api/usuarios/autenticado").permitAll()
 
                             .anyRequest().authenticated()
                     )
                     .formLogin((form) -> form
                             .loginPage("/public-views/login.html")
                             .loginProcessingUrl("/login")
-                            .defaultSuccessUrl("/home.html", true) // URL a la que redirigir tras el login exitoso
+                            .defaultSuccessUrl("/home.html", true)
                             .permitAll()
                     )
                     .logout(logout ->
                             logout
-                                    .logoutUrl("/logout") // Configura la URL para logout
-                                    .logoutSuccessUrl("/index.html") // Redirige a index.html tras cerrar sesión
+                                    .logoutUrl("/logout") // Configura a URL para logout
+                                    .logoutSuccessUrl("/index.html")
                                     .permitAll()
                     )
 
-
-
-
-            //  .httpBasic(Customizer.withDefaults())
                     .csrf(csrf->csrf.disable());
 
 
@@ -71,26 +62,5 @@ import org.springframework.security.web.SecurityFilterChain;
                     .passwordEncoder(passwordEncoder());
             return authenticationManagerBuilder.build();
         }
-
-        /*
-        @Bean
-        public UserDetailsService userDetailsService() {
-
-            return new CustomUserDetailsService();
-        }*/
-
-        /*
-        @Bean
-        public UserDetailsService userDetailsService() {
-            UserDetails user =
-                    (User.withDefaultPasswordEncoder()
-                            .username("user")
-                            .password("password")
-                            .roles("USER")
-                            .build());
-
-
-            return new InMemoryUserDetailsManager(user);
-        }*/
 
     }

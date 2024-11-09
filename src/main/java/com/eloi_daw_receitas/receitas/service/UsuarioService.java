@@ -1,6 +1,5 @@
 package com.eloi_daw_receitas.receitas.service;
 
-
 import com.eloi_daw_receitas.receitas.model.Usuario;
 import com.eloi_daw_receitas.receitas.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,30 +19,18 @@ public class UsuarioService {
     }
 
     @Autowired
-    private PasswordEncoder passwordEncoder;  // Inyecta el encoder de contraseñas
+    private PasswordEncoder passwordEncoder;
 
     public Usuario registrarUsuario(Usuario usuario) {
-        // Cifrar la contraseña antes de almacenarla
+
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         return usuarioRepository.save(usuario);
     }
 
-    //de momento non habilito esta seguirdade por metodos
     //@Secured("ROLE_ADMIN")
     public void eliminarUsuario(String nickname) {
         // Lógica para eliminar un usuario solo para admins
+        //esto fárase desde a bbdd
     }
-
-    /*
-    //metodo para login
-    //creo que de mmto innecesario pq o login vaino xestionar SecurityConfig....imos vendo!!
-    public boolean login(String nickname, String password) {
-        Usuario usuario = usuarioRepository.findByNickname(nickname);
-        if (usuario != null && passwordEncoder.matches(password, usuario.getPassword())) {
-            return true;
-        }
-        return false;
-    }*/
-
 
 }

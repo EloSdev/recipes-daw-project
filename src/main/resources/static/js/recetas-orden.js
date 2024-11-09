@@ -1,10 +1,18 @@
 let currentPage = 0;
 const pageSize = 6;
+let currentOrder = 'fechaDesc';
+let currentSearch = '';
 
-// Función principal para cargar las recetas, que ahora acepta un parámetro de "orden"
-async function cargarRecetas(page = 0, orden = 'fechaDesc') {
+// Función principal para cargar as receitas
+async function cargarRecetas(page = 0, orden = 'fechaDesc', search = '') {
     try {
-        const response = await fetch(`/api/recetas?page=${page}&size=${pageSize}&orden=${orden}`);
+
+        let url = `/api/recetas?page=${page}&size=${pageSize}&orden=${orden}`;
+        if (search) {
+            url += `&search=${encodeURIComponent(search)}`;
+        }
+
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`Error al cargar las recetas: ${response.status} ${response.statusText}`);
         }
@@ -15,24 +23,24 @@ async function cargarRecetas(page = 0, orden = 'fechaDesc') {
             const recetas = data.content;
             const totalPages = data.totalPages;
             mostrarRecetas(recetas);
-            actualizarPaginacion(totalPages, page, orden);
+            actualizarPaginacion(totalPages, page, orden, search);
         } else {
-            document.getElementById('recetas-list').innerHTML = '<p>Error: los datos no son válidos.</p>';
+            document.getElementById('recetas-list').innerHTML = '<p>No se encontraron recetas.</p>';
         }
     } catch (error) {
         document.getElementById('recetas-list').innerHTML = `<p>${error.message}</p>`;
     }
 }
 
-// Función para actualizar la paginación, ahora recibe "orden"
-function actualizarPaginacion(totalPages, currentPage, orden) {
+// Función para actualizar a paxinación
+function actualizarPaginacion(totalPages, currentPage, orden, search) {
     const paginationContainer = document.querySelector('.pagination-container');
     paginationContainer.innerHTML = '';
 
     if (currentPage > 0) {
         const prevButton = document.createElement('button');
         prevButton.textContent = 'Anterior';
-        prevButton.addEventListener('click', () => cargarRecetas(currentPage - 1, orden));
+        prevButton.addEventListener('click', () => cargarRecetas(currentPage - 1, orden, search));
         paginationContainer.appendChild(prevButton);
     }
 
@@ -42,19 +50,19 @@ function actualizarPaginacion(totalPages, currentPage, orden) {
         if (i === currentPage) {
             pageButton.disabled = true;
         }
-        pageButton.addEventListener('click', () => cargarRecetas(i, orden));
+        pageButton.addEventListener('click', () => cargarRecetas(i, orden, search));
         paginationContainer.appendChild(pageButton);
     }
 
     if (currentPage < totalPages - 1) {
         const nextButton = document.createElement('button');
         nextButton.textContent = 'Siguiente';
-        nextButton.addEventListener('click', () => cargarRecetas(currentPage + 1, orden));
+        nextButton.addEventListener('click', () => cargarRecetas(currentPage + 1, orden, search));
         paginationContainer.appendChild(nextButton);
     }
 }
 
-// Función para mostrar recetas en la página
+// Función para amosar as receitas na páxina
 function mostrarRecetas(recetas) {
     const recetasList = document.getElementById('recetas-list');
     recetasList.innerHTML = '';
@@ -65,13 +73,13 @@ function mostrarRecetas(recetas) {
         recetaDiv.innerHTML = `
             <article>
                 <div class="recipe-container">
-                    <img src=${receta.imagenUrl} class="recipe-img" alt=${receta.nombre} />
+                    <img src=${receta.imagenUrl} class="recipe-img" alt="${receta.nombre}" />
                 </div>
                 <footer>
                     <p class="recipe-name">${receta.nombre}</p>
                     <h4 class="recipe-autor">${receta.autor}</h4>
                     <div class="like-section">
-                        <button class="like-btn" data-id=${receta.id}>
+                        <button class="like-btn" data-id="${receta.id}">
                             <i class="fas fa-thumbs-up"></i>
                             <span class="like-count">${receta.likes}</span>
                         </button>
@@ -85,7 +93,7 @@ function mostrarRecetas(recetas) {
     agregarLikeEventListeners();
 }
 
-// Función para añadir eventos de "like"
+// Función para engadir eventos de "like"
 function agregarLikeEventListeners() {
     const likeButtons = document.querySelectorAll('.like-btn');
     likeButtons.forEach(button => {
@@ -96,7 +104,7 @@ function agregarLikeEventListeners() {
     });
 }
 
-// Función para manejar "like" en recetas
+// Función para manexar "like" en recetas
 function likeReceta(recetaId, likeButton) {
     fetch(`/api/recetas/${recetaId}/like`, {
         method: 'POST',
@@ -113,10 +121,17 @@ function likeReceta(recetaId, likeButton) {
     .catch(error => console.error('Error:', error));
 }
 
-// Escucha el cambio en el menú desplegable de orden
+// Escoita o cambio no menú desplegable de orden
 document.getElementById("orden-recetas").addEventListener("change", function(event) {
-    const ordenSeleccionado = event.target.value;
-    cargarRecetas(0, ordenSeleccionado); // Recargar recetas desde la primera página con el nuevo orden
+    currentOrder = event.target.value;
+    cargarRecetas(0, currentOrder, currentSearch);
 });
 
-window.onload = cargarRecetas(currentPage);
+// Evento para buscar en tempo real o campo de búsqueda
+document.querySelector('.search-input').addEventListener('input', function (event) {
+    currentSearch = event.target.value;
+    cargarRecetas(0, currentOrder, currentSearch);
+});
+
+// Cargar receitas inicialmente
+window.onload = () => cargarRecetas(currentPage, currentOrder, currentSearch);

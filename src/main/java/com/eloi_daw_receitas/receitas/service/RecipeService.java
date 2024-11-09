@@ -10,7 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class RecipeService {
@@ -42,48 +42,39 @@ public class RecipeService {
                 return recipeRepository.findAll(pageable);
         }
     }
-    // Método para listar recetas con orden y paginación
-    /*public Page<Recipe> listarRecetas(String orden, Pageable pageable) {
-        // Lógica para ordenar las recetas según el valor del parámetro 'orden'
-        return recipeRepository.findAll(pageable); // Reemplaza con tu lógica de orden si es necesario
-    }*/
 
-    // Método para buscar recetas por nombre con paginación y orden
+    // Método para buscar receitas por nome con paxinación e orden
     public Page<Recipe> buscarRecetasPorNombre(String nombre, String orden, Pageable pageable) {
-        // Busca recetas cuyo nombre contenga el término de búsqueda (ignora mayúsculas)
-        return recipeRepository.findByNombreContainingIgnoreCase(nombre, pageable); // Reemplaza con tu lógica de orden si es necesario
+
+        return recipeRepository.findByNombreContainingIgnoreCase(nombre, pageable);
     }
 
-    // Método para incrementar los likes de una receta
+    // Método para incrementar os likes dunha receita
     public Recipe incrementarLikes(Long recetaId) {
         Recipe receta = recipeRepository.findById(recetaId)
                 .orElseThrow(() -> new ResourceNotFoundException("Receta no encontrada"));
         receta.setLikes(receta.getLikes() + 1);
-        return recipeRepository.save(receta); // Asegúrate de que se está guardando correctamente
+        return recipeRepository.save(receta);
     }
-
 
     //@PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public Recipe crearReceta(Recipe receta) {
         return recipeRepository.save(receta);
     }
 
-    // Nuevo método para listar todas las recetas
     public List<Recipe> listarTodasLasRecetas() {
-        return recipeRepository.findAll(); // Asumiendo que este método está disponible en tu repositorio
+        return recipeRepository.findAll();
     }
 
 
-    // Método para buscar recetas por nombre
     public List<Recipe> buscarRecetasPorNombre(String nombre) {
         return recipeRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
-
-
     //@PreAuthorize("hasRole('ADMIN')")
     public void eliminarReceta(Long id) {
-        // Lógica para eliminar la receta
+        // Lógica para eliminar receita
+        //non se vai implementar, as receitas eliminaránse desde a bbdd
     }
 
 

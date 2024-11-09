@@ -20,12 +20,11 @@ public class Usuario {
     @Column(nullable = false)
     private String email;
     @Enumerated(EnumType.STRING)
-    private Rol rol; // Enum con valores USER, ADMIN
+    private Rol rol;
 
-    //Al incluir la dependencia jpa no seria necesario mapear esta relacion pero la incluyo igual a modo educativo
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true) //usuario referencia a la tabla en la bbdd
-    @JsonManagedReference // Ignora esta propiedad al serializar
-    private List<Recipe> recipes; // Relación uno a muchos
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference // Ignora esta propiedade ao serializar
+    private List<Recipe> recipes; // Relación moitos a un
 
     //constructor
     public Usuario(){};

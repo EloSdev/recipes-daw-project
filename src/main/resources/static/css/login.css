@@ -1,4 +1,4 @@
-/* General styles */
+/* ESTILOS XERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ body {
 
 .login-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 800px;
     padding: 20px;
@@ -32,7 +32,7 @@ body {
     border-radius: 8px;
 }
 
-/* Login box styles */
+
 .login-box {
     padding: 20px;
     display: flex;
@@ -103,7 +103,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* Logo box styles */
+
 .logo-box {
     display: flex;
     justify-content: center;

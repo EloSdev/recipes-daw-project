@@ -11,10 +11,8 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 
     List<Recipe> findByNombreContainingIgnoreCase(String nombre);
 
-    // Método para búsqueda por nombre (contiene, sin importar mayúsculas/minúsculas)
     Page<Recipe> findByNombreContainingIgnoreCase(String nombre, Pageable pageable);
 
-    // Métodos para ordenar recetas por fechas y  likes
     Page<Recipe> findAllByOrderByFechaAsc(Pageable pageable);
     Page<Recipe> findAllByOrderByFechaDesc(Pageable pageable);
     Page<Recipe> findAllByOrderByLikesAsc(Pageable pageable);

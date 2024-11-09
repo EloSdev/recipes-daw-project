@@ -9,44 +9,38 @@
 <body>
 <div class="login-container">
     <div class="login-grid">
-        <!-- Login form -->
+
         <div class="login-box">
             <h2>Login</h2>
             <form action="/login" method="post">
-                <!-- Nickname input -->
+
                 <div class="input-group">
                     <label for="username">Nickname</label>
                     <input type="text" id="username" name="username" placeholder="Enter your nickname" required>
                 </div>
 
-                <!-- Password input -->
+
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter password" required>
                 </div>
 
-                <!-- Login button -->
+
                 <button type="submit" class="btn">Login</button>
                 <br><br>
-                <!-- Redirect to index button -->
+
                 <button type="button" class="btn" onclick="window.location.href='/index.html'">Volver</button>
 
-                <!-- Register link -->
+
                 <p class="register-text">Don't have an account? <a href="/public-views/registro.html">Register here</a></p>
             </form>
         </div>
 
-        <!-- Logo image -->
         <div class="logo-box">
             <img src="/images/cocinera.jpg" alt="App Logo">
         </div>
     </div>
 </div>
-<!--Manexo de erro con js-->
-<script>
-    if (window.location.search.includes("error")) {
-        document.write("<p style='color:red;'>Invalid username or password</p>");
-    }
-</script>
+
 </body>
 </html>

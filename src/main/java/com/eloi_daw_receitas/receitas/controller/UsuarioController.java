@@ -20,15 +20,13 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @Autowired
-    private UsuarioController(UsuarioService usuarioService){
+    private UsuarioController(UsuarioService usuarioService) {
 
         this.usuarioService = usuarioService;
     }
 
-    // Endpoint para registrar un nuevo usuario
-    //@PostMapping(value ="/usuarios" , consumes = "application/json")//ver si e necesario este valor
-   //@PostMapping("/usuarios")
-    @PostMapping(value ="/usuarios",consumes = "application/json", produces = "application/json")
+    // Endpoint para rexistrar un novo usuario
+    @PostMapping(value = "/usuarios", consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario) {
         try {
             usuarioService.registrarUsuario(usuario);
@@ -37,20 +35,6 @@ public class UsuarioController {
             return ResponseEntity.badRequest().body("Error al registrar usuario: " + e.getMessage());
         }
     }
-
-
-
-    //metodo para valida introducir login--> o login debe validarse a traves de Security Config (Spring Security)
-    /*
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Usuario user) {
-        boolean isAuthenticated = usuarioService.login(user.getNickname(), user.getPassword());
-        if (isAuthenticated) {
-            return ResponseEntity.ok("Login exitoso");
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales incorrectas");
-        }
-    }*/
 
     //devolucion do usuario logueado
     @GetMapping("/usuarios")
@@ -69,7 +53,4 @@ public class UsuarioController {
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario no autenticado");
     }
-
-
-
 }

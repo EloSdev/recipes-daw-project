@@ -32,9 +32,7 @@ public class RecipeController {
     private final RecipeService recipeService;
 
     @Autowired
-    private UsuarioRepository usuarioRepository; // Repositorio para obtener el usuario
-
-    // private final String UPLOAD_DIR = "uploads/"; // Directorio donde se guardarán las imágenes
+    private UsuarioRepository usuarioRepository;
 
     @Autowired
     private RecipeController(RecipeService recipeService) {
@@ -52,32 +50,7 @@ public class RecipeController {
             return ResponseEntity.notFound().build();
         }
     }
-    /*
-    @GetMapping(value = "/recetas")
-    public Page<Recipe> listarRecetas(@RequestParam(defaultValue = "fechaDesc") String orden,
-                                      @RequestParam(defaultValue = "0") int page,
-                                      @RequestParam(defaultValue = "6") int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        return recipeService.listarRecetas(orden, pageable);
-    }*/
-    /*@GetMapping(value = "/recetas")
-    public List<Recipe> listarRecetas(
-            @RequestParam(defaultValue = "fechaDesc") String orden,
-            @PageableDefault(size = 6) Pageable pageable) {
-        Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
-        return pageRecetas.getContent(); // Devuelve solo el contenido (las recetas)
-    }*/
 
-    /*
-    @GetMapping(value = "/recetas")
-    public Page<Recipe> listarRecetas(
-            @RequestParam(defaultValue = "fechaDesc") String orden,
-            @PageableDefault(size = 6) Pageable pageable) {
-        //return recipeService.listarRecetas(orden, pageable);
-        Page<Recipe> pageRecetas = recipeService.listarRecetas(orden, pageable);
-        return pageRecetas; // Devuelve la página completa
-
-    }*/
     @GetMapping(value = "/recetas")
     public Page<Recipe> listarRecetas(
             @RequestParam(defaultValue = "fechaDesc") String orden,
@@ -85,110 +58,91 @@ public class RecipeController {
             @PageableDefault(size = 6) Pageable pageable) {
 
         if (search != null && !search.isEmpty()) {
-            // Si hay un término de búsqueda, llama a un método de servicio que filtre por nombre
+
             return recipeService.buscarRecetasPorNombre(search, orden, pageable);
         } else {
-            // Si no hay búsqueda, devuelve la lista completa ordenada
+
             return recipeService.listarRecetas(orden, pageable);
         }
     }
 
     @GetMapping("/recetas/all")
     public List<Recipe> listarTodasLasRecetas() {
-        return recipeService.listarTodasLasRecetas(); // Devuelve todas las recetas
+        return recipeService.listarTodasLasRecetas();
     }
 
     @GetMapping(value = "/recetas/search")
     public ResponseEntity<List<Recipe>> buscarRecetasPorNombre(@RequestParam String nombre) {
         List<Recipe> recetas = recipeService.buscarRecetasPorNombre(nombre);
-        return ResponseEntity.ok(recetas); // Devuelve una lista, puede ser vacía
+        return ResponseEntity.ok(recetas); // Devolve unha lista, pode estar vacía
     }
 
 
-    // Endpoint para incrementar el número de likes
+    // Endpoint para incrementar o número de likes
     @PostMapping("recetas/{recetaId}/like")
     public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
         Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
 
-        // Verifica si se actualizó la receta
+
         if (recetaActualizada != null) {
-            return ResponseEntity.ok(recetaActualizada); // Asegúrate de que esto devuelva un JSON válido
+            return ResponseEntity.ok(recetaActualizada);
         } else {
-            return ResponseEntity.notFound().build(); // Devuelve 404 si la receta no se encuentra
+            return ResponseEntity.notFound().build();
         }
     }
 
-    /*@PostMapping(value = "/recetas/subir-receta", consumes = "application/json")
-    @PreAuthorize("hasAnyRole('USER','ADMIN')")
-    public Recipe crearReceta(@RequestBody Recipe receita, Authentication authentication) {
-        receita.setAutor(authentication.getName());
-
-        return recipeService.crearReceta(receita);
-    }*/
-
-    //corregir problema de que si se sube unha receta con nome colhido reescribese
-    //outro problema> unha vez logueado, si vou recetas.html sae login e registrar
-    //nickname e logout so aparece en home.html
-    //ten que aparecer en home.html,recetas,html. e about .html si login ok
-    @PostMapping("recetas/subir-receta") // Asegúrate de que la URL coincida con la de tu formulario
+    @PostMapping("recetas/subir-receta")
     public ResponseEntity<Recipe> crearReceta(
             @RequestParam("nombre") String nombre,
             @RequestParam("ingredientes") String ingredientes,
             @RequestParam("elaboracion") String elaboracion,
-            @RequestParam("imagen") MultipartFile imagen, // Cambiado para recibir la imagen
+            @RequestParam("imagen") MultipartFile imagen,
             @RequestParam("autor") String autor,
             @RequestParam("likes") int likes) {
 
-        // Obtener el usuario autenticado
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName(); // Obtener el nombre de usuario
 
-        // Buscar el usuario por nickname y manejar el caso opcional
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+
         Optional<Usuario> optionalUsuario = usuarioRepository.findByNickname(username);
 
         if (optionalUsuario.isPresent()) {
-            Usuario usuario = optionalUsuario.get(); // Obtener el usuario
+            Usuario usuario = optionalUsuario.get();
 
-            // Lógica para guardar la receta
+            // Lóxica para gardar a receita
             Recipe nuevaReceta = new Recipe();
             nuevaReceta.setNombre(nombre);
             nuevaReceta.setIngredientes(ingredientes);
             nuevaReceta.setElaboracion(elaboracion);
             nuevaReceta.setAutor(usuario.getNickname());
             nuevaReceta.setLikes(likes);
-            nuevaReceta.setFecha(new Date()); // Establecer la fecha actual
+            nuevaReceta.setFecha(new Date()); // Establecer a data actual
             nuevaReceta.setUsuario(usuario);
 
-            // Maneja el archivo de imagen
             if (imagen != null && !imagen.isEmpty()) {
                 try {
-                    // Definir la ruta donde se guardará la imagen
+                    // Definir a ruta onde se gardará a imaxen
                     String rutaImagen = "src/main/resources/static/images/recetas/" + imagen.getOriginalFilename();
                     File file = new File(rutaImagen);
 
-                    // Escribir la imagen en la ruta especificada
+                    // Escribir a imagen na ruta especificada
                     try (FileOutputStream fos = new FileOutputStream(file)) {
                         fos.write(imagen.getBytes());
                     }
-
-                    // Almacenar la URL relativa de la imagen en la base de datos
-                    String imagenUrl = "/images/recetas/" + imagen.getOriginalFilename(); // URL que se guardará en la base de datos
-                    nuevaReceta.setImagenUrl(imagenUrl); // Asigna la URL a la receta
+                    // Almacenar a URL relativa da imagen na base de datos
+                    String imagenUrl = "/images/recetas/" + imagen.getOriginalFilename();
+                    nuevaReceta.setImagenUrl(imagenUrl);
 
                 } catch (IOException e) {
                     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                            .body(null); // Manejo de errores si la imagen no se puede procesar
+                            .body(null);
                 }
             }
-
-            // Guarda la receta en la base de datos usando tu servicio
             recipeService.crearReceta(nuevaReceta);
-
-
-
            return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
+
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // Usuario no encontrado
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 

@@ -18,7 +18,7 @@
 <body>
 <section>
     <div class="container">
-        <!-- Columna del formulario -->
+
         <form class="form-column" id="form-subir-receta" action="/api/recetas/subir-receta" method="POST" enctype="multipart/form-data"  >
             <h1>Crear receta</h1>
             <input type="hidden" id="user-nickname" name="autor" >
@@ -40,7 +40,6 @@
                 <textarea id="elaboracion" name="elaboracion" rows="5" required></textarea>
             </div>
 
-            <!-- Imagen de la receta -->
             <div class="form-control">
                 <label for="imagen">Imagen de la receta:</label>
                 <input type="file" id="imagen" name="imagen" accept="image/*" required>
@@ -49,12 +48,9 @@
 
             <button type="submit" class="btn-primary">Crear</button>
             <br>
-            <!-- Redirect to home button -->
             <button type="button" class="btn-primary" onclick="window.location.href='/home.html'">Volver</button>
-
         </form>
 
-        <!-- Columna de la imagen -->
         <div class="image-column">
             <img src="/images/cocinera.jpg" alt="Sample image">
         </div>
@@ -62,6 +58,6 @@
 </section>
 
 <script src="/js/subirReceta.js"></script>
-</body>
 
+</body>
 </html>

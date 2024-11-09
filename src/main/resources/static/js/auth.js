@@ -1,8 +1,8 @@
-// archivo js, por ejemplo auth.js, incluido en todas las páginas
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch("/api/usuarios/autenticado")
         .then(response => {
-         console.log(response); // Verifica la respuesta
+         console.log(response);
             if (response.ok) {
                 return response.text();
             } else {

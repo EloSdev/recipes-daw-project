@@ -25,8 +25,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return User.builder()
                 .username(usuario.getNickname())
-                .password(usuario.getPassword()) // contraseñas cifradas
-                .roles(usuario.getRol().name())   // Enum USER/ADMIN
+                .password(usuario.getPassword())
+                .roles(usuario.getRol().name())
                 .build();
 
     }

@@ -168,7 +168,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding-top: 5rem; /* Ensure there is enough space between logo and links */
+    padding-top: 5rem;
 }
 
 .sidebar-link {
@@ -190,8 +190,7 @@ body {
     margin-right: 1rem;
 }
 
-/* GRID RECETAS*/
-/* Estilos generales para la sección de recetas */
+/* GRID RECEITAS*/
 section.recipes {
     padding: 2rem;
     background-color: #f4f4f4;
@@ -208,7 +207,7 @@ section.recipes {
     color: #333;
 }
 
-/* Contenedor del grid */
+/* Container do grid */
 .recipes-center {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -217,7 +216,7 @@ section.recipes {
     margin: 0 auto;
 }
 
-/* Estilo para cada receta */
+/* ESTILOS RECEITAS */
 .recipe {
     background: white;
     border-radius: 10px;
@@ -226,12 +225,12 @@ section.recipes {
     transition: transform 0.3s ease;
 }
 
-/* Efecto hover en cada receta */
+
 .recipe:hover {
     transform: scale(1.05);
 }
 
-/* Estilo para la imagen de la receta */
+
 .recipe-container {
     height: 200px;
     overflow: hidden;
@@ -245,13 +244,12 @@ section.recipes {
     border-radius: 10px 10px 0 0;
 }
 
-/* Estilo para el pie de cada receta */
+
 footer {
     padding: 1rem;
     text-align: center;
 }
 
-/* Nombre de la receta */
 .recipe-name {
     font-size: 1.25rem;
     font-weight: bold;
@@ -259,13 +257,12 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Nombre del autor de la receta */
 .recipe-autor {
     font-size: 1rem;
     color: #777;
 }
 
-/* Adaptar el grid en pantallas más pequeñas */
+
 @media screen and  (max-width: 768px) {
     .recipes-center {
         grid-template-columns: repeat(2, 1fr);
@@ -278,7 +275,7 @@ footer {
     }
 }
 
-/* Estilo para la sección de "Like" */
+/* Estilo para a sección de "Like" */
 .like-section {
     display: flex;
     justify-content: center;
@@ -298,11 +295,11 @@ footer {
 
 .like-btn i {
     margin-right: 0.5rem;
-    color: #007bff; /* Color azul para el pulgar */
+    color: #007bff;
 }
 
 .like-btn:hover i {
-    color: #0056b3; /* Cambiar el color al hacer hover */
+    color: #0056b3;
 }
 
 .like-count {
@@ -379,12 +376,12 @@ footer {
     }
 
     .sidebar-logo {
-        width: 80px;  /* Smaller logo in sidebar */
+        width: 80px;
         margin-bottom: 1.5rem;
     }
 
     .sidebar-links {
-        padding-top: 5rem; /* Space to avoid covering links by navbar */
+        padding-top: 5rem;
     }
 }
 
@@ -404,7 +401,7 @@ footer {
 }
 
 
-/*Pagination*/
+/* PAGINATION */
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -426,7 +423,7 @@ footer {
 }
 
 
-/*search*/
+/* SEARCH */
 .search-input {
   padding: 0.5rem;
   background: hsl(210, 36%, 96%);
@@ -447,4 +444,72 @@ footer {
   text-align: center;
   margin-top: 4rem;
 }
+
+/* About Section */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    color: #e94e77;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.footer-container a {
+    color: #e94e77;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer-container a:hover {
+    color: #fff;
+}
+
 
