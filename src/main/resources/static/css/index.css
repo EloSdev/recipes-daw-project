@@ -308,6 +308,7 @@ footer {
 }
 
 /* Featured Recipes */
+/*
 .section {
     padding: 4rem 0;
 }
@@ -351,7 +352,7 @@ footer {
 
 .btn:hover {
     background-color: #e5533b;
-}
+}/*
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -406,6 +407,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .pagination-container button {
@@ -510,6 +512,11 @@ footer {
 
 .footer-container a:hover {
     color: #fff;
+}
+
+/* ocultar container de receitas e footer antes de que se carguen as receitas*/
+.hidden {
+    display: none;
 }
 
 

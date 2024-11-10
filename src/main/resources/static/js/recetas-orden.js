@@ -24,6 +24,11 @@ async function cargarRecetas(page = 0, orden = 'fechaDesc', search = '') {
             const totalPages = data.totalPages;
             mostrarRecetas(recetas);
             actualizarPaginacion(totalPages, page, orden, search);
+
+             // Quitar a clase 'hidden' para amosar o contido unha vez cargado
+             document.getElementById('recetas-section').classList.remove('hidden');
+             document.getElementById('footer').classList.remove('hidden');
+
         } else {
             document.getElementById('recetas-list').innerHTML = '<p>No se encontraron recetas.</p>';
         }
