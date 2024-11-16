@@ -80,9 +80,9 @@ function mostrarRecetas(recetas) {
                 <div class="recipe-container">
                     <img src=${receta.imagenUrl} class="recipe-img" alt="${receta.nombre}" />
                     <div class="recipe-icons">
-                           <a href="receta.html?id=${receta.id}" class="recipe-icon">
-                            <i class="fas fa-search"></i>
-                           </a>
+                          <button class="recipe-icon modal-btn" data-id="${receta.id}">
+                          <i class="fas fa-search"></i>
+                           </button>
                     </div>
                 </div>
                 <footer>
@@ -101,6 +101,7 @@ function mostrarRecetas(recetas) {
     });
 
     agregarLikeEventListeners();
+    agregarModalEventListeners();
 }
 
 // Función para engadir eventos de "like"
@@ -142,6 +143,55 @@ document.querySelector('.search-input').addEventListener('input', function (even
     currentSearch = event.target.value;
     cargarRecetas(0, currentOrder, currentSearch);
 });
+
+//MODAL
+// función para agregar eventos aos botóns do modal
+function agregarModalEventListeners() {
+    const modalButtons = document.querySelectorAll('.modal-btn');
+    modalButtons.forEach(button => {
+        button.addEventListener('click', async function () {
+            const recetaId = this.getAttribute('data-id');
+            await cargarDetallesReceta(recetaId);
+        });
+    });
+}
+
+// función para cargar os detalles da receta no modal
+async function cargarDetallesReceta(recetaId) {
+    try {
+        const response = await fetch(`/api/recetas/${recetaId}`);
+        if (!response.ok) {
+            throw new Error(`Error al cargar los detalles de la receta: ${response.statusText}`);
+        }
+
+        const receta = await response.json();
+        mostrarDetallesEnModal(receta);
+
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+// función para amosar os detalles no modal
+function mostrarDetallesEnModal(receta) {
+    const modal = document.querySelector('.modal-overlay');
+    const modalContent = document.querySelector('.modal-container');
+
+    modalContent.innerHTML = `
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <h3>${receta.nombre}</h3>
+        <p><strong>Autor:</strong> ${receta.autor}</p>
+        <p><strong>Ingredientes:</strong> ${receta.ingredientes}</p>
+        <p><strong>Preparación:</strong> ${receta.elaboracion}</p>
+    `;
+
+    modal.classList.add('open-modal');
+
+    // Agregar evento para pechar o modal
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        modal.classList.remove('open-modal');
+    });
+}
 
 // Cargar receitas inicialmente
 window.onload = () => cargarRecetas(currentPage, currentOrder, currentSearch);
