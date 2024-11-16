@@ -79,6 +79,11 @@ function mostrarRecetas(recetas) {
             <article>
                 <div class="recipe-container">
                     <img src=${receta.imagenUrl} class="recipe-img" alt="${receta.nombre}" />
+                    <div class="recipe-icons">
+                           <a href="receta.html?id=${receta.id}" class="recipe-icon">
+                            <i class="fas fa-search"></i>
+                           </a>
+                    </div>
                 </div>
                 <footer>
                     <p class="recipe-name">${receta.nombre}</p>

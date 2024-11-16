@@ -431,8 +431,7 @@ footer {
   background: hsl(210, 36%, 96%);
   border-radius: 0.25rem;
   border-color: transparent;
-  border
-  letter-spacing: 0.1rem;;
+  letter-spacing: 0.1rem;
 }
 .search-input::placeholder {
   text-transform: capitalize;
@@ -517,6 +516,38 @@ footer {
 /* ocultar container de receitas e footer antes de que se carguen as receitas*/
 .hidden {
     display: none;
+}
+
+
+/* lupa icon*/
+.recipe-icons {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: flex;
+  transition: all 0.3s linear;
+}
+.recipe-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  background:  hsl(21, 62%, 45%);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 1rem;
+  border-color: transparent;
+  margin: 0 0.5rem;
+}
+.recipe-icon:hover {
+  background:  hsl(21, 65%, 59%);
+}
+.recipe-container:hover .recipe-icons {
+  opacity: 1;
 }
 
 
