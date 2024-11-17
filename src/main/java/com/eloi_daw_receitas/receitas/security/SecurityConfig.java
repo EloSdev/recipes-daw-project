@@ -1,5 +1,6 @@
 package com.eloi_daw_receitas.receitas.security;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +35,10 @@ import org.springframework.security.web.SecurityFilterChain;
                             .loginPage("/public-views/login.html")
                             .loginProcessingUrl("/login")
                             .defaultSuccessUrl("/home.html", true)
+                            .failureHandler((request, response, exception) -> {
+                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED); //configurar para que devolva 401 e asi manexar o erro de credenciais incorrectas; doutra forma pr defecto SpringSecurity devolve erro na url
+                                response.getWriter().write("Invalid credentials");
+                            })
                             .permitAll()
                     )
                     .logout(logout ->

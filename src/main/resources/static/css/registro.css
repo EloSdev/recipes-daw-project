@@ -131,6 +131,13 @@ h1 {
     background-color: #0056b3;
 }
 
+/* errore message */
+.error-message {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+        }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .container {

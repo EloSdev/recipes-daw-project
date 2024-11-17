@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (response.ok) {
                 return response.text();
             } else {
+
                 throw new Error("No autenticado");
+
             }
         })
         .then(username => {
@@ -23,3 +25,5 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("logout").style.display = "none";
         });
 });
+
+
