@@ -77,12 +77,10 @@ public class RecipeController {
         return ResponseEntity.ok(recetas); // Devolve unha lista, pode estar vacía
     }
 
-
     // Endpoint para incrementar o número de likes
     @PostMapping("recetas/{recetaId}/like")
     public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
         Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
-
 
         if (recetaActualizada != null) {
             return ResponseEntity.ok(recetaActualizada);
@@ -100,7 +98,6 @@ public class RecipeController {
             @RequestParam("autor") String autor,
             @RequestParam("likes") int likes) {
 
-
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
 
@@ -116,21 +113,26 @@ public class RecipeController {
             nuevaReceta.setElaboracion(elaboracion);
             nuevaReceta.setAutor(usuario.getNickname());
             nuevaReceta.setLikes(likes);
-            nuevaReceta.setFecha(new Date()); // Establecer a data actual
+            nuevaReceta.setFecha(new Date());
             nuevaReceta.setUsuario(usuario);
 
             if (imagen != null && !imagen.isEmpty()) {
                 try {
-                    // Definir a ruta onde se gardará a imaxen
-                    String rutaImagen = "src/main/resources/static/images/recetas/" + imagen.getOriginalFilename();
+                    //Xenerar un nome único para o arquivo utilizando a marca de tempo actual
+                    String extension = imagen.getOriginalFilename()
+                            .substring(imagen.getOriginalFilename().lastIndexOf('.'));
+                    String nuevoNombreArchivo = username + "_" + System.currentTimeMillis() + extension;
+
+                    // Definir a ruta onde se gardará a imaxe
+                    String rutaImagen = "src/main/resources/static/images/recetas/" + nuevoNombreArchivo;
                     File file = new File(rutaImagen);
 
-                    // Escribir a imagen na ruta especificada
+                    // Escribir a imaxe na ruta especificada
                     try (FileOutputStream fos = new FileOutputStream(file)) {
                         fos.write(imagen.getBytes());
                     }
-                    // Almacenar a URL relativa da imagen na base de datos
-                    String imagenUrl = "/images/recetas/" + imagen.getOriginalFilename();
+                    // Almacenar a URL relativa da imaxe na base de datos
+                    String imagenUrl = "/images/recetas/" + nuevoNombreArchivo;
                     nuevaReceta.setImagenUrl(imagenUrl);
 
                 } catch (IOException e) {
@@ -139,7 +141,7 @@ public class RecipeController {
                 }
             }
             recipeService.crearReceta(nuevaReceta);
-           return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
+            return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
 
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
