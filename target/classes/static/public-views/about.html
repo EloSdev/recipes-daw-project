@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>About | Recetas Deliciosas</title>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar">
+    <div class="nav-center">
+        <!-- links -->
+        <div>
+            <button class="toggle-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li>
+                    <a href="home.html" class="nav-link">home</a>
+                </li>
+                <li>
+                    <a href="/public-views/recetas.html" class="nav-link">recetas</a>
+                </li>
+                <li>
+                    <a href="/public-views/about.html" class="nav-link">about</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- logo -->
+        <img src="/images/cocinera.jpg" class="nav-logo" alt="logo" />
+        <!-- auth links -->
+        <div class="toggle-container">
+            <a href="/public-views/login.html" id="login" class="nav-link">Login</a>
+            <a href="/public-views/registro.html" id = "registro" class="nav-link">Registrarse</a>
+            <span id="user-nickname" class="nav-link "  style="display: none" ></span>
+            <a href="/logout" class="nav-link " id= "logout" style="display: none" >Logout</a>
+        </div>
+    </div>
+</nav>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="about-container">
+        <h1>Sobre Nosotros</h1>
+        <p>
+            Bienvenido a <strong>Recetas Deliciosas</strong>, un lugar donde los apasionados de la cocina y la gastronomía
+            pueden descubrir, cocinar y compartir sus recetas favoritas. Nuestro objetivo es construir una comunidad
+            de amantes de la comida, desde principiantes hasta expertos, que puedan inspirarse mutuamente para crear
+            platos únicos y deliciosos.
+        </p>
+        <p>
+            Nuestro sitio web ofrece una variedad de recetas cuidadosamente seleccionadas y probadas para que
+            cualquier persona pueda preparar platos deliciosos en casa. Creemos que la cocina es un arte accesible
+            para todos, y estamos aquí para guiarte en cada paso de tu aventura culinaria.
+        </p>
+        <p>
+            ¡Gracias por formar parte de nuestra comunidad! Esperamos que disfrutes de las recetas y encuentres
+            inspiración para tu próxima creación en la cocina.
+        </p>
+        <br>
+        <h2>Nuestra Misión</h2>
+        <p>
+            En <strong>Recetas Deliciosas</strong>, creemos que la comida tiene el poder de reunir a las personas y
+            de inspirar creatividad. Nuestra misión es facilitar el acceso a recetas para todos, promoviendo la
+            diversidad culinaria y el amor por la cocina.
+        </p>
+    </div>
+</section>
+
+<!-- sidebar -->
+<div class="sidebar-overlay">
+    <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+            <li>
+                <a href="home.html" class="sidebar-link">
+                    <i class="fas fa-home fa-fw"></i>
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="/public-views/recetas.html" class="sidebar-link">
+                    <i class="fas fa-utensils fa-fw"></i>
+                    recetas
+                </a>
+            </li>
+            <li>
+                <a href="/public-views/about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle fa-fw"></i>
+                    about
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; <span id="current-year"></span> Recetas Deliciosas. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en nuestras redes sociales:
+            <a href="https://es-es.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </p>
+    </div>
+</footer>
+
+<script src="/js/usuario_logueado.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/updateYear.js"></script>
+
+</body>
+</html>

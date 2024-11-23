@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Home | Recetas Deliciosas</title>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar">
+    <div class="nav-center">
+        <!-- links -->
+        <div>
+            <button class="toggle-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li>
+                    <a href="home.html" class="nav-link">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="/public-views/recetas.html" class="nav-link">
+                        recetas
+                    </a>
+                </li>
+                <li>
+                    <a href="/public-views/about.html" class="nav-link">
+                        about
+                    </a>
+                </li>
+                <li>
+                    <a href="crear-receta.html" class="nav-link">
+                        crear receta
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- logo -->
+        <img src="/images/cocinera.jpg" class="nav-logo" alt="logo" />
+        <!-- auth links -->
+        <div class="toggle-container">
+            <span id="user-nickname" class="nav-link" ></span>
+            <a href="/logout" class="nav-link">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero" style="background-image: url('./images/cooking-hero.jpg');">
+    <div class="hero-container">
+        <h1 class="text-slanted">
+            Descubre, cocina y comparte
+        </h1>
+        <h3>Las mejores recetas de nuestra comunidad</h3>
+        <br>
+        <a href="public-views/recetas.html" class="hero-btn">
+            Ver Recetas
+        </a>
+    </div>
+</section>
+<!-- sidebar -->
+<div class="sidebar-overlay">
+    <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+            <li>
+                <a href="home.html" class="sidebar-link">
+                    <i class="fas fa-home fa-fw"></i>
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="/public-views/recetas.html" class="sidebar-link">
+                    <i class="fas fa-utensils fa-fw"></i>
+                    recetas
+                </a>
+            </li>
+            <li>
+                <a href="/public-views/about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle fa-fw"></i>
+                    about
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; <span id="current-year"></span>  Recetas Deliciosas. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en nuestras redes sociales:
+            <a href="https://es-es.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </p>
+    </div>
+</footer>
+
+<script src="/js/usuario_logueado.js"></script>
+<script src="/js/updateYear.js"></script>
+
+</body>
+</html>
