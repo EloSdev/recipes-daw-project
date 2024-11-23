@@ -293,9 +293,24 @@ footer {
     align-items: center;
 }
 
+.like-btn-disabled {
+    background: none;
+    border: none;
+    color: #2d8e0d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 .like-btn i {
     margin-right: 0.5rem;
     color: #007bff;
+}
+
+.like-btn-disabled i {
+    margin-right: 0.5rem;
+
 }
 
 .like-btn:hover i {
@@ -307,52 +322,6 @@ footer {
     color: #333;
 }
 
-/* Featured Recipes */
-/*
-.section {
-    padding: 4rem 0;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.title h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #333;
-    letter-spacing: 2px;
-}
-
-.section-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-loading {
-    color: #333;
-    font-size: 1.5rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #ff6347;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-}
-
-.btn:hover {
-    background-color: #e5533b;
-}/*
 
 /* Media Queries */
 @media screen and (max-width: 768px) {

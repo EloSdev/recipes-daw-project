@@ -92,8 +92,12 @@ async function mostrarRecetas(recetas) {
                         <span class="like-count">${receta.likes}</span>
                     </button>
                </div>` 
-            : (hasLiked ? `<div class="like-section">
-                              <span class="liked-message">Ya has votado</span>
+            : (userAuthenticated && hasLiked ? `<div class="like-section">
+                        <button disabled class="like-btn-disabled" data-id="${receta.id}">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="like-count">${receta.likes}</span>
+                        </button>
+                              
                            </div>`
                         : ''); 
 
