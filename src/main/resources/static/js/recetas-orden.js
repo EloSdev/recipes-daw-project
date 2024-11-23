@@ -1,3 +1,5 @@
+import { isAuthenticated } from './auth.js';
+
 let currentPage = 0;
 const pageSize = 6;
 let currentOrder = 'fechaDesc';
@@ -68,13 +70,28 @@ function actualizarPaginacion(totalPages, currentPage, orden, search) {
 }
 
 // Función para amosar as receitas na páxina
-function mostrarRecetas(recetas) {
+async function mostrarRecetas(recetas) {
     const recetasList = document.getElementById('recetas-list');
     recetasList.innerHTML = '';
+
+    // Verificar autenticación unha vez ao cargar recetas.html
+    const userAuthenticated = await isAuthenticated();
 
     recetas.forEach(receta => {
         const recetaDiv = document.createElement('div');
         recetaDiv.classList.add('recipe');
+
+        // Solo incluir el botón de "like" si el usuario está autenticado
+        const likeButtonHTML = userAuthenticated
+            ? `<div class="like-section">
+                    <button class="like-btn" data-id="${receta.id}">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="like-count">${receta.likes}</span>
+                    </button>
+               </div>`
+            : ''; // No agregar el botón si no está autenticado
+
+
         recetaDiv.innerHTML = `
             <article>
                 <div class="recipe-container">
@@ -88,19 +105,17 @@ function mostrarRecetas(recetas) {
                 <footer>
                     <p class="recipe-name">${receta.nombre}</p>
                     <h4 class="recipe-autor">${receta.autor}</h4>
-                    <div class="like-section">
-                        <button class="like-btn" data-id="${receta.id}">
-                            <i class="fas fa-thumbs-up"></i>
-                            <span class="like-count">${receta.likes}</span>
-                        </button>
-                    </div>
+                    ${likeButtonHTML} 
                 </footer>
             </article>
         `;
         recetasList.appendChild(recetaDiv);
     });
 
-    agregarLikeEventListeners();
+    if (userAuthenticated) {
+        agregarLikeEventListeners(); // Solo agregar listeners si se muestran los botones
+    }
+
     agregarModalEventListeners();
 }
 
@@ -194,4 +209,15 @@ function mostrarDetallesEnModal(receta) {
 }
 
 // Cargar receitas inicialmente
-window.onload = () => cargarRecetas(currentPage, currentOrder, currentSearch);
+window.onload = async () => {
+    cargarRecetas(currentPage, currentOrder, currentSearch);
+
+    const userAuthenticated = await isAuthenticated();
+    if (!userAuthenticated) {
+        // Ocultar los botones de "likes" si no está autenticado
+        const likeSections = document.querySelectorAll('.like-section');
+        likeSections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+}

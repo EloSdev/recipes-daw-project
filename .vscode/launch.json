@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ReceitasApplication<receitas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.eloi_daw_receitas.receitas.ReceitasApplication",
+            "projectName": "receitas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

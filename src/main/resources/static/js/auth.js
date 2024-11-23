@@ -27,3 +27,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+export async function isAuthenticated() {
+    try {
+        const response = await fetch("/api/usuarios/autenticado");
+        return response.ok; // Retorna true si el usuario está autenticado
+    } catch {
+        return false; // Retorna false si hay un error
+    }
+}
+
+
+
