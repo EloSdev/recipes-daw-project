@@ -78,14 +78,27 @@ public class RecipeController {
     }
 
     // Endpoint para incrementar o número de likes
+    /*
+     * @PostMapping("recetas/{recetaId}/like")
+     * public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
+     * Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
+     * 
+     * if (recetaActualizada != null) {
+     * return ResponseEntity.ok(recetaActualizada);
+     * } else {
+     * return ResponseEntity.notFound().build();
+     * }
+     * }
+     */
+    // Endpoint para incrementar o número de likes
     @PostMapping("recetas/{recetaId}/like")
-    public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
-        Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
-
-        if (recetaActualizada != null) {
+    public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId, Authentication authentication) {
+        String username = authentication.getName(); 
+        try {
+            Recipe recetaActualizada = recipeService.incrementarLikes(recetaId, username);
             return ResponseEntity.ok(recetaActualizada);
-        } else {
-            return ResponseEntity.notFound().build();
+        } catch (IllegalStateException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(null); 
         }
     }
 
@@ -118,7 +131,7 @@ public class RecipeController {
 
             if (imagen != null && !imagen.isEmpty()) {
                 try {
-                    //Xenerar un nome único para o arquivo utilizando a marca de tempo actual
+                    // Xenerar un nome único para o arquivo utilizando a marca de tempo actual
                     String extension = imagen.getOriginalFilename()
                             .substring(imagen.getOriginalFilename().lastIndexOf('.'));
                     String nuevoNombreArchivo = username + "_" + System.currentTimeMillis() + extension;

@@ -135,15 +135,18 @@ function likeReceta(recetaId, likeButton) {
         headers: { 'Content-Type': 'application/json' },
     })
     .then(response => {
+        if (response.status === 409) {
+            alert('Ya has dado like a esta receta.');
+            return null;
+        }
         if (!response.ok) throw new Error('Error al hacer like');
         return response.json();
     })
     .then(data => {
-        const likesCountSpan = likeButton.querySelector('.like-count');
-        likesCountSpan.textContent = data.likes;
-
-    
-        likeButton.disabled = true;  
+        if (data) {
+            const likesCountSpan = likeButton.querySelector('.like-count');
+            likesCountSpan.textContent = data.likes;
+        }
     })
     .catch(error => console.error('Error:', error));
 }
