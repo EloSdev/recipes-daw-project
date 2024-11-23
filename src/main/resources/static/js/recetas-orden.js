@@ -74,22 +74,28 @@ async function mostrarRecetas(recetas) {
     const recetasList = document.getElementById('recetas-list');
     recetasList.innerHTML = '';
 
-    // Verificar autenticación unha vez ao cargar recetas.html
+    // Verificar autenticación ao cargar recetas.html
     const userAuthenticated = await isAuthenticated();
 
     recetas.forEach(receta => {
         const recetaDiv = document.createElement('div');
         recetaDiv.classList.add('recipe');
 
-        // Solo incluir el botón de "like" si el usuario está autenticado
-        const likeButtonHTML = userAuthenticated
+        
+        const hasLiked = localStorage.getItem(`liked_${receta.id}`);
+
+        
+        const likeButtonHTML = userAuthenticated && !hasLiked
             ? `<div class="like-section">
                     <button class="like-btn" data-id="${receta.id}">
                         <i class="fas fa-thumbs-up"></i>
                         <span class="like-count">${receta.likes}</span>
                     </button>
-               </div>`
-            : ''; // No agregar el botón si no está autenticado
+               </div>` 
+            : (hasLiked ? `<div class="like-section">
+                              <span class="liked-message">Ya has votado</span>
+                           </div>`
+                        : ''); 
 
 
         recetaDiv.innerHTML = `
@@ -113,7 +119,7 @@ async function mostrarRecetas(recetas) {
     });
 
     if (userAuthenticated) {
-        agregarLikeEventListeners(); // Solo agregar listeners si se muestran los botones
+        agregarLikeEventListeners(); 
     }
 
     agregarModalEventListeners();
@@ -143,6 +149,10 @@ function likeReceta(recetaId, likeButton) {
     .then(data => {
         const likesCountSpan = likeButton.querySelector('.like-count');
         likesCountSpan.textContent = data.likes;
+
+        
+        localStorage.setItem(`liked_${recetaId}`, 'true');
+        likeButton.disabled = true;  
     })
     .catch(error => console.error('Error:', error));
 }
@@ -202,7 +212,6 @@ function mostrarDetallesEnModal(receta) {
 
     modal.classList.add('open-modal');
 
-    // Agregar evento para pechar o modal
     document.querySelector('.close-btn').addEventListener('click', () => {
         modal.classList.remove('open-modal');
     });
@@ -214,7 +223,7 @@ window.onload = async () => {
 
     const userAuthenticated = await isAuthenticated();
     if (!userAuthenticated) {
-        // Ocultar los botones de "likes" si no está autenticado
+    
         const likeSections = document.querySelectorAll('.like-section');
         likeSections.forEach(section => {
             section.style.display = 'none';
