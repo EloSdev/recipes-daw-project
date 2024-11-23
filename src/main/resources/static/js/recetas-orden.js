@@ -81,26 +81,14 @@ async function mostrarRecetas(recetas) {
         const recetaDiv = document.createElement('div');
         recetaDiv.classList.add('recipe');
 
-        
-        const hasLiked = localStorage.getItem(`liked_${receta.id}`);
-
-        
-        const likeButtonHTML = userAuthenticated && !hasLiked
+        const likeButtonHTML = userAuthenticated
             ? `<div class="like-section">
                     <button class="like-btn" data-id="${receta.id}">
                         <i class="fas fa-thumbs-up"></i>
                         <span class="like-count">${receta.likes}</span>
                     </button>
-               </div>` 
-            : (userAuthenticated && hasLiked ? `<div class="like-section">
-                        <button disabled class="like-btn-disabled" data-id="${receta.id}">
-                        <i class="fas fa-thumbs-up"></i>
-                        <span class="like-count">${receta.likes}</span>
-                        </button>
-                              
-                           </div>`
-                        : ''); 
-
+               </div>`
+            : ''; 
 
         recetaDiv.innerHTML = `
             <article>
@@ -154,8 +142,7 @@ function likeReceta(recetaId, likeButton) {
         const likesCountSpan = likeButton.querySelector('.like-count');
         likesCountSpan.textContent = data.likes;
 
-        
-        localStorage.setItem(`liked_${recetaId}`, 'true');
+    
         likeButton.disabled = true;  
     })
     .catch(error => console.error('Error:', error));

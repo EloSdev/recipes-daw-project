@@ -293,24 +293,9 @@ footer {
     align-items: center;
 }
 
-.like-btn-disabled {
-    background: none;
-    border: none;
-    color: #2d8e0d;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
 .like-btn i {
     margin-right: 0.5rem;
     color: #007bff;
-}
-
-.like-btn-disabled i {
-    margin-right: 0.5rem;
-
 }
 
 .like-btn:hover i {
