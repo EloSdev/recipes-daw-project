@@ -41,7 +41,7 @@ public class UsuarioController {
     public Map<String, String> getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String nickname = authentication.getName();
-        return Map.of("username", nickname); // Devolvemos el nombre en JSON
+        return Map.of("username", nickname); 
     }
 
 

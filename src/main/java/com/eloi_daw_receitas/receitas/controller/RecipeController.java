@@ -6,7 +6,6 @@ import com.eloi_daw_receitas.receitas.repository.UsuarioRepository;
 import com.eloi_daw_receitas.receitas.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
@@ -78,19 +77,6 @@ public class RecipeController {
     }
 
     // Endpoint para incrementar o número de likes
-    /*
-     * @PostMapping("recetas/{recetaId}/like")
-     * public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId) {
-     * Recipe recetaActualizada = recipeService.incrementarLikes(recetaId);
-     * 
-     * if (recetaActualizada != null) {
-     * return ResponseEntity.ok(recetaActualizada);
-     * } else {
-     * return ResponseEntity.notFound().build();
-     * }
-     * }
-     */
-    // Endpoint para incrementar o número de likes
     @PostMapping("recetas/{recetaId}/like")
     public ResponseEntity<Recipe> incrementarLike(@PathVariable Long recetaId, Authentication authentication) {
         String username = authentication.getName(); 
@@ -100,6 +86,13 @@ public class RecipeController {
         } catch (IllegalStateException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(null); 
         }
+    }
+
+    // Enpoint que devolve as receitas xa votadas por usuario
+    @GetMapping("/votadas/{username}")
+    public ResponseEntity<List<Long>> obtenerRecetasVotadas(@PathVariable String username) {
+        List<Long> recetaIds = recipeService.obtenerRecetasVotadasPorUsuario(username);
+        return ResponseEntity.ok(recetaIds);
     }
 
     @PostMapping("recetas/subir-receta")

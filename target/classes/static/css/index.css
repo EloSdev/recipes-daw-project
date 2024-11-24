@@ -298,6 +298,11 @@ footer {
     color: #007bff;
 }
 
+.like-btn.liked i {
+    margin-right: 0.5rem;
+    color: #00ff1a;
+}
+
 .like-btn:hover i {
     color: #0056b3;
 }

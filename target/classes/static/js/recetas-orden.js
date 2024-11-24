@@ -24,7 +24,18 @@ async function cargarRecetas(page = 0, orden = 'fechaDesc', search = '') {
         if (data && data.content) {
             const recetas = data.content;
             const totalPages = data.totalPages;
-            mostrarRecetas(recetas);
+
+            
+            const userAuthenticated = await isAuthenticated();
+            if (userAuthenticated) {
+                const username = localStorage.getItem("username");
+                const recetasVotadas = await obtenerRecetasVotadas(username); 
+
+                mostrarRecetas(recetas, recetasVotadas);  
+            } else {
+                mostrarRecetas(recetas);  
+            }
+
             actualizarPaginacion(totalPages, page, orden, search);
 
              // Quitar a clase 'hidden' para amosar o contido unha vez cargado
@@ -70,20 +81,21 @@ function actualizarPaginacion(totalPages, currentPage, orden, search) {
 }
 
 // Función para amosar as receitas na páxina
-async function mostrarRecetas(recetas) {
+async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
     const recetasList = document.getElementById('recetas-list');
     recetasList.innerHTML = '';
 
-    // Verificar autenticación ao cargar recetas.html
     const userAuthenticated = await isAuthenticated();
 
     recetas.forEach(receta => {
         const recetaDiv = document.createElement('div');
         recetaDiv.classList.add('recipe');
 
+        const likeButtonClass = recetasVotadas.has(receta.id) ? 'like-btn liked' : 'like-btn'; 
+
         const likeButtonHTML = userAuthenticated
             ? `<div class="like-section">
-                    <button class="like-btn" data-id="${receta.id}">
+                    <button class="${likeButtonClass}" data-id="${receta.id}">
                         <i class="fas fa-thumbs-up"></i>
                         <span class="like-count">${receta.likes}</span>
                     </button>
@@ -144,11 +156,28 @@ function likeReceta(recetaId, likeButton) {
     })
     .then(data => {
         if (data) {
+            
             const likesCountSpan = likeButton.querySelector('.like-count');
             likesCountSpan.textContent = data.likes;
+            likeButton.classList.add('liked'); 
         }
     })
     .catch(error => console.error('Error:', error));
+}
+
+// Función para obter as receitas que o usuario xa votou
+async function obtenerRecetasVotadas(username) {
+    try {
+        const response = await fetch(`/api/votadas/${username}`);
+        if (!response.ok) {
+            throw new Error('Error al obtener las recetas votadas');
+        }
+        const data = await response.json();
+        return new Set(data); 
+    } catch (error) {
+        console.error('Error:', error);
+        return new Set(); 
+    }
 }
 
 // Escoita o cambio no menú desplegable de orden

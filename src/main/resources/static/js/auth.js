@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
         .then(username => {
+            localStorage.setItem("username", username);
+
             document.getElementById("user-nickname").innerText = username;
             document.getElementById("login").style.display = "none";
             document.getElementById("registro").style.display = "none";
@@ -30,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
 export async function isAuthenticated() {
     try {
         const response = await fetch("/api/usuarios/autenticado");
-        return response.ok; // Retorna true si el usuario está autenticado
+        return response.ok; 
     } catch {
-        return false; // Retorna false si hay un error
+        return false; 
     }
 }
 

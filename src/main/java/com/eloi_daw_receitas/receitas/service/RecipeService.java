@@ -7,7 +7,6 @@ import com.eloi_daw_receitas.receitas.model.UsuarioLikeRecipe;
 import com.eloi_daw_receitas.receitas.repository.RecipeRepository;
 import com.eloi_daw_receitas.receitas.repository.UsuarioLikeRecipeRepository;
 import com.eloi_daw_receitas.receitas.repository.UsuarioRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class RecipeService {
@@ -60,16 +60,6 @@ public class RecipeService {
     }
 
     // Método para incrementar os likes dunha receita
-    /*
-     * public Recipe incrementarLikes(Long recetaId) {
-     * Recipe receta = recipeRepository.findById(recetaId)
-     * .orElseThrow(() -> new ResourceNotFoundException("Receta no encontrada"));
-     * receta.setLikes(receta.getLikes() + 1);
-     * return recipeRepository.save(receta);
-     * }
-     */
-
-     // Método para incrementar os likes dunha receita
     public Recipe incrementarLikes(Long recetaId, String username) {
         Recipe receta = recipeRepository.findById(recetaId)
                 .orElseThrow(() -> new ResourceNotFoundException("Receta no encontrada"));
@@ -77,17 +67,14 @@ public class RecipeService {
         Usuario usuario = usuarioRepository.findByNickname(username)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuario no encontrado"));
 
-        // Verificar si el usuario ya dio like
         Optional<UsuarioLikeRecipe> likeExistente = userLikeRecipeRepository.findByUsuarioAndReceta(usuario, receta);
         if (likeExistente.isPresent()) {
             throw new IllegalStateException("Ya has dado like a esta receta");
         }
 
-        // Incrementar el contador de likes
         receta.setLikes(receta.getLikes() + 1);
         recipeRepository.save(receta);
 
-        // Registrar el like en la tabla intermedia
         UsuarioLikeRecipe userLikeRecipe = new UsuarioLikeRecipe();
         userLikeRecipe.setUsuario(usuario);
         userLikeRecipe.setReceta(receta);
@@ -107,6 +94,17 @@ public class RecipeService {
 
     public List<Recipe> buscarRecetasPorNombre(String nombre) {
         return recipeRepository.findByNombreContainingIgnoreCase(nombre);
+    }
+
+    // Método para obter as receitas que o usuario xa dou like
+    public List<Long> obtenerRecetasVotadasPorUsuario(String username) {
+        Usuario usuario = usuarioRepository.findByNickname(username)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuario no encontrado"));
+
+        List<UsuarioLikeRecipe> likes = userLikeRecipeRepository.findByUsuario(usuario);
+        List<Long> recetaIds = likes.stream().map(like -> like.getReceta().getId()).collect(Collectors.toList());
+        
+        return recetaIds;
     }
 
     // @PreAuthorize("hasRole('ADMIN')")
