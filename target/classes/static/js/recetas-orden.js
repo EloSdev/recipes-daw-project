@@ -92,12 +92,13 @@ async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
         recetaDiv.classList.add('recipe');
 
         const likeButtonClass = recetasVotadas.has(receta.id) ? 'like-btn liked' : 'like-btn'; 
+        const likeButtonClassI = recetasVotadas.has(receta.id) ? 'fa fa-lock' : 'fas fa-thumbs-up'; 
 
         const likeButtonHTML = userAuthenticated
             ? `<div class="like-section">
                     <button class="${likeButtonClass}" data-id="${receta.id}">
-                        <i class="fas fa-thumbs-up"></i>
-                        <span class="like-count">${receta.likes}</span>
+                        <i class="${likeButtonClassI}"></i>
+                        <span class="like-count">${receta.likes} votos</span>
                     </button>
                </div>`
             : ''; 
@@ -148,7 +149,7 @@ function likeReceta(recetaId, likeButton) {
     })
     .then(response => {
         if (response.status === 409) {
-            alert('Ya has dado like a esta receta.');
+            //alert('Ya has dado like a esta receta.');
             return null;
         }
         if (!response.ok) throw new Error('Error al hacer like');
@@ -240,7 +241,7 @@ function mostrarDetallesEnModal(receta) {
     });
 }
 
-// Cargar receitas inicialmente
+// Cargar receitas inicialmente (sen a sección de likes)
 window.onload = async () => {
     cargarRecetas(currentPage, currentOrder, currentSearch);
 
