@@ -300,11 +300,16 @@ footer {
 
 .like-btn.liked i {
     margin-right: 0.5rem;
-    color: #00ff1a;
+    color: #0e0e0e;
 }
 
 .like-btn:hover i {
     color: #0056b3;
+}
+
+.like-btn.liked:hover i {
+    margin-right: 0.5rem;
+    color: #050404;
 }
 
 .like-count {
