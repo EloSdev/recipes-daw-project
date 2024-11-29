@@ -101,7 +101,9 @@ async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
                         <span class="like-count">${receta.likes} votos</span>
                     </button>
                </div>`
-            : ''; 
+            : `<div class="like-section">
+                    <span class="like-count">${receta.likes} votos</span>
+               </div>`; 
 
         recetaDiv.innerHTML = `
             <article>
@@ -161,6 +163,8 @@ function likeReceta(recetaId, likeButton) {
             const likesCountSpan = likeButton.querySelector('.like-count');
             likesCountSpan.textContent = data.likes;
             likeButton.classList.add('liked'); 
+            const icon = likeButton.querySelector('i');
+            icon.classList.replace('fa-thumbs-up', 'fa-lock');
         }
     })
     .catch(error => console.error('Error:', error));
@@ -245,12 +249,4 @@ function mostrarDetallesEnModal(receta) {
 window.onload = async () => {
     cargarRecetas(currentPage, currentOrder, currentSearch);
 
-    const userAuthenticated = await isAuthenticated();
-    if (!userAuthenticated) {
-    
-        const likeSections = document.querySelectorAll('.like-section');
-        likeSections.forEach(section => {
-            section.style.display = 'none';
-        });
-    }
 }
