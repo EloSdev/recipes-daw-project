@@ -161,8 +161,8 @@ function likeReceta(recetaId, likeButton) {
             const likesCountSpan = likeButton.querySelector('.like-count');
             likesCountSpan.textContent = data.likes;
             likeButton.classList.add('liked'); 
-            const icon = likeButton.querySelector('.i');
-            icon.classList.replace('fa-thumbs-up' , 'fa-lock ');
+            const icon = likeButton.querySelector('i');
+            icon.classList.replace('fa-thumbs-up', 'fa-lock');
         }
     })
     .catch(error => console.error('Error:', error));

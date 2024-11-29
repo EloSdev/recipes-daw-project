@@ -60,7 +60,7 @@ body {
     margin-right: 2rem;
 }
 
-/* Auth Links  */
+/* Auth Links (Login and Registrarse) */
 .toggle-container {
     display: flex;
     gap: 1.5rem;
@@ -152,7 +152,7 @@ body {
     background-color: #fff;
     padding: 2rem;
     transition: all 0.3s ease;
-    z-index: 999; 
+    z-index: 999; /* Make sure sidebar is above other elements */
 }
 
 .sidebar-close {
@@ -300,15 +300,15 @@ footer {
 
 .like-btn.liked i {
     margin-right: 0.5rem;
-    color: #090b09;
+    color: #080a08;
 }
 
 .like-btn:hover i {
-    color: #348bd2;
+    color: #0056b3;
 }
 
 .like-btn.liked:hover i {
-    color: #cd122e;
+    color: #b3001e;
 }
 
 .like-count {
@@ -512,6 +512,7 @@ footer {
 .recipe-container:hover .recipe-icons {
   opacity: 1;
 }
+
 
 
 /*  MODAL */
