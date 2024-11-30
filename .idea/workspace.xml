@@ -26,9 +26,10 @@
   "keyToString": {
     "Application.ReceitasApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "grafana",
     "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Eloy_/Documents/SPRING/spring-with-grafana-loki"
   }
 }]]></component>
   <component name="RunManager">

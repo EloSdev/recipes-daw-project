@@ -1,0 +1,1190 @@
+[INFO ] 2024-11-30 18:42:47.011 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 18788 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-11-30 18:42:47.011 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-11-30 18:42:48.232 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-11-30 18:42:48.344 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-11-30 18:42:49.187 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-11-30 18:42:49.210 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-11-30 18:42:49.212 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-11-30 18:42:49.348 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-11-30 18:42:49.349 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2270 ms
+[INFO ] 2024-11-30 18:42:49.707 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-11-30 18:42:49.857 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-11-30 18:42:49.956 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-11-30 18:42:50.539 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-11-30 18:42:50.586 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-11-30 18:42:50.799 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@299cab08
+[INFO ] 2024-11-30 18:42:50.804 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-11-30 18:42:50.894 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-11-30 18:42:52.416 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-11-30 18:42:52.612 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-11-30 18:42:53.393 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-11-30 18:42:53.422 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-11-30 18:42:53.559 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[DEBUG] 2024-11-30 18:42:53.809 [main]  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+[INFO ] 2024-11-30 18:42:54.166 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-11-30 18:42:54.182 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 7.786 seconds (process running for 9.813)
+[INFO ] 2024-11-30 18:43:42.096 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-11-30 18:43:42.100 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2024-11-30 18:43:42.102 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected StandardServletMultipartResolver
+[DEBUG] 2024-11-30 18:43:42.102 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2024-11-30 18:43:42.103 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected FixedThemeResolver
+[DEBUG] 2024-11-30 18:43:42.106 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7aecff85
+[DEBUG] 2024-11-30 18:43:42.106 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7271320c
+[DEBUG] 2024-11-30 18:43:42.107 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2024-11-30 18:43:42.108 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 6 ms
+[DEBUG] 2024-11-30 18:43:42.135 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 18:43:42.145 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 18:43:42.149 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 18:43:42.205 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 18:43:42.206 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 18:43:42.207 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 18:43:42.228 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 18:43:42.234 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:42.239 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:42.303 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 18:43:42.305 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 18:43:42.305 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 18:43:42.306 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 18:43:42.306 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 18:43:42.307 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:42.307 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 18:43:42.308 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 18:43:42.309 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 18:43:42.312 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:42.313 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:42.317 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:42.317 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:42.319 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:42.319 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:42.346 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 18:43:42.349 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 18:43:42.351 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:42.368 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:42.369 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.339 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 18:43:45.340 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 18:43:45.341 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 18:43:45.347 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.348 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.413 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 18:43:45.418 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 18:43:45.419 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 18:43:45.419 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 18:43:45.420 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 18:43:45.419 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 18:43:45.420 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 18:43:45.420 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 18:43:45.420 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:45.421 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 18:43:45.421 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 18:43:45.421 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 18:43:45.422 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 18:43:45.422 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 18:43:45.422 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 18:43:45.424 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.425 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.425 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.426 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.427 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.429 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.440 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.441 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.441 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.441 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.465 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.470 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.472 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 18:43:45.496 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.510 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 18:43:45.520 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 18:43:45.523 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 18:43:45.532 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[WARN ] 2024-11-30 18:43:45.921 [http-nio-8080-exec-6]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[DEBUG] 2024-11-30 18:43:45.955 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:45.955 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.962 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.964 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.965 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 18:43:45.968 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.971 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 18:43:45.979 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.980 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:45.981 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 18:43:45.983 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:45.987 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 18:43:46.003 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 18:43:46.004 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 18:43:46.004 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 18:43:46.004 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 18:43:46.004 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 18:43:46.004 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 18:43:46.005 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 18:43:46.005 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:46.007 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:46.006 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 18:43:46.007 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:46.008 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:46.017 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:46.022 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:46.022 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:46.022 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:46.026 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:46.026 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:46.026 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:46.027 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:47.356 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/21
+[DEBUG] 2024-11-30 18:43:47.386 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/21
+[DEBUG] 2024-11-30 18:43:47.388 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/recetas/21", parameters={}
+[DEBUG] 2024-11-30 18:43:47.499 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:47.501 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.602 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=likeAsc
+[DEBUG] 2024-11-30 18:43:54.605 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=likeAsc
+[DEBUG] 2024-11-30 18:43:54.606 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=likeAsc", parameters={masked}
+[DEBUG] 2024-11-30 18:43:54.626 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.626 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.634 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:54.635 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:54.635 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 18:43:54.639 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.640 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 18:43:54.648 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:54.649 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 18:43:54.650 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 18:43:54.651 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.652 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 18:43:54.676 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /public-views/null
+[DEBUG] 2024-11-30 18:43:54.677 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /public-views/rustrido.jpg
+[DEBUG] 2024-11-30 18:43:54.678 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /public-views/penne.jpg
+[DEBUG] 2024-11-30 18:43:54.677 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 18:43:54.679 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /public-views/null
+[DEBUG] 2024-11-30 18:43:54.680 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/logo.jpg
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /public-views/rustrido.jpg
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /public-views/penne.jpg
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/public-views/null", parameters={}
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/logo.jpg
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/public-views/rustrido.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:54.681 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/public-views/penne.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:54.682 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/logo.jpg", parameters={}
+[DEBUG] 2024-11-30 18:43:54.689 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.690 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.692 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 18:43:54.693 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 18:43:54.692 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 18:43:54.692 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 18:43:54.693 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.693 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.693 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.693 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.696 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 18:43:54.696 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 18:43:54.696 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 18:43:54.696 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 18:43:54.697 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.697 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.697 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.697 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[WARN ] 2024-11-30 18:43:54.838 [http-nio-8080-exec-5]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+[WARN ] 2024-11-30 18:43:54.838 [http-nio-8080-exec-9]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+[WARN ] 2024-11-30 18:43:54.838 [http-nio-8080-exec-4]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+[WARN ] 2024-11-30 18:43:54.838 [http-nio-8080-exec-6]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+[DEBUG] 2024-11-30 18:43:54.842 [http-nio-8080-exec-9]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 18:43:54.842 [http-nio-8080-exec-5]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 18:43:54.842 [http-nio-8080-exec-6]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 18:43:54.842 [http-nio-8080-exec-4]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 18:43:54.845 [http-nio-8080-exec-9]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.845 [http-nio-8080-exec-6]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.845 [http-nio-8080-exec-5]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.845 [http-nio-8080-exec-4]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.868 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.869 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.871 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 18:43:54.877 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.877 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.880 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.881 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.882 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 18:43:54.887 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.890 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.891 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.891 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 18:43:54.891 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.897 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.898 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:54.900 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.904 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 18:43:54.907 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 18:43:54.914 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:54.915 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:43:56.762 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/5
+[DEBUG] 2024-11-30 18:43:56.770 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/5
+[DEBUG] 2024-11-30 18:43:56.770 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas/5", parameters={}
+[DEBUG] 2024-11-30 18:43:56.780 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:43:56.780 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 18:44:00.374 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/6
+[DEBUG] 2024-11-30 18:44:00.374 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/6
+[DEBUG] 2024-11-30 18:44:00.374 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/api/recetas/6", parameters={}
+[DEBUG] 2024-11-30 18:44:00.390 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 18:44:00.391 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[INFO ] 2024-11-30 20:26:06.826 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 23416 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-11-30 20:26:06.843 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-11-30 20:26:07.938 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-11-30 20:26:08.032 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-11-30 20:26:09.001 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-11-30 20:26:09.023 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-11-30 20:26:09.023 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-11-30 20:26:09.103 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-11-30 20:26:09.103 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2213 ms
+[INFO ] 2024-11-30 20:26:09.381 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-11-30 20:26:09.506 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-11-30 20:26:09.577 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-11-30 20:26:10.057 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-11-30 20:26:10.108 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-11-30 20:26:10.329 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@799fb45e
+[INFO ] 2024-11-30 20:26:10.339 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-11-30 20:26:10.440 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-11-30 20:26:11.599 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-11-30 20:26:11.797 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-11-30 20:26:12.323 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-11-30 20:26:12.358 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-11-30 20:26:12.514 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[DEBUG] 2024-11-30 20:26:12.755 [main]  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+[INFO ] 2024-11-30 20:26:13.118 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-11-30 20:26:13.118 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 6.973 seconds (process running for 8.754)
+[INFO ] 2024-11-30 20:27:19.165 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-11-30 20:27:19.169 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2024-11-30 20:27:19.169 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected StandardServletMultipartResolver
+[DEBUG] 2024-11-30 20:27:19.171 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2024-11-30 20:27:19.172 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected FixedThemeResolver
+[DEBUG] 2024-11-30 20:27:19.175 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7959fbe3
+[DEBUG] 2024-11-30 20:27:19.176 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@77d0a492
+[DEBUG] 2024-11-30 20:27:19.176 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2024-11-30 20:27:19.176 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 7 ms
+[DEBUG] 2024-11-30 20:27:19.225 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:27:19.232 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:27:19.264 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 20:27:19.316 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.321 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.397 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:27:19.398 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:27:19.402 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:27:19.402 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 20:27:19.400 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:27:19.405 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:19.406 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 20:27:19.404 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:27:19.405 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:19.406 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:19.407 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 20:27:19.407 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 20:27:19.408 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:19.410 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:19.410 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.423 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.426 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:27:19.426 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.428 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.428 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.428 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.428 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.439 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:19.438 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.440 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.572 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:19.577 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:19.577 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:19.616 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:19.640 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:19.700 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:27:19.707 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:27:19.708 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[WARN ] 2024-11-30 20:27:20.351 [http-nio-8080-exec-9]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[DEBUG] 2024-11-30 20:27:20.416 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:20.420 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.431 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:20.431 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:20.431 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:20.431 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.446 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:20.463 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:20.464 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:20.464 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:20.464 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.464 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:20.495 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:27:20.497 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:27:20.495 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:27:20.495 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:20.499 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:20.513 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:20.513 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:20.514 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.515 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.517 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:20.517 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:20.517 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:20.517 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:23.096 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 20:27:23.113 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 20:27:23.113 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 20:27:23.147 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 20:27:23.147 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 20:27:23.147 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 20:27:23.173 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 20:27:23.173 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:23.176 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:23.249 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:27:23.256 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:23.256 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:27:23.260 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:23.261 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:23.265 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:23.265 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:23.265 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:23.265 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:23.272 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:27:23.272 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:27:23.272 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:23.287 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:23.292 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.203 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:27:27.203 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:27:27.209 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 20:27:27.218 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.221 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.285 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:27:27.286 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:27:27.286 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:27:27.286 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 20:27:27.289 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:27.293 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 20:27:27.293 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:27:27.293 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 20:27:27.296 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:27:27.296 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.308 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.302 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.308 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.308 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.318 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.318 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.318 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:27.318 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.330 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:27.351 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:27:27.363 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:27:27.363 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 20:27:27.393 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.393 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.409 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.409 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.413 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:27.413 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.420 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:27.426 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.426 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:27:27.426 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:27:27.435 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.439 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:27:27.464 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:27:27.468 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:27:27.468 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:27.468 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:27:27.472 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:27.472 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:27.473 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 20:27:27.473 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.481 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:27.482 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:28.972 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/21
+[DEBUG] 2024-11-30 20:27:28.982 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/21
+[DEBUG] 2024-11-30 20:27:28.982 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/recetas/21", parameters={}
+[INFO ] 2024-11-30 20:27:29.036 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Getting customer by id 21
+[DEBUG] 2024-11-30 20:27:29.051 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:29.051 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:32.350 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 20:27:32.355 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 20:27:32.355 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 20:27:32.355 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Getting customer by id 20
+[DEBUG] 2024-11-30 20:27:32.371 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:32.373 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:35.071 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 20:27:35.074 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 20:27:35.077 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 20:27:35.094 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Getting customer by id 19
+[DEBUG] 2024-11-30 20:27:35.098 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:35.100 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:27:38.801 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/18
+[DEBUG] 2024-11-30 20:27:38.801 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/18
+[DEBUG] 2024-11-30 20:27:38.801 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/api/recetas/18", parameters={}
+[INFO ] 2024-11-30 20:27:38.815 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Getting customer by id 18
+[DEBUG] 2024-11-30 20:27:38.824 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:27:38.824 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[INFO ] 2024-11-30 20:37:39.589 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 22032 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-11-30 20:37:39.606 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-11-30 20:37:40.695 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-11-30 20:37:40.797 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-11-30 20:37:41.683 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-11-30 20:37:41.706 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-11-30 20:37:41.706 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-11-30 20:37:41.857 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-11-30 20:37:41.857 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2191 ms
+[INFO ] 2024-11-30 20:37:42.151 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-11-30 20:37:42.280 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-11-30 20:37:42.340 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-11-30 20:37:42.872 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-11-30 20:37:42.932 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-11-30 20:37:43.159 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@323efafe
+[INFO ] 2024-11-30 20:37:43.164 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-11-30 20:37:43.273 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-11-30 20:37:44.800 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-11-30 20:37:45.099 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-11-30 20:37:45.598 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-11-30 20:37:45.627 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-11-30 20:37:45.763 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[DEBUG] 2024-11-30 20:37:46.050 [main]  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+[INFO ] 2024-11-30 20:37:46.386 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-11-30 20:37:46.398 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 7.38 seconds (process running for 8.534)
+[INFO ] 2024-11-30 20:37:55.298 [http-nio-8080-exec-3]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-11-30 20:37:55.298 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2024-11-30 20:37:55.298 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Detected StandardServletMultipartResolver
+[DEBUG] 2024-11-30 20:37:55.314 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2024-11-30 20:37:55.314 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Detected FixedThemeResolver
+[DEBUG] 2024-11-30 20:37:55.314 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@64547a83
+[DEBUG] 2024-11-30 20:37:55.314 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4583a186
+[DEBUG] 2024-11-30 20:37:55.314 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2024-11-30 20:37:55.319 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed initialization in 21 ms
+[DEBUG] 2024-11-30 20:37:55.351 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 20:37:55.357 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 20:37:55.367 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 20:37:55.400 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 20:37:55.400 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 20:37:55.400 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 20:37:55.422 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 20:37:55.425 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:55.425 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:55.509 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:37:55.509 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:37:55.514 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:37:55.509 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:37:55.514 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:37:55.514 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:37:55.514 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:55.514 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:37:55.529 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:37:55.534 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:55.541 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:55.543 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:55.549 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:55.561 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:55.566 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:55.593 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:37:55.595 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:37:55.597 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:55.616 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:55.619 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.641 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:37:57.644 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:37:57.646 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 20:37:57.656 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.660 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:37:57.730 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 20:37:57.740 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 20:37:57.738 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:37:57.739 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:37:57.741 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:37:57.741 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:37:57.741 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:57.741 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 20:37:57.744 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:37:57.744 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 20:37:57.748 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.748 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.748 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.753 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.753 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.754 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.761 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.761 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:57.761 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.778 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.800 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:57.800 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:57.807 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:37:57.846 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:37:57.848 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:57.850 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:37:57.853 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 20:37:57.877 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[WARN ] 2024-11-30 20:37:58.564 [http-nio-8080-exec-1]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[DEBUG] 2024-11-30 20:37:58.641 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:58.641 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.655 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:58.660 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:58.662 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:37:58.662 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.675 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:37:58.683 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:58.686 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:37:58.686 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:37:58.697 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.709 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:37:58.738 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:58.739 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:58.739 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:37:58.734 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:37:58.745 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:37:58.750 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:58.754 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:58.756 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.755 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:58.766 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:58.763 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:37:58.769 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.773 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:58.795 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:37:58.798 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:37:59.899 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/21
+[DEBUG] 2024-11-30 20:37:59.915 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/21
+[DEBUG] 2024-11-30 20:37:59.915 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/recetas/21", parameters={}
+[INFO ] 2024-11-30 20:38:00.082 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Getting recipe by id 21 and name guiso de pasta
+[DEBUG] 2024-11-30 20:38:00.089 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:00.089 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:38:03.012 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 20:38:03.012 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 20:38:03.012 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 20:38:03.025 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 20:38:03.031 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:03.034 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:38:05.426 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 20:38:05.426 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 20:38:05.426 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 20:38:05.442 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Getting recipe by id 19 and name tortilla española
+[DEBUG] 2024-11-30 20:38:05.450 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:05.450 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:38:08.444 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/18
+[DEBUG] 2024-11-30 20:38:08.446 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/18
+[DEBUG] 2024-11-30 20:38:08.446 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/recetas/18", parameters={}
+[INFO ] 2024-11-30 20:38:08.446 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Getting recipe by id 18 and name guiso de pasta
+[DEBUG] 2024-11-30 20:38:08.463 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:08.466 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:38:11.945 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/17
+[DEBUG] 2024-11-30 20:38:11.948 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/17
+[DEBUG] 2024-11-30 20:38:11.950 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas/17", parameters={}
+[INFO ] 2024-11-30 20:38:11.959 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Getting recipe by id 17 and name tortilla rellena
+[DEBUG] 2024-11-30 20:38:11.962 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:11.965 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:38:14.877 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/16
+[DEBUG] 2024-11-30 20:38:14.881 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/16
+[DEBUG] 2024-11-30 20:38:14.881 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/recetas/16", parameters={}
+[INFO ] 2024-11-30 20:38:14.883 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Getting recipe by id 16 and name tortilla2
+[DEBUG] 2024-11-30 20:38:14.897 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:38:14.897 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[INFO ] 2024-11-30 20:54:44.614 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 22124 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-11-30 20:54:44.632 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-11-30 20:54:45.850 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-11-30 20:54:45.952 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-11-30 20:54:46.800 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-11-30 20:54:46.824 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-11-30 20:54:46.825 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-11-30 20:54:46.937 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-11-30 20:54:46.939 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2229 ms
+[INFO ] 2024-11-30 20:54:47.293 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-11-30 20:54:47.479 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-11-30 20:54:47.567 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-11-30 20:54:48.119 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-11-30 20:54:48.166 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-11-30 20:54:48.420 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4182a651
+[INFO ] 2024-11-30 20:54:48.420 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-11-30 20:54:48.523 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-11-30 20:54:50.727 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-11-30 20:54:51.384 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-11-30 20:54:52.596 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-11-30 20:54:52.675 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-11-30 20:54:52.977 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[DEBUG] 2024-11-30 20:54:53.591 [main]  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+[INFO ] 2024-11-30 20:54:54.978 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-11-30 20:54:55.007 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 12.556 seconds (process running for 13.819)
+[INFO ] 2024-11-30 20:54:56.032 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-11-30 20:54:56.041 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2024-11-30 20:54:56.044 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected StandardServletMultipartResolver
+[DEBUG] 2024-11-30 20:54:56.044 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2024-11-30 20:54:56.048 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected FixedThemeResolver
+[DEBUG] 2024-11-30 20:54:56.049 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39329d81
+[DEBUG] 2024-11-30 20:54:56.052 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@15b882a0
+[DEBUG] 2024-11-30 20:54:56.054 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2024-11-30 20:54:56.055 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 11 ms
+[DEBUG] 2024-11-30 20:54:56.098 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 20:54:56.126 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 20:54:56.126 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 20:54:56.205 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 20:54:56.207 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 20:54:56.208 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 20:54:56.245 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 20:54:56.253 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:56.255 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:56.344 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:54:56.363 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:54:56.363 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:54:56.348 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:54:56.365 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:54:56.365 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:54:56.371 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:54:56.376 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:56.379 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:54:56.411 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:56.411 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:54:56.423 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:56.439 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:56.443 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:56.445 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:56.508 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:54:56.508 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:54:56.508 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 20:54:56.522 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:56.522 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:59.660 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 20:54:59.671 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 20:54:59.671 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 20:54:59.677 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 20:54:59.679 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 20:54:59.680 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 20:54:59.692 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 20:54:59.694 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:59.694 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:54:59.751 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:54:59.766 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:59.766 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:59.767 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:59.767 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:59.767 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:59.767 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:54:59.779 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:54:59.779 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 20:54:59.781 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 20:54:59.791 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:54:59.798 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:01.937 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:56:01.937 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 20:56:01.950 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 20:56:01.952 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:01.968 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.038 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 20:56:02.051 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 20:56:02.053 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 20:56:02.054 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:56:02.054 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 20:56:02.055 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:56:02.056 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 20:56:02.056 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 20:56:02.056 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:56:02.058 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 20:56:02.056 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 20:56:02.058 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:02.060 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 20:56:02.058 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 20:56:02.060 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.062 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 20:56:02.062 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.069 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.069 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.069 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.084 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.087 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.087 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.088 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.088 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.121 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.127 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.127 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:56:02.160 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:56:02.170 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.170 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:56:02.176 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 20:56:02.207 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[WARN ] 2024-11-30 20:56:02.745 [http-nio-8080-exec-1]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[DEBUG] 2024-11-30 20:56:02.824 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.834 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.840 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.840 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.840 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:56:02.840 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.856 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:56:02.872 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.874 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:02.874 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:56:02.880 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.885 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:56:02.904 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:56:02.904 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:56:02.905 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:56:02.906 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:56:02.906 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:56:02.907 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 20:56:02.906 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 20:56:02.907 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 20:56:02.907 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:02.908 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:02.907 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:02.907 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:02.919 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.922 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.924 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.924 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.925 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.925 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:02.926 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:02.927 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:04.022 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/21
+[DEBUG] 2024-11-30 20:56:04.022 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/21
+[DEBUG] 2024-11-30 20:56:04.022 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/recetas/21", parameters={}
+[INFO ] 2024-11-30 20:56:04.075 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Getting recipe by id 21 and name guiso de pasta
+[DEBUG] 2024-11-30 20:56:04.092 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:04.092 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:06.832 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 20:56:06.835 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 20:56:06.835 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 20:56:06.848 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 20:56:06.852 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:06.852 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:09.033 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:09.036 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:09.036 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 20:56:09.049 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Getting recipe by id 19 and name tortilla española
+[DEBUG] 2024-11-30 20:56:09.052 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:09.056 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:11.183 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:11.185 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:11.186 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 20:56:11.193 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Getting recipe by id 19 and name tortilla española
+[DEBUG] 2024-11-30 20:56:11.197 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:11.202 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:13.364 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:13.364 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 20:56:13.364 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 20:56:13.376 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Getting recipe by id 19 and name tortilla española
+[DEBUG] 2024-11-30 20:56:13.376 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:13.376 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:16.086 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 20:56:16.089 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 20:56:16.091 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 20:56:16.092 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 20:56:16.107 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:16.107 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:20.234 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/16
+[DEBUG] 2024-11-30 20:56:20.234 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/16
+[DEBUG] 2024-11-30 20:56:20.239 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/recetas/16", parameters={}
+[INFO ] 2024-11-30 20:56:20.245 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Getting recipe by id 16 and name tortilla2
+[DEBUG] 2024-11-30 20:56:20.257 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:20.257 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:22.844 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/17
+[DEBUG] 2024-11-30 20:56:22.844 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/17
+[DEBUG] 2024-11-30 20:56:22.844 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/recetas/17", parameters={}
+[INFO ] 2024-11-30 20:56:22.860 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Getting recipe by id 17 and name tortilla rellena
+[DEBUG] 2024-11-30 20:56:22.860 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:22.860 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:25.527 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/18
+[DEBUG] 2024-11-30 20:56:25.527 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/18
+[DEBUG] 2024-11-30 20:56:25.527 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas/18", parameters={}
+[INFO ] 2024-11-30 20:56:25.543 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Getting recipe by id 18 and name guiso de pasta
+[DEBUG] 2024-11-30 20:56:25.543 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:25.543 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:28.423 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/17
+[DEBUG] 2024-11-30 20:56:28.423 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/17
+[DEBUG] 2024-11-30 20:56:28.423 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/api/recetas/17", parameters={}
+[INFO ] 2024-11-30 20:56:28.432 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Getting recipe by id 17 and name tortilla rellena
+[DEBUG] 2024-11-30 20:56:28.448 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:28.448 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.190 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=1&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:56:33.191 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=1&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 20:56:33.193 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=1&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 20:56:33.218 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:33.218 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.233 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:33.242 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:33.242 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:56:33.242 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.250 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:56:33.262 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:33.265 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 20:56:33.265 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 20:56:33.265 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.265 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 20:56:33.296 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /images/receta.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/logo.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /images/logo.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /images/receta.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/logo.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /images/logo.jpg
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/images/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/recetas/logo.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/images/logo.jpg", parameters={}
+[DEBUG] 2024-11-30 20:56:33.298 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:33.309 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:33.308 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.310 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.314 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 20:56:33.314 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 404 NOT_FOUND
+[DEBUG] 2024-11-30 20:56:33.318 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.319 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.321 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 20:56:33.321 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /error
+[DEBUG] 2024-11-30 20:56:33.326 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.326 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[WARN ] 2024-11-30 20:56:33.594 [http-nio-8080-exec-1]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [238] milliseconds.
+[WARN ] 2024-11-30 20:56:33.594 [http-nio-8080-exec-8]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [238] milliseconds.
+[DEBUG] 2024-11-30 20:56:33.612 [http-nio-8080-exec-1]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 20:56:33.612 [http-nio-8080-exec-8]  o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/error?continue to session
+[DEBUG] 2024-11-30 20:56:33.616 [http-nio-8080-exec-8]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.616 [http-nio-8080-exec-1]  o.s.s.w.DefaultRedirectStrategy - Redirecting to http://localhost:8080/public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.638 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.642 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.642 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 20:56:33.652 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:33.653 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:33.656 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.657 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /public-views/login.html
+[DEBUG] 2024-11-30 20:56:33.658 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/public-views/login.html", parameters={}
+[DEBUG] 2024-11-30 20:56:33.669 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:33.672 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:34.968 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/15
+[DEBUG] 2024-11-30 20:56:34.968 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/15
+[DEBUG] 2024-11-30 20:56:34.968 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/api/recetas/15", parameters={}
+[INFO ] 2024-11-30 20:56:34.979 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Getting recipe by id 15 and name verdura con carne
+[DEBUG] 2024-11-30 20:56:34.984 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:34.985 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:37.602 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/14
+[DEBUG] 2024-11-30 20:56:37.602 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/14
+[DEBUG] 2024-11-30 20:56:37.602 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/recetas/14", parameters={}
+[INFO ] 2024-11-30 20:56:37.616 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Getting recipe by id 14 and name canre sobrosa
+[DEBUG] 2024-11-30 20:56:37.622 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:37.622 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:40.239 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/13
+[DEBUG] 2024-11-30 20:56:40.239 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/13
+[DEBUG] 2024-11-30 20:56:40.239 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/recetas/13", parameters={}
+[INFO ] 2024-11-30 20:56:40.254 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Getting recipe by id 13 and name carne pasta pasta
+[DEBUG] 2024-11-30 20:56:40.255 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:40.255 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:44.658 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/10
+[DEBUG] 2024-11-30 20:56:44.671 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/10
+[DEBUG] 2024-11-30 20:56:44.671 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/recetas/10", parameters={}
+[INFO ] 2024-11-30 20:56:44.671 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Getting recipe by id 10 and name percebes
+[DEBUG] 2024-11-30 20:56:44.686 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:44.688 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:47.083 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/11
+[DEBUG] 2024-11-30 20:56:47.083 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/11
+[DEBUG] 2024-11-30 20:56:47.083 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas/11", parameters={}
+[INFO ] 2024-11-30 20:56:47.100 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Getting recipe by id 11 and name pasta pasta
+[DEBUG] 2024-11-30 20:56:47.100 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:47.111 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 20:56:49.649 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/12
+[DEBUG] 2024-11-30 20:56:49.652 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/12
+[DEBUG] 2024-11-30 20:56:49.652 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/api/recetas/12", parameters={}
+[INFO ] 2024-11-30 20:56:49.667 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Getting recipe by id 12 and name carne
+[DEBUG] 2024-11-30 20:56:49.672 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 20:56:49.672 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:23.740 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 21:17:23.914 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 21:17:23.932 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 21:17:24.246 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.255 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 21:17:24.294 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 21:17:24.308 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 21:17:24.308 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 21:17:24.308 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 21:17:24.309 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 21:17:24.309 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.341 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.343 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.343 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.349 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.356 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.358 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.358 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.372 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:17:24.372 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:17:24.388 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 21:17:24.388 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:24.388 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.484 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:24.501 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:24.502 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:17:24.516 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:24.601 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 21:17:24.610 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 21:17:24.626 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 21:17:24.632 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 21:17:25.201 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:25.201 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.215 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:25.215 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:25.215 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:17:25.226 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.228 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 21:17:25.245 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:25.245 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:17:25.245 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:17:25.245 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.256 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 21:17:25.260 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 21:17:25.260 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 21:17:25.276 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 21:17:25.276 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 21:17:25.276 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 21:17:25.276 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 21:17:25.278 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 21:17:25.278 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 21:17:25.278 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 21:17:25.279 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 21:17:25.280 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 21:17:25.280 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 21:17:25.289 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:25.287 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:25.292 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.294 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.295 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:25.295 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:17:25.297 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:17:25.298 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[INFO ] 2024-11-30 21:42:18.706 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 21184 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-11-30 21:42:18.711 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-11-30 21:42:19.882 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-11-30 21:42:19.980 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-11-30 21:42:20.850 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-11-30 21:42:20.874 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-11-30 21:42:20.874 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-11-30 21:42:20.994 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-11-30 21:42:20.994 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2227 ms
+[INFO ] 2024-11-30 21:42:21.285 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-11-30 21:42:21.409 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-11-30 21:42:21.486 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-11-30 21:42:21.986 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-11-30 21:42:22.036 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-11-30 21:42:22.240 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f7ba0af
+[INFO ] 2024-11-30 21:42:22.240 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-11-30 21:42:22.328 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-11-30 21:42:23.607 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-11-30 21:42:23.803 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-11-30 21:42:24.413 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-11-30 21:42:24.442 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-11-30 21:42:24.579 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[DEBUG] 2024-11-30 21:42:24.870 [main]  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+[INFO ] 2024-11-30 21:42:25.481 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-11-30 21:42:25.495 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 7.39 seconds (process running for 8.547)
+[INFO ] 2024-11-30 21:44:41.120 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-11-30 21:44:41.125 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2024-11-30 21:44:41.125 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected StandardServletMultipartResolver
+[DEBUG] 2024-11-30 21:44:41.125 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2024-11-30 21:44:41.125 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected FixedThemeResolver
+[DEBUG] 2024-11-30 21:44:41.125 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@75c0e6be
+[DEBUG] 2024-11-30 21:44:41.138 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2f46bc25
+[DEBUG] 2024-11-30 21:44:41.142 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2024-11-30 21:44:41.142 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 17 ms
+[DEBUG] 2024-11-30 21:44:41.188 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /
+[DEBUG] 2024-11-30 21:44:41.210 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /
+[DEBUG] 2024-11-30 21:44:41.212 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/", parameters={}
+[DEBUG] 2024-11-30 21:44:41.287 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /index.html
+[DEBUG] 2024-11-30 21:44:41.287 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /index.html
+[DEBUG] 2024-11-30 21:44:41.287 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+[DEBUG] 2024-11-30 21:44:41.335 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+[DEBUG] 2024-11-30 21:44:41.340 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:41.345 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:41.421 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 21:44:41.422 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:44:41.423 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:44:41.423 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 21:44:41.425 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:44:41.425 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:44:41.425 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 21:44:41.426 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:41.431 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 21:44:41.434 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:41.437 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:41.439 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:41.441 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:41.450 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:41.452 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:41.461 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 21:44:41.461 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /images/cooking-hero.jpg
+[DEBUG] 2024-11-30 21:44:41.463 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/images/cooking-hero.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:41.491 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:41.493 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:42.946 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /public-views/recetas.html
+[DEBUG] 2024-11-30 21:44:42.950 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /public-views/recetas.html
+[DEBUG] 2024-11-30 21:44:42.954 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/public-views/recetas.html", parameters={}
+[DEBUG] 2024-11-30 21:44:42.963 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:42.963 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.037 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /css/index.css
+[DEBUG] 2024-11-30 21:44:43.038 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:44:43.041 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Securing GET /js/auth.js
+[DEBUG] 2024-11-30 21:44:43.038 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /css/index.css
+[DEBUG] 2024-11-30 21:44:43.042 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/cocinera.jpg
+[DEBUG] 2024-11-30 21:44:43.038 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 21:44:43.041 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:44:43.042 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/css/index.css", parameters={}
+[DEBUG] 2024-11-30 21:44:43.042 [http-nio-8080-exec-9]  o.s.s.w.FilterChainProxy - Secured GET /js/auth.js
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/cocinera.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /js/recetas-orden.js
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /js/updateYear.js
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - GET "/js/auth.js", parameters={}
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/js/updateYear.js", parameters={}
+[DEBUG] 2024-11-30 21:44:43.043 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/js/recetas-orden.js", parameters={}
+[DEBUG] 2024-11-30 21:44:43.053 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.055 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.056 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.056 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.056 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.058 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.072 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.074 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.072 [http-nio-8080-exec-9]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.076 [http-nio-8080-exec-9]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.097 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.097 [http-nio-8080-exec-1]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.097 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:44:43.136 [http-nio-8080-exec-1]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.140 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 21:44:43.145 [http-nio-8080-exec-2]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas?page=0&size=6&orden=fechaDesc
+[DEBUG] 2024-11-30 21:44:43.145 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - GET "/api/recetas?page=0&size=6&orden=fechaDesc", parameters={masked}
+[DEBUG] 2024-11-30 21:44:43.173 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[WARN ] 2024-11-30 21:44:43.875 [http-nio-8080-exec-2]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[DEBUG] 2024-11-30 21:44:43.941 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:43.942 [http-nio-8080-exec-2]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.955 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.957 [http-nio-8080-exec-3]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.957 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:44:43.962 [http-nio-8080-exec-3]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.962 [http-nio-8080-exec-3]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 21:44:43.974 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Securing GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.979 [http-nio-8080-exec-4]  o.s.s.w.FilterChainProxy - Secured GET /api/usuarios/autenticado
+[DEBUG] 2024-11-30 21:44:43.979 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - GET "/api/usuarios/autenticado", parameters={}
+[DEBUG] 2024-11-30 21:44:43.979 [http-nio-8080-exec-4]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:43.987 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed 401 UNAUTHORIZED
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/Mile_1732376164841.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/tortilla-rellena.jpg
+[DEBUG] 2024-11-30 21:44:44.013 [http-nio-8080-exec-7]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/User1_1732376099765.jpg
+[DEBUG] 2024-11-30 21:44:44.017 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /images/recetas/receta.jpg
+[DEBUG] 2024-11-30 21:44:44.017 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/images/recetas/Mile_1732376164841.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:44.017 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/images/recetas/tortilla-rellena.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:44.017 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/images/recetas/receta.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:44.017 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - GET "/images/recetas/User1_1732376099765.jpg", parameters={}
+[DEBUG] 2024-11-30 21:44:44.032 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:44.034 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:44.034 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:44.035 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:44.036 [http-nio-8080-exec-7]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:44.038 [http-nio-8080-exec-7]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:44.039 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:44.040 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:44.953 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/21
+[DEBUG] 2024-11-30 21:44:44.955 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/21
+[DEBUG] 2024-11-30 21:44:44.955 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/recetas/21", parameters={}
+[INFO ] 2024-11-30 21:44:45.025 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Getting recipe by id 21 and name guiso de pasta
+[DEBUG] 2024-11-30 21:44:45.025 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:45.040 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:50.211 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:50.211 [http-nio-8080-exec-10]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:50.220 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 21:44:50.228 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 21:44:50.228 [http-nio-8080-exec-10]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:50.228 [http-nio-8080-exec-10]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:52.663 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:52.663 [http-nio-8080-exec-6]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:52.663 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 21:44:52.674 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 21:44:52.680 [http-nio-8080-exec-6]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:52.680 [http-nio-8080-exec-6]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:55.515 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:55.515 [http-nio-8080-exec-5]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/20
+[DEBUG] 2024-11-30 21:44:55.515 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - GET "/api/recetas/20", parameters={}
+[INFO ] 2024-11-30 21:44:55.531 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Getting recipe by id 20 and name tortilla rellena
+[DEBUG] 2024-11-30 21:44:55.531 [http-nio-8080-exec-5]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:55.531 [http-nio-8080-exec-5]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+[DEBUG] 2024-11-30 21:44:58.329 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Securing GET /api/recetas/19
+[DEBUG] 2024-11-30 21:44:58.330 [http-nio-8080-exec-8]  o.s.s.w.FilterChainProxy - Secured GET /api/recetas/19
+[DEBUG] 2024-11-30 21:44:58.330 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - GET "/api/recetas/19", parameters={}
+[INFO ] 2024-11-30 21:44:58.344 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Getting recipe by id 19 and name tortilla española
+[DEBUG] 2024-11-30 21:44:58.347 [http-nio-8080-exec-8]  o.s.w.s.DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-11-30 21:44:58.350 [http-nio-8080-exec-8]  o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext

@@ -24,6 +24,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j 
 @RestController
 @RequestMapping("/api")
 public class RecipeController {
@@ -41,10 +45,13 @@ public class RecipeController {
 
     }
 
+    @SuppressWarnings("unused")
     @GetMapping(value = "/recetas/{id}")
     public ResponseEntity<Recipe> obtenerRecetaPorId(@PathVariable Long id) {
         Recipe receita = recipeService.obtenerRecetaPorId(id);
+        String nome = receita.getNombre();
         if (receita != null) {
+            log.info("Getting recipe by id {} and name {}", id, nome);
             return ResponseEntity.ok(receita);
         } else {
             return ResponseEntity.notFound().build();
