@@ -19,7 +19,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @Autowired
+    //@Autowired
     private UsuarioController(UsuarioService usuarioService) {
 
         this.usuarioService = usuarioService;

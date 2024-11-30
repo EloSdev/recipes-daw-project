@@ -28,7 +28,7 @@ public class RecipeService {
     @Autowired
     private UsuarioLikeRecipeRepository userLikeRecipeRepository;
 
-    @Autowired
+    //@Autowired
     public RecipeService(RecipeRepository recipeRepository) {
 
         this.recipeRepository = recipeRepository;
@@ -59,6 +59,12 @@ public class RecipeService {
         return recipeRepository.findByNombreContainingIgnoreCase(nombre, pageable);
     }
 
+    //Método para buscar receitas por nome
+    public List<Recipe> buscarRecetasPorNombre(String nombre) {
+        return recipeRepository.findByNombreContainingIgnoreCase(nombre);
+    }
+
+   
     // Método para incrementar os likes dunha receita
     public Recipe incrementarLikes(Long recetaId, String username) {
         Recipe receta = recipeRepository.findById(recetaId)
@@ -92,9 +98,6 @@ public class RecipeService {
         return recipeRepository.findAll();
     }
 
-    public List<Recipe> buscarRecetasPorNombre(String nombre) {
-        return recipeRepository.findByNombreContainingIgnoreCase(nombre);
-    }
 
     // Método para obter as receitas que o usuario xa dou like
     public List<Long> obtenerRecetasVotadasPorUsuario(String username) {

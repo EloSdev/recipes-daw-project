@@ -6,11 +6,12 @@ import com.eloi_daw_receitas.receitas.repository.UsuarioRepository;
 import com.eloi_daw_receitas.receitas.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +34,7 @@ public class RecipeController {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @Autowired
+    //@Autowired
     private RecipeController(RecipeService recipeService) {
 
         this.recipeService = recipeService;
@@ -70,10 +71,11 @@ public class RecipeController {
         return recipeService.listarTodasLasRecetas();
     }
 
+    //Endpoint para buscar receitas no search
     @GetMapping(value = "/recetas/search")
     public ResponseEntity<List<Recipe>> buscarRecetasPorNombre(@RequestParam String nombre) {
         List<Recipe> recetas = recipeService.buscarRecetasPorNombre(nombre);
-        return ResponseEntity.ok(recetas); // Devolve unha lista, pode estar vacía
+        return ResponseEntity.ok(recetas); 
     }
 
     // Endpoint para incrementar o número de likes
