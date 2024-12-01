@@ -156,7 +156,6 @@ function likeReceta(recetaId, likeButton) {
     })
     .then(response => {
         if (response.status === 409) {
-            //alert('Ya has dado like a esta receta.');
             return null;
         }
         if (!response.ok) throw new Error('Error al hacer like');
@@ -239,7 +238,7 @@ function mostrarDetallesEnModal(receta) {
     modalContent.innerHTML = `
         <button class="close-btn"><i class="fas fa-times"></i></button>
         <h3>${receta.nombre}</h3>
-        <p><strong>Autor:</strong> ${receta.autor}</p>
+        <p><strong>Autor/a:</strong> ${receta.autor}</p>
         <p><strong>Ingredientes:</strong> ${receta.ingredientes}</p>
         <p><strong>Preparación:</strong> ${receta.elaboracion}</p>
     `;

@@ -540,7 +540,7 @@ footer {
 /* OPEN/CLOSE MODAL */
 .open-modal {
   visibility: visible;
-  z-index: 10;
+  z-index: 110;
 }
 .modal-container {
   background: #fff;

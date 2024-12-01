@@ -5257,3 +5257,667 @@
 [INFO ] 2024-12-01 16:46:35.477 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Receta ya votadas por el usuario Eloi
 [INFO ] 2024-12-01 16:46:35.494 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Eloi autenticado
 [INFO ] 2024-12-01 16:46:37.746 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - El usuario 2 ha dado like a la receta Eloi
+[INFO ] 2024-12-01 18:34:51.684 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 4020 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 18:34:51.705 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 18:34:52.822 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 18:34:52.929 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 18:34:53.804 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 18:34:53.835 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 18:34:53.836 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 18:34:53.943 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 18:34:53.943 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2115 ms
+[INFO ] 2024-12-01 18:34:54.198 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 18:34:54.267 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 18:34:54.318 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 18:34:54.755 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 18:34:54.803 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 18:34:55.112 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@323efafe
+[INFO ] 2024-12-01 18:34:55.117 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 18:34:55.209 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 18:34:56.922 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 18:34:57.246 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 18:34:57.801 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 18:34:57.846 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 18:34:57.951 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 18:34:58.554 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 18:34:58.565 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 7.469 seconds (process running for 8.798)
+[INFO ] 2024-12-01 18:39:14.542 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 18:39:14.574 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 18:39:14.668 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 90 ms
+[INFO ] 2024-12-01 18:45:39.681 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:39.885 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[WARN ] 2024-12-01 18:45:41.566 [http-nio-8080-exec-10]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 18:45:41.648 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:41.659 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:44.731 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - receta - Camarones
+[INFO ] 2024-12-01 18:45:48.646 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Camarones
+[INFO ] 2024-12-01 18:45:53.520 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:45:53.574 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:53.584 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:56.984 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:45:57.029 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:57.040 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:45:59.605 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 18:46:04.513 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - receta - Tortilla Betanzos
+[INFO ] 2024-12-01 18:46:07.067 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:46:07.091 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:46:07.112 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 18:46:08.894 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:46:13.077 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:46:16.920 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:46:20.361 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:46:23.835 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Paella de mariscos
+[INFO ] 2024-12-01 18:46:29.529 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Paella de mariscos
+[WARN ] 2024-12-01 18:47:00.607 [http-nio-8080-exec-4]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [324] milliseconds.
+[INFO ] 2024-12-01 18:47:00.762 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Rebe logueado
+[INFO ] 2024-12-01 18:47:06.127 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:47:06.179 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:47:06.222 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:47:06.401 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Receta ya votadas por el usuario Rebe
+[INFO ] 2024-12-01 18:47:06.420 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:47:12.848 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Camarones
+[INFO ] 2024-12-01 18:47:20.154 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - receta - Gambas al ajillo
+[INFO ] 2024-12-01 18:47:25.738 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - receta - Gambas al ajillo
+[INFO ] 2024-12-01 18:47:31.818 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:47:31.852 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:47:31.912 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Receta ya votadas por el usuario Rebe
+[INFO ] 2024-12-01 18:47:31.931 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:47:34.106 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Arroz a la cubana
+[INFO ] 2024-12-01 18:47:37.479 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:47:41.974 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:47:45.682 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:47:50.417 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Ensalada de frutas y verduras
+[INFO ] 2024-12-01 18:47:54.236 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - receta - Ensalada de frutas y verduras
+[INFO ] 2024-12-01 18:47:59.225 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - receta - Carne a la brasa
+[INFO ] 2024-12-01 18:48:02.856 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Ensalada de frutas y verduras
+[INFO ] 2024-12-01 18:48:06.374 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:48:11.673 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:48:11.702 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:48:11.764 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Receta ya votadas por el usuario Rebe
+[INFO ] 2024-12-01 18:48:11.779 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Rebe autenticado
+[INFO ] 2024-12-01 18:48:13.625 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:48:17.110 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Fabes con almejas
+[INFO ] 2024-12-01 18:48:20.085 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - receta - Paella de mariscos
+[INFO ] 2024-12-01 18:48:23.155 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Paella de mariscos
+[INFO ] 2024-12-01 18:49:46.116 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 14216 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 18:49:46.129 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 18:49:47.503 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 18:49:47.599 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 18:49:48.556 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 18:49:48.576 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 18:49:48.582 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 18:49:48.688 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 18:49:48.688 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2467 ms
+[INFO ] 2024-12-01 18:49:48.990 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 18:49:49.120 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 18:49:49.190 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 18:49:49.946 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 18:49:50.018 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 18:49:50.292 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c788d08
+[INFO ] 2024-12-01 18:49:50.295 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 18:49:50.382 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 18:49:51.781 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 18:49:51.937 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 18:49:52.703 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 18:49:52.749 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 18:49:52.995 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 18:49:53.851 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 18:49:53.864 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 8.34 seconds (process running for 9.571)
+[INFO ] 2024-12-01 18:50:01.414 [http-nio-8080-exec-2]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 18:50:01.426 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 18:50:01.427 [http-nio-8080-exec-2]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[WARN ] 2024-12-01 18:50:17.283 [http-nio-8080-exec-6]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [228] milliseconds.
+[INFO ] 2024-12-01 18:50:17.460 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 18:50:19.505 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:50:19.589 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[WARN ] 2024-12-01 18:50:19.808 [http-nio-8080-exec-2]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 18:50:19.876 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:50:19.967 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 18:50:19.985 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:50:30.193 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - receta - Gambas al ajillo
+[INFO ] 2024-12-01 18:50:38.920 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - El usuario Mile ha dado like a la receta Gambas al ajillo
+[INFO ] 2024-12-01 18:50:42.302 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:50:42.350 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:50:42.417 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 18:50:42.430 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:50:45.323 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:50:56.232 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Pulpo a feira
+[INFO ] 2024-12-01 18:51:06.576 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - receta - Ensalada de frutas y verduras
+[INFO ] 2024-12-01 18:51:18.423 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:51:18.461 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:18.517 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 18:51:18.534 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:24.035 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 18:51:24.060 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:24.123 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 18:51:24.147 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:33.192 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 18:51:33.254 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:33.327 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 18:51:33.334 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 18:51:37.460 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 18:51:47.521 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 18:51:59.078 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - El usuario Mile ha dado like a la receta Fabes con almejas
+[INFO ] 2024-12-01 18:53:12.816 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - receta - Carne a la brasa
+[INFO ] 2024-12-01 18:54:16.168 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 19:07:11.434 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 18808 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 19:07:11.451 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 19:07:12.351 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 19:07:12.442 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 19:07:13.250 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 19:07:13.277 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 19:07:13.278 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 19:07:13.382 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 19:07:13.383 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1866 ms
+[INFO ] 2024-12-01 19:07:13.618 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 19:07:13.815 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 19:07:13.920 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 19:07:14.461 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 19:07:14.515 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 19:07:14.703 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ffa078d
+[INFO ] 2024-12-01 19:07:14.706 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 19:07:14.791 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 19:07:16.069 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 19:07:16.226 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 19:07:16.700 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 19:07:16.737 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 19:07:16.855 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 19:07:17.439 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 19:07:17.450 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 6.496 seconds (process running for 7.704)
+[INFO ] 2024-12-01 19:07:35.626 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:07:35.626 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:07:35.626 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2024-12-01 19:07:38.541 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:07:38.603 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[WARN ] 2024-12-01 19:07:39.143 [http-nio-8080-exec-2]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 19:07:39.209 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:07:39.224 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:07:55.548 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:07:55.600 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:07:55.610 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:08:02.049 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:08:02.090 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:08:02.109 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:08:08.755 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 19:08:10.695 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 19:08:14.048 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Cocido gallego
+[INFO ] 2024-12-01 19:09:04.267 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 9608 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 19:09:04.290 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 19:09:05.230 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 19:09:05.338 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 19:09:06.436 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 19:09:06.463 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 19:09:06.464 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 19:09:06.562 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 19:09:06.564 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2211 ms
+[INFO ] 2024-12-01 19:09:06.837 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 19:09:06.992 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 19:09:07.071 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 19:09:07.519 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 19:09:07.572 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 19:09:07.768 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c5708e7
+[INFO ] 2024-12-01 19:09:07.772 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 19:09:07.874 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 19:09:09.192 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 19:09:09.336 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 19:09:09.839 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 19:09:09.878 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 19:09:09.988 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 19:09:10.635 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 19:09:10.650 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 6.92 seconds (process running for 8.166)
+[INFO ] 2024-12-01 19:09:18.224 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:09:18.224 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:09:18.224 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2024-12-01 19:09:21.422 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:21.464 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[WARN ] 2024-12-01 19:09:21.731 [http-nio-8080-exec-5]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 19:09:21.768 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:21.779 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.062 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:09:26.121 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.137 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.468 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:09:26.502 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.514 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.590 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:09:26.622 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:26.638 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:09:29.923 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Bandeja paisa
+[INFO ] 2024-12-01 19:09:58.952 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - receta - Arroz a la cubana
+[INFO ] 2024-12-01 19:10:21.344 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - receta - Arroz a la cubana
+[INFO ] 2024-12-01 19:10:28.525 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Arroz a la cubana
+[INFO ] 2024-12-01 19:13:02.922 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:13:02.948 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:02.964 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.061 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:13:06.086 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.102 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.242 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Recetas filtradas
+[INFO ] 2024-12-01 19:13:06.274 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.291 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.597 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:13:06.633 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:06.645 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:14.173 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:13:14.206 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:14.213 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:17.607 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:13:17.640 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:17.640 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:13:39.232 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Tortilla Betanzos
+[INFO ] 2024-12-01 19:14:56.209 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - receta - Tortilla Betanzos
+[INFO ] 2024-12-01 19:15:20.889 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:15:20.936 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:15:20.939 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:15:27.933 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - receta - Causa limeña
+[INFO ] 2024-12-01 19:15:35.150 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - receta - Causa limeña
+[INFO ] 2024-12-01 19:18:23.513 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - receta - Causa limeña
+[INFO ] 2024-12-01 19:18:27.279 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:18:27.339 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:18:27.356 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:18:30.643 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - receta - Empanada gallega de bacalo
+[INFO ] 2024-12-01 19:18:35.777 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - receta - Pasta carbonara
+[INFO ] 2024-12-01 19:18:46.094 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:18:46.133 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:18:46.133 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:18:50.882 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:18:50.929 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:18:50.935 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:02.953 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:19:02.985 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:02.998 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:17.673 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:19:17.706 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:17.722 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:24.593 [http-nio-8080-exec-10]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:19:24.622 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:24.622 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:45.562 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:19:45.598 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:19:45.598 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:05.169 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:20:05.203 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:05.220 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:07.620 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:20:07.650 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:07.669 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:14.007 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:20:14.037 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:20:14.052 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[WARN ] 2024-12-01 19:20:23.119 [http-nio-8080-exec-8]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [252] milliseconds.
+[INFO ] 2024-12-01 19:21:48.656 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:21:48.693 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:21:48.726 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:21:48.732 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:21:53.694 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario anonymousUser logueado
+[INFO ] 2024-12-01 19:21:58.595 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:21:58.633 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:21:58.665 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:21:58.678 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:22:01.847 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - receta - Empanada gallega de bacalo
+[INFO ] 2024-12-01 19:22:11.208 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:22:11.242 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 19:22:11.283 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:22:11.302 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:28:58.681 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 14776 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 19:28:58.699 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 19:28:59.697 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 19:28:59.800 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 19:29:00.506 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 19:29:00.525 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 19:29:00.526 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 19:29:00.628 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 19:29:00.635 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+[INFO ] 2024-12-01 19:29:00.951 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 19:29:01.048 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 19:29:01.133 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 19:29:01.557 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 19:29:01.600 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 19:29:01.815 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ffa078d
+[INFO ] 2024-12-01 19:29:01.818 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 19:29:01.905 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 19:29:03.058 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 19:29:03.234 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 19:29:03.795 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 19:29:03.825 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 19:29:03.911 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 19:29:04.502 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 19:29:04.519 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 6.289 seconds (process running for 7.427)
+[INFO ] 2024-12-01 19:29:11.005 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:29:11.005 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 19:29:11.016 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2024-12-01 19:29:13.810 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:29:13.857 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[WARN ] 2024-12-01 19:29:14.380 [http-nio-8080-exec-2]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 19:29:14.475 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:29:14.490 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 19:29:24.079 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - receta - Camarones
+[INFO ] 2024-12-01 20:32:12.640 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 20:32:12.691 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[INFO ] 2024-12-01 20:32:12.756 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 20:32:12.767 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario no antenticado
+[WARN ] 2024-12-01 20:32:27.759 [http-nio-8080-exec-8]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [242] milliseconds.
+[INFO ] 2024-12-01 20:32:27.895 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 20:33:28.874 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - El usuario  ha creado la receta con nombre fake recipe
+[INFO ] 2024-12-01 20:33:29.020 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 20:38:56.652 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 16608 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 20:38:56.671 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 20:38:57.564 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 20:38:57.668 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 20:38:58.397 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 20:38:58.419 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 20:38:58.420 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 20:38:58.534 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 20:38:58.535 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1806 ms
+[INFO ] 2024-12-01 20:38:58.786 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 20:38:59.073 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 20:38:59.133 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 20:38:59.552 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 20:38:59.594 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 20:38:59.804 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10cb050
+[INFO ] 2024-12-01 20:38:59.808 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 20:38:59.920 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 20:39:01.357 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 20:39:01.513 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 20:39:01.987 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 20:39:02.016 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 20:39:02.138 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 20:39:02.750 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 20:39:02.761 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 6.589 seconds (process running for 7.844)
+[INFO ] 2024-12-01 20:39:31.060 [http-nio-8080-exec-1]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 20:39:31.066 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 20:39:31.066 [http-nio-8080-exec-1]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[WARN ] 2024-12-01 20:39:31.393 [http-nio-8080-exec-1]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [238] milliseconds.
+[DEBUG] 2024-12-01 20:40:36.732 [http-nio-8080-exec-7]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[INFO ] 2024-12-01 20:40:37.173 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[DEBUG] 2024-12-01 20:41:28.013 [http-nio-8080-exec-3]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:28.138 [http-nio-8080-exec-3]  o.h.SQL - insert into recipe (autor,elaboracion,fecha,imagen_url,ingredientes,likes,nombre,usuario_id) values (?,?,?,?,?,?,?,?)
+[INFO ] 2024-12-01 20:41:28.233 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - El usuario  ha creado la receta con nombre fake recipe
+[INFO ] 2024-12-01 20:41:28.484 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 20:41:29.977 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:30.029 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:41:30.055 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:41:30.075 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.080 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.087 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.097 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.118 [http-nio-8080-exec-8]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[WARN ] 2024-12-01 20:41:30.134 [http-nio-8080-exec-8]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 20:41:30.187 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:41:30.215 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:30.235 [http-nio-8080-exec-5]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:41:30.247 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.263 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.267 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.277 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.285 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.294 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.296 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.296 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:30.312 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:41:30.312 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:41:30.331 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:43.365 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:43.409 [http-nio-8080-exec-3]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:41:43.421 [http-nio-8080-exec-3]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:41:43.428 [http-nio-8080-exec-3]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.433 [http-nio-8080-exec-3]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.439 [http-nio-8080-exec-3]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.445 [http-nio-8080-exec-3]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.454 [http-nio-8080-exec-3]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:41:43.476 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:41:43.492 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:43.504 [http-nio-8080-exec-5]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:41:43.509 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.517 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.523 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.527 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.527 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.539 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.544 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.550 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:43.555 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:41:43.561 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:41:43.578 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:48.539 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:48.579 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:41:48.587 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:41:48.587 [http-nio-8080-exec-2]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.587 [http-nio-8080-exec-2]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.604 [http-nio-8080-exec-2]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.612 [http-nio-8080-exec-2]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.621 [http-nio-8080-exec-2]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:41:48.641 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:41:48.655 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:48.668 [http-nio-8080-exec-5]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:41:48.674 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.680 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.685 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.690 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.698 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.707 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.715 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.715 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:48.721 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:41:48.731 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:41:48.747 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:51.338 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:51.373 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:41:51.375 [http-nio-8080-exec-4]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:41:51.384 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.386 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.386 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.399 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.407 [http-nio-8080-exec-4]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:41:51.419 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:41:51.431 [http-nio-8080-exec-7]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:51.438 [http-nio-8080-exec-7]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:41:51.438 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.446 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.453 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.457 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.462 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.462 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.478 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.486 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:51.495 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:41:51.499 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:41:51.510 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:55.244 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:41:55.279 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:41:55.284 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:41:55.293 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.296 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.304 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.310 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.319 [http-nio-8080-exec-8]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:41:55.331 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:41:55.355 [http-nio-8080-exec-1]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:41:55.360 [http-nio-8080-exec-1]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:41:55.360 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.376 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.382 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.390 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.399 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.406 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.410 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.410 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:41:55.422 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:41:55.431 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:41:55.444 [http-nio-8080-exec-4]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:42:07.359 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:42:07.363 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha limit ?
+[DEBUG] 2024-12-01 20:42:07.363 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.363 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.377 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.387 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.395 [http-nio-8080-exec-5]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:42:07.409 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:42:07.425 [http-nio-8080-exec-9]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:42:07.432 [http-nio-8080-exec-9]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:42:07.432 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.444 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.447 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.447 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.457 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.457 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.470 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.474 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:42:07.480 [http-nio-8080-exec-9]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:42:07.480 [http-nio-8080-exec-9]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:42:07.490 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:44:10.645 [http-nio-8080-exec-1]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:44:10.645 [http-nio-8080-exec-1]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:44:10.655 [http-nio-8080-exec-1]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.656 [http-nio-8080-exec-1]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.656 [http-nio-8080-exec-1]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.669 [http-nio-8080-exec-1]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.672 [http-nio-8080-exec-1]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:44:10.690 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:44:10.703 [http-nio-8080-exec-7]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:44:10.708 [http-nio-8080-exec-7]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:44:10.718 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.718 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.733 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.733 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.733 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.749 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.756 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.764 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:44:10.764 [http-nio-8080-exec-7]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:44:10.764 [http-nio-8080-exec-7]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:44:10.780 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:51:35.542 [main]  c.e.r.ReceitasApplication - Starting ReceitasApplication using Java 17.0.12 with PID 12960 (C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas\target\classes started by Eloy_ in C:\Users\Eloy_\OneDrive\Desktop\receitas\receitas)
+[INFO ] 2024-12-01 20:51:35.558 [main]  c.e.r.ReceitasApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-12-01 20:51:36.518 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2024-12-01 20:51:36.611 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 3 JPA repository interfaces.
+[INFO ] 2024-12-01 20:51:37.658 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2024-12-01 20:51:37.693 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2024-12-01 20:51:37.695 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO ] 2024-12-01 20:51:37.866 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2024-12-01 20:51:37.868 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2259 ms
+[INFO ] 2024-12-01 20:51:38.236 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2024-12-01 20:51:38.374 [main]  o.h.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+[INFO ] 2024-12-01 20:51:38.453 [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2024-12-01 20:51:38.955 [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2024-12-01 20:51:39.030 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2024-12-01 20:51:39.273 [main]  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e26564d
+[INFO ] 2024-12-01 20:51:39.278 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[WARN ] 2024-12-01 20:51:39.396 [main]  o.h.d.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[INFO ] 2024-12-01 20:51:40.655 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2024-12-01 20:51:40.816 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2024-12-01 20:51:41.362 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2024-12-01 20:51:41.396 [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+[INFO ] 2024-12-01 20:51:41.488 [main]  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2024-12-01 20:51:42.176 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2024-12-01 20:51:42.203 [main]  c.e.r.ReceitasApplication - Started ReceitasApplication in 7.162 seconds (process running for 8.276)
+[INFO ] 2024-12-01 20:52:08.772 [http-nio-8080-exec-4]  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2024-12-01 20:52:08.772 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2024-12-01 20:52:08.772 [http-nio-8080-exec-4]  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2024-12-01 20:52:09.370 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 20:52:09.758 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:52:09.898 [http-nio-8080-exec-6]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:52:09.920 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:09.947 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:09.950 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:09.952 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:09.969 [http-nio-8080-exec-6]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[WARN ] 2024-12-01 20:52:10.018 [http-nio-8080-exec-6]  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+[INFO ] 2024-12-01 20:52:10.061 [http-nio-8080-exec-9]  c.e.r.c.UsuarioController - Usuario no antenticado
+[INFO ] 2024-12-01 20:52:10.075 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario no antenticado
+[DEBUG] 2024-12-01 20:52:30.191 [http-nio-8080-exec-10]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[WARN ] 2024-12-01 20:52:30.672 [http-nio-8080-exec-10]  o.a.c.u.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [283] milliseconds.
+[INFO ] 2024-12-01 20:52:30.858 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 20:52:33.516 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[INFO ] 2024-12-01 20:52:36.506 [http-nio-8080-exec-3]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:52:36.533 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:52:36.533 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:52:36.547 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.549 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.555 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.564 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.580 [http-nio-8080-exec-8]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:52:36.598 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:52:36.620 [http-nio-8080-exec-5]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:52:36.640 [http-nio-8080-exec-5]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:52:36.644 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.651 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.657 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.666 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.671 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.675 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.683 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.690 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:36.697 [http-nio-8080-exec-5]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:52:36.707 [http-nio-8080-exec-5]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:52:36.720 [http-nio-8080-exec-1]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:52:41.079 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:52:41.120 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:52:41.126 [http-nio-8080-exec-4]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:52:41.126 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.135 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.142 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.151 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.158 [http-nio-8080-exec-4]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:52:41.174 [http-nio-8080-exec-10]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:52:41.209 [http-nio-8080-exec-8]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:52:41.215 [http-nio-8080-exec-8]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:52:41.222 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.222 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.238 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.238 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.253 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.253 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.270 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.274 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:41.285 [http-nio-8080-exec-8]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:52:41.292 [http-nio-8080-exec-8]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:52:41.303 [http-nio-8080-exec-6]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:52:59.317 [http-nio-8080-exec-8]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:52:59.356 [http-nio-8080-exec-6]  c.e.r.c.RecipeController - Recetas listadas y paginadas
+[DEBUG] 2024-12-01 20:52:59.367 [http-nio-8080-exec-6]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id from recipe r1_0 order by r1_0.fecha desc limit ?
+[DEBUG] 2024-12-01 20:52:59.377 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.377 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.377 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.395 [http-nio-8080-exec-6]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.395 [http-nio-8080-exec-6]  o.h.SQL - select count(r1_0.id) from recipe r1_0
+[INFO ] 2024-12-01 20:52:59.409 [http-nio-8080-exec-7]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[DEBUG] 2024-12-01 20:52:59.426 [http-nio-8080-exec-2]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:52:59.439 [http-nio-8080-exec-2]  o.h.SQL - select ulr1_0.id,ulr1_0.receta_id,ulr1_0.usuario_id from usuario_like_recipe ulr1_0 where ulr1_0.usuario_id=?
+[DEBUG] 2024-12-01 20:52:59.447 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.449 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.456 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.458 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.458 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.479 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.483 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.492 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[DEBUG] 2024-12-01 20:52:59.492 [http-nio-8080-exec-2]  o.h.SQL - select r1_0.id,r1_0.autor,r1_0.elaboracion,r1_0.fecha,r1_0.imagen_url,r1_0.ingredientes,r1_0.likes,r1_0.nombre,r1_0.usuario_id,u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from recipe r1_0 join usuario u1_0 on u1_0.id=r1_0.usuario_id where r1_0.id=?
+[INFO ] 2024-12-01 20:52:59.504 [http-nio-8080-exec-2]  c.e.r.c.RecipeController - Recetas ya votadas por el usuario Mile
+[INFO ] 2024-12-01 20:52:59.520 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Mile autenticado
+[INFO ] 2024-12-01 20:53:13.259 [http-nio-8080-exec-5]  c.e.r.c.UsuarioController - Usuario Mile logueado
+[DEBUG] 2024-12-01 20:53:49.240 [http-nio-8080-exec-4]  o.h.SQL - select u1_0.id,u1_0.email,u1_0.nickname,u1_0.password,u1_0.rol from usuario u1_0 where u1_0.nickname=?
+[DEBUG] 2024-12-01 20:53:49.334 [http-nio-8080-exec-4]  o.h.SQL - insert into recipe (autor,elaboracion,fecha,imagen_url,ingredientes,likes,nombre,usuario_id) values (?,?,?,?,?,?,?,?)
+[INFO ] 2024-12-01 20:53:49.413 [http-nio-8080-exec-4]  c.e.r.c.RecipeController - El usuario  ha creado la receta con nombre fakr
+[INFO ] 2024-12-01 20:53:49.555 [http-nio-8080-exec-2]  c.e.r.c.UsuarioController - Usuario Mile logueado

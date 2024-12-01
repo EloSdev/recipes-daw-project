@@ -94,7 +94,7 @@ public class RecipeController {
         String username = authentication.getName(); 
         try {
             Recipe recetaActualizada = recipeService.incrementarLikes(recetaId, username);
-            log.info("El usuario {} ha dado like a la receta {}", recetaId, username);
+            log.info("El usuario {} ha dado like a la receta {}", username, recetaActualizada.getNombre());
             return ResponseEntity.ok(recetaActualizada);
         } catch (IllegalStateException e) {
             log.error("Error mientras el usuario {} daba like a la receta {}", username, recetaId);
@@ -106,7 +106,7 @@ public class RecipeController {
     @GetMapping("/votadas/{username}")
     public ResponseEntity<List<Long>> obtenerRecetasVotadas(@PathVariable String username) {
         List<Long> recetaIds = recipeService.obtenerRecetasVotadasPorUsuario(username);
-        log.info("Receta ya votadas por el usuario {}", username);
+        log.info("Recetas ya votadas por el usuario {}", username);
         return ResponseEntity.ok(recetaIds);
     }
 
