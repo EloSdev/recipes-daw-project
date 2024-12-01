@@ -8,7 +8,7 @@ document.getElementById('registro-form').addEventListener('submit', async functi
     const nickname = document.getElementById('nickname').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const repeatPassword = document.querySelector('input[placeholder="Repeat your password"]').value;
+    const repeatPassword = document.querySelector('input[placeholder="Repite tu password"]').value;
     const termsAccepted = document.getElementById('terms').checked;
 
     //Limpar mensaxes de erro previos

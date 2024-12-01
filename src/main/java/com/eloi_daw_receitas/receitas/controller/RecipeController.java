@@ -106,7 +106,7 @@ public class RecipeController {
     @GetMapping("/votadas/{username}")
     public ResponseEntity<List<Long>> obtenerRecetasVotadas(@PathVariable String username) {
         List<Long> recetaIds = recipeService.obtenerRecetasVotadasPorUsuario(username);
-        log.info("Recetas ya votadas por el usuario {}", username);
+        log.info("Receta ya votadas por el usuario {}", username);
         return ResponseEntity.ok(recetaIds);
     }
 
@@ -146,7 +146,7 @@ public class RecipeController {
                     String nuevoNombreArchivo = username + "_" + System.currentTimeMillis() + extension;
 
                     // Definir a ruta onde se gardará a imaxe
-                    String rutaImagen = "src/main/resources/static/images/recetas/" + nuevoNombreArchivo;
+                    String rutaImagen = "src/main/resources/static/images/recipes/" + nuevoNombreArchivo;
                     File file = new File(rutaImagen);
 
                     // Escribir a imaxe na ruta especificada
