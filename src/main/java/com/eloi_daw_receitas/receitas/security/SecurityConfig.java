@@ -26,7 +26,7 @@ import org.springframework.security.web.SecurityFilterChain;
                     .authorizeHttpRequests((requests) -> requests
                             .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                             .requestMatchers("/", "/index.html", "/public-views/**","/api/usuarios","/api/usuarios/**").permitAll()
-                            .requestMatchers("/api/recetas/subir-receta", "/home.html").authenticated()  // Require autenticación para acceder o home e poder crear receita e
+                            .requestMatchers("/api/recetas/subir-receta", "/home.html").authenticated()  
                             .requestMatchers("/api/recetas", "/api/recetas/search", "/api/recetas/**", "/api/usuarios/autenticado").permitAll()
 
                             .anyRequest().authenticated()
@@ -36,20 +36,18 @@ import org.springframework.security.web.SecurityFilterChain;
                             .loginProcessingUrl("/login")
                             .defaultSuccessUrl("/home.html", true)
                             .failureHandler((request, response, exception) -> {
-                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED); //configurar para que devolva 401 e asi manexar o erro de credenciais incorrectas; doutra forma pr defecto SpringSecurity devolve erro na url
+                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED); //configurar para que devolva 401 e asi manexar o erro de credenciais incorrectas; doutra forma por defecto SpringSecurity devolve erro na url
                                 response.getWriter().write("Invalid credentials");
                             })
                             .permitAll()
                     )
                     .logout(logout ->
                             logout
-                                    .logoutUrl("/logout") // Configura a URL para logout
+                                    .logoutUrl("/logout") 
                                     .logoutSuccessUrl("/index.html")
                                     .permitAll()
                     )
-
                     .csrf(csrf->csrf.disable());
-
 
             return http.build();
         }
@@ -67,5 +65,4 @@ import org.springframework.security.web.SecurityFilterChain;
                     .passwordEncoder(passwordEncoder());
             return authenticationManagerBuilder.build();
         }
-
     }

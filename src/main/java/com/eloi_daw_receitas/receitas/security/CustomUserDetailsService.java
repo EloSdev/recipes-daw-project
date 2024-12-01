@@ -21,14 +21,10 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Usuario usuario = usuarioRepository.findByNickname(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
-
-
         return User.builder()
                 .username(usuario.getNickname())
                 .password(usuario.getPassword())
                 .roles(usuario.getRol().name())
                 .build();
-
     }
-
 }

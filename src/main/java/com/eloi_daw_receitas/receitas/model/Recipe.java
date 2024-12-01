@@ -1,10 +1,8 @@
 package com.eloi_daw_receitas.receitas.model;
 
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.util.Date;
 
 @Entity
@@ -24,17 +22,15 @@ public class Recipe {
     @Column
     private int likes;
     @Column(name = "imagen_url")
-    private String imagenUrl;  // Nuevo campo
+    private String imagenUrl;  
     @Column(name = "fecha", nullable = false)
     @CreationTimestamp // Esto asegura que Hibernate pon a data actual automáticamente si non se especifica.
     private Date fecha;
 
-
-    //Ao incluir a dependencia jpa non seria necesario mapear esta relacion pero incluoa igual a modo educativo
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false) //usuario_id referencia á columna na bbdd
-    @JsonBackReference // Manexa a serialización no lado "fillo"
-    private Usuario usuario; // Relación moitos a un a
+    @JsonBackReference // Manexa a serialización no lado "One"
+    private Usuario usuario; 
 
     //constructor
     public Recipe(){}

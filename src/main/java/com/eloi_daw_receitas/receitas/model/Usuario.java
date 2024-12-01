@@ -21,11 +21,10 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference // Ignora esta propiedade ao serializar
-    private List<Recipe> recipes; // Relación moitos a un
+    private List<Recipe> recipes; 
 
     //constructor
     public Usuario(){};
-
 
     //Getters & Setters
     public Long getId() {

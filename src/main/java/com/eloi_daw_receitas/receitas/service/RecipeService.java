@@ -28,16 +28,18 @@ public class RecipeService {
     @Autowired
     private UsuarioLikeRecipeRepository userLikeRecipeRepository;
 
-    //@Autowired
+    
     public RecipeService(RecipeRepository recipeRepository) {
 
         this.recipeRepository = recipeRepository;
     }
 
+    //Método para obter unha receita
     public Recipe obtenerRecetaPorId(Long id) {
         return recipeRepository.findById(id).orElse(null);
     }
 
+    //Método para obter tódalas receitas paxinadas e por unha certa orde
     public Page<Recipe> listarRecetas(String orden, Pageable pageable) {
         switch (orden) {
             case "fechaAsc":
@@ -53,7 +55,12 @@ public class RecipeService {
         }
     }
 
-    // Método para buscar receitas por nome con paxinación e orden
+    //Método para obter tódalas receitas
+    public List<Recipe> listarTodasLasRecetas() {
+        return recipeRepository.findAll();
+    }
+
+    //Método para buscar receitas por nome con paxinación e orden
     public Page<Recipe> buscarRecetasPorNombre(String nombre, String orden, Pageable pageable) {
 
         return recipeRepository.findByNombreContainingIgnoreCase(nombre, pageable);
@@ -64,7 +71,6 @@ public class RecipeService {
         return recipeRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
-   
     // Método para incrementar os likes dunha receita
     public Recipe incrementarLikes(Long recetaId, String username) {
         Recipe receta = recipeRepository.findById(recetaId)
@@ -89,17 +95,12 @@ public class RecipeService {
         return receta;
     }
 
-    // @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    //Método para crear receita
     public Recipe crearReceta(Recipe receta) {
         return recipeRepository.save(receta);
     }
-
-    public List<Recipe> listarTodasLasRecetas() {
-        return recipeRepository.findAll();
-    }
-
-
-    // Método para obter as receitas que o usuario xa dou like
+    
+    //Método para obter as receitas que o usuario xa dou like
     public List<Long> obtenerRecetasVotadasPorUsuario(String username) {
         Usuario usuario = usuarioRepository.findByNickname(username)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuario no encontrado"));
@@ -115,5 +116,4 @@ public class RecipeService {
         // Lógica para eliminar receita
         // non se vai implementar, as receitas eliminaránse desde a bbdd
     }
-
 }

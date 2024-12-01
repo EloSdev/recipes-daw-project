@@ -1,3 +1,6 @@
+//Envío da receita a bbdd
+//Validacións no formulario de crear receita
+
 document.getElementById("form-subir-receta").addEventListener("submit", function (event) {
     event.preventDefault();
     clearErrorMessages();
@@ -5,11 +8,11 @@ document.getElementById("form-subir-receta").addEventListener("submit", function
     const nombre = document.getElementById("nombre").value.trim();
     const ingredientes = document.getElementById("ingredientes").value.trim();
     const elaboracion = document.getElementById("elaboracion").value.trim();
-    const imagen = document.getElementById("imagen").files[0]; // Obtenemos el archivo de imagen
+    const imagen = document.getElementById("imagen").files[0];
 
     let isValid = true;
 
-    // validacións
+    //validacións
     if (nombre === "") {
         showError("nombre", "El nombre de la receta es obligatorio.");
         isValid = false;
@@ -42,7 +45,7 @@ document.getElementById("form-subir-receta").addEventListener("submit", function
         return;
     }
 
-    // si pasan tódalas validacións:
+    //si pasan tódalas validacións:
     const formData = new FormData(this);
 
     fetch("/api/recetas/subir-receta", {
@@ -67,7 +70,7 @@ document.getElementById("form-subir-receta").addEventListener("submit", function
     });
 });
 
-// función para amosar mensaxe de erro
+//función para amosar mensaxe de erro
 function showError(fieldId, message) {
     const field = document.getElementById(fieldId);
     const errorMessage = document.createElement("span");
@@ -77,7 +80,7 @@ function showError(fieldId, message) {
     field.insertAdjacentElement("afterend", errorMessage);
 }
 
-// función para limpar as mensaxes de erro previas
+//función para limpar as mensaxes de erro previas
 function clearErrorMessages() {
     const errorMessages = document.querySelectorAll(".error-message");
     errorMessages.forEach(message => message.remove());

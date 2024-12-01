@@ -1,4 +1,4 @@
-/* General Styles */
+/* Estilos xerais */
 * {
     margin: 0;
     padding: 0;
@@ -60,7 +60,7 @@ body {
     margin-right: 2rem;
 }
 
-/* Auth Links (Login and Registrarse) */
+/* Auth Links (Login e Rexistrarse) */
 .toggle-container {
     display: flex;
     gap: 1.5rem;
@@ -152,7 +152,7 @@ body {
     background-color: #fff;
     padding: 2rem;
     transition: all 0.3s ease;
-    z-index: 999; /* Make sure sidebar is above other elements */
+    z-index: 999; 
 }
 
 .sidebar-close {
@@ -317,7 +317,7 @@ footer {
 }
 
 
-/* Media Queries */
+/* Responsive */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -476,7 +476,6 @@ footer {
     color: #fff;
 }
 
-/* ocultar container de receitas e footer antes de que se carguen as receitas*/
 .hidden {
     display: none;
 }
@@ -512,7 +511,6 @@ footer {
 .recipe-container:hover .recipe-icons {
   opacity: 1;
 }
-
 
 
 /*  MODAL */

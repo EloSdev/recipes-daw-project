@@ -1,3 +1,7 @@
+//Ficheiro para cargar as receitas e amosalas según diversos criterios establecidos nas funcións que se detallan
+//Ao facer click en cada receita, ábrese un modal con datos sobre a mesma
+//Cada receita ten a posibilidade de darlle a like sempre e cando o usuario esté autenticado
+
 import { isAuthenticated } from './auth.js';
 
 let currentPage = 0;
@@ -25,20 +29,20 @@ async function cargarRecetas(page = 0, orden = 'fechaDesc', search = '') {
             const recetas = data.content;
             const totalPages = data.totalPages;
 
-            
             const userAuthenticated = await isAuthenticated();
             if (userAuthenticated) {
                 const username = localStorage.getItem("username");
                 const recetasVotadas = await obtenerRecetasVotadas(username); 
 
                 mostrarRecetas(recetas, recetasVotadas);  
+
             } else {
                 mostrarRecetas(recetas);  
             }
 
             actualizarPaginacion(totalPages, page, orden, search);
 
-             // Quitar a clase 'hidden' para amosar o contido unha vez cargado
+             //Quitar a clase 'hidden' para amosar o contido unha vez cargado
              document.getElementById('recetas-section').classList.remove('hidden');
              document.getElementById('footer').classList.remove('hidden');
 
@@ -91,6 +95,7 @@ async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
         const recetaDiv = document.createElement('div');
         recetaDiv.classList.add('recipe');
 
+        //si as receitas xa foron votadas, actualízase o icono do pulgar cara arriba a un candado
         const likeButtonClass = recetasVotadas.has(receta.id) ? 'like-btn liked' : 'like-btn'; 
         const likeButtonClassI = recetasVotadas.has(receta.id) ? 'fa fa-lock' : 'fas fa-thumbs-up'; 
 
@@ -143,7 +148,7 @@ function agregarLikeEventListeners() {
     });
 }
 
-// Función para manexar "like" en recetas
+// Función para manexar "like" en receitas
 function likeReceta(recetaId, likeButton) {
     fetch(`/api/recetas/${recetaId}/like`, {
         method: 'POST',
@@ -160,6 +165,7 @@ function likeReceta(recetaId, likeButton) {
     .then(data => {
         if (data) {
             
+            //actualizar número de likes e cambio de iconos
             const likesCounter = likeButton.querySelector('.like-count');
             likesCounter.textContent = data.likes;
             likeButton.classList.add('liked'); 
@@ -185,13 +191,13 @@ async function obtenerRecetasVotadas(username) {
     }
 }
 
-// Escoita o cambio no menú desplegable de orden
+// Escoitar o cambio no menú desplegable de orden
 document.getElementById("orden-recetas").addEventListener("change", function(event) {
     currentOrder = event.target.value;
     cargarRecetas(0, currentOrder, currentSearch);
 });
 
-// Evento para buscar en tempo real o campo de búsqueda
+// Evento para buscar en tempo real no campo de búsqueda
 document.querySelector('.search-input').addEventListener('input', function (event) {
     currentSearch = event.target.value;
     cargarRecetas(0, currentOrder, currentSearch);
@@ -209,7 +215,7 @@ function agregarModalEventListeners() {
     });
 }
 
-// función para cargar os detalles da receta no modal
+//función para cargar os detalles da receta no modal
 async function cargarDetallesReceta(recetaId) {
     try {
         const response = await fetch(`/api/recetas/${recetaId}`);
@@ -245,8 +251,7 @@ function mostrarDetallesEnModal(receta) {
     });
 }
 
-// Cargar receitas inicialmente (sen a sección de likes)
+// Cargar receitas inicialmente
 window.onload = async () => {
     cargarRecetas(currentPage, currentOrder, currentSearch);
-
 }

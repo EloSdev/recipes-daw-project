@@ -13,14 +13,15 @@ public class UsuarioService {
     @Autowired
     private final UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public UsuarioService(UsuarioRepository usuarioRepository){
 
         this.usuarioRepository = usuarioRepository;
     }
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
+    //Método para rexistrar un usuario coa contrasinal encriptada
     public Usuario registrarUsuario(Usuario usuario) {
 
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
@@ -30,7 +31,7 @@ public class UsuarioService {
     //@Secured("ROLE_ADMIN")
     public void eliminarUsuario(String nickname) {
         // Lógica para eliminar un usuario solo para admins
-        //esto fárase desde a bbdd
+        //non se implemente, fárase desde a bbdd
     }
 
 }

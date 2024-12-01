@@ -8,10 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
-
+@Slf4j 
 @RestController
 @RequestMapping("/api")
 public class UsuarioController {
@@ -19,7 +19,6 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    //@Autowired
     private UsuarioController(UsuarioService usuarioService) {
 
         this.usuarioService = usuarioService;
@@ -30,27 +29,31 @@ public class UsuarioController {
     public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario) {
         try {
             usuarioService.registrarUsuario(usuario);
+            log.info("Usuario {} registrado con éxito", usuario.getNickname());
             return ResponseEntity.ok("Usuario registrado exitosamente");
         } catch (Exception e) {
+            log.info("Error al registrar un usuario");
             return ResponseEntity.badRequest().body("Error al registrar usuario: " + e.getMessage());
         }
     }
 
-    //devolucion do usuario logueado
+    //Endpoint que devolve o usuario logueado
     @GetMapping("/usuarios")
     public Map<String, String> getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String nickname = authentication.getName();
+        log.info("Usuario {} logueado", nickname);
         return Map.of("username", nickname); 
     }
 
-
-    //METODO PARA SABER SI USUARIO ESTA AUTENTICADO PARA POR NICKNAME E LOGOUT EN HOME,ABOUT E RECETAS
+    //Endpoint  para comprobar si o usuario esta logueado e poder actualizar o html cos botóns correspondentes
     @GetMapping("/usuarios/autenticado")
     public ResponseEntity<?> obtenerUsuarioAutenticado(Authentication authentication) {
         if (authentication != null && authentication.isAuthenticated()) {
+            log.info("Usuario {} autenticado", authentication.getName());
             return ResponseEntity.ok(authentication.getName());
         }
+        log.info("Usuario no antenticado");
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario no autenticado");
     }
 }

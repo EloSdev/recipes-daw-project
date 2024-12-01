@@ -1,3 +1,6 @@
+//Envío do usuario rexistrodo a bbdd
+//Validación no formulario de rexistro
+
 document.getElementById('registro-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
@@ -8,10 +11,10 @@ document.getElementById('registro-form').addEventListener('submit', async functi
     const repeatPassword = document.querySelector('input[placeholder="Repeat your password"]').value;
     const termsAccepted = document.getElementById('terms').checked;
 
-    // Limpar mensaxes de erro previos
+    //Limpar mensaxes de erro previos
     clearErrors();
 
-    // Validar campos
+    //Validar campos
     const isNicknameValid = validateNickname(nickname);
     const isEmailValid = validateEmail(email);
     const isPasswordValid = validatePassword(password);
@@ -73,7 +76,7 @@ function showError(inputElement, message) {
     inputElement.parentElement.appendChild(errorElement);
 }
 
-// Validar nickname
+//Validar nickname
 function validateNickname(nickname) {
     if (nickname.trim().length < 3 || nickname.trim().length > 15) {
         showError(document.getElementById('nickname'), 'El nickname debe tener entre 3 y 15 caracteres.');
@@ -86,7 +89,7 @@ function validateNickname(nickname) {
     return true;
 }
 
-// Validar email
+//Validar email
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -96,7 +99,7 @@ function validateEmail(email) {
     return true;
 }
 
-// Validar pass
+//Validar contrasinal
 function validatePassword(password) {
     if (password.length < 8) {
         showError(document.getElementById('password'), 'La contraseña debe tener al menos 8 caracteres.');
@@ -109,7 +112,7 @@ function validatePassword(password) {
     return true;
 }
 
-// Validar que os pass coincidan
+//Validar que as contrasinais coincidan
 function validatePasswordsMatch(password, repeatPassword) {
     if (password !== repeatPassword) {
         showError(document.querySelector('input[placeholder="Repeat your password"]'), 'Las contraseñas no coinciden.');
@@ -118,7 +121,7 @@ function validatePasswordsMatch(password, repeatPassword) {
     return true;
 }
 
-// Validar términos e condicións
+//Validar términos e condicións
 function validateTerms(accepted) {
     if (!accepted) {
         showError(document.getElementById('terms').parentElement, 'Debes aceptar los términos y condiciones.');

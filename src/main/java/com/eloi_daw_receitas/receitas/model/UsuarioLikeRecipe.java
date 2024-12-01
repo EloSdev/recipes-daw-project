@@ -19,8 +19,7 @@ public class UsuarioLikeRecipe {
     @ManyToOne
     private Recipe receta;
 
-    //G&S
-
+    //Getter and Setters
     public Long getId() {
         return id;
     }

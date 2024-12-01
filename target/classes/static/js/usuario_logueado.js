@@ -1,4 +1,4 @@
-// Función para obter o usuario logueado e actualizar a interfaz
+//función para obter o usuario logueado e actualizar barra de navegación 
         async function mostrarUsuario() {
             try {
                 const response = await fetch('http://localhost:8080/api/usuarios');

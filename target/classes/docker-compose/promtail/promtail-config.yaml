@@ -13,11 +13,3 @@ scrape_configs:
         labels:
           job: recipes-app
           __path__: /var/log/*log
-    pipeline_stages:
-      - json:
-          expressions:
-           message: message
-      - regex:
-          expression: "and name (\\S+)"
-      - labels:
-          recipe_name:
