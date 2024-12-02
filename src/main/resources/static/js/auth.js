@@ -12,19 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then((username) => {
       localStorage.setItem("username", username);
-
+      
       //si o usuario esta autenticado, pinta o seu nome donde antes estaba o botón de login e pinta logout onde antes estaba o botón de rexistro
       document.getElementById("user-nickname").innerText = username;
       document.getElementById("login").style.display = "none";
       document.getElementById("registro").style.display = "none";
       document.getElementById("user-nickname").style.display = "block";
       document.getElementById("logout").style.display = "block";
+      document.getElementById("subir-receta").classList.remove("hidden");
     })
     .catch((error) => {
       document.getElementById("login").style.display = "block";
       document.getElementById("registro").style.display = "block";
       document.getElementById("user-nickname").style.display = "none";
       document.getElementById("logout").style.display = "none";
+      
     });
 });
 
