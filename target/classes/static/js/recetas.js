@@ -166,7 +166,7 @@ function likeReceta(recetaId, likeButton) {
             
             //actualizar número de likes e cambio de iconos
             const likesCounter = likeButton.querySelector('.like-count');
-            likesCounter.textContent = data.likes;
+            likesCounter.textContent = data.likes + " votos";
             likeButton.classList.add('liked'); 
             const icon = likeButton.querySelector('i');
             icon.classList.replace('fa-thumbs-up', 'fa-lock');

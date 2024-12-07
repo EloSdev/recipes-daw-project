@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("user-nickname").style.display = "block";
       document.getElementById("logout").style.display = "block";
       document.getElementById("subir-receta").classList.remove("hidden");
+      document.getElementById("upload-recipe").classList.remove("hidden");
     })
     .catch((error) => {
       document.getElementById("login").style.display = "block";

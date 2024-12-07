@@ -54,6 +54,12 @@ body {
     border-color: #ff6347;
 }
 
+.active {
+    color: #fff;
+    background-color: #ff6347;
+    border-color: #ff6347;
+}
+
 .nav-logo {
     width: 120px;
     height: auto;
@@ -190,6 +196,10 @@ body {
     margin-right: 1rem;
 }
 
+.active-side {
+    color: #ff6347;
+}
+
 /* GRID RECEITAS*/
 section.recipes {
     padding: 2rem;
@@ -317,7 +327,7 @@ footer {
 }
 
 
-/* Responsive */
+/* media */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -546,7 +556,7 @@ footer {
   background: #fff;
   border-radius: 0.5rem;
   width: 90vw;
-  height: 30vh;
+  height: 36vh;
   max-width: 620px;
   text-align: center;
   display: grid;

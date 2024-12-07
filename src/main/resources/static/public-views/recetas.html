@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/public-views/recetas.html" class="nav-link">
+                    <a href="/public-views/recetas.html" class="nav-link active">
                         recetas
                     </a>
                 </li>
@@ -106,21 +106,27 @@
         <!-- links -->
         <ul class="sidebar-links">
             <li>
-                <a href="/index.html" class="sidebar-link">
+                <a href="/home.html" class="sidebar-link">
                     <i class="fas fa-home fa-fw"></i>
                     home
                 </a>
             </li>
             <li>
-                <a href="/public-views/recetas.html" class="sidebar-link">
+                <a href="/public-views/recetas.html" class="sidebar-link active-side">
                     <i class="fas fa-utensils fa-fw"></i>
                     recetas
                 </a>
             </li>
             <li>
-                <a href="/public-views/about.html" class="sidebar-link">
+                <a href="/public-views/about.html"  class="sidebar-link">
                     <i class="fas fa-info-circle fa-fw"></i>
                     about
+                </a>
+            </li>
+            <li>
+                <a href="/crear-receta.html" id="upload-recipe" class="sidebar-link hidden">
+                    <i class="fas fa-cookie"></i>
+                    crear receta
                 </a>
             </li>
         </ul>
@@ -130,7 +136,7 @@
 <!-- footer section -->
 <footer  id="footer" class="footer hidden">
     <div class="footer-container">
-        <p>&copy; <span id="current-year"></span> Recetas Deliciosas. Todos los derechos reservados. Contacto: admin@receitas.es</p>
+        <p>&copy; <span id="current-year"></span> GastroHub. Todos los derechos reservados. Contacto: admin@gastrohub.es</p>
         <p>
             Síguenos en nuestras redes sociales:
             <a href="https://es-es.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -143,6 +149,7 @@
 <script src="/js/recetas.js" type="module"></script>
 <script src="/js/auth.js" type="module"></script>
 <script src="/js/updateYear.js"></script>
+<script src="/js/sidebar.js"></script>
 
 </body>
 </html>

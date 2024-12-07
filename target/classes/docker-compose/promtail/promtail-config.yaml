@@ -5,6 +5,8 @@ positions:
   filename: /tmp/positions.yaml
 clients:
   - url: http://loki:3100/loki/api/v1/push
+    batchsize: 1048576 
+    batchwait: 2s      
 scrape_configs:
   - job_name: recipes-app
     static_configs:

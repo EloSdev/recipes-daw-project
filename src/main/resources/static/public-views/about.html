@@ -24,7 +24,7 @@
                     <a href="/public-views/recetas.html" class="nav-link">recetas</a>
                 </li>
                 <li>
-                    <a href="/public-views/about.html" class="nav-link">about</a>
+                    <a href="/public-views/about.html" class="nav-link active">about</a>
                 </li>
                 <li>
                     <a href="/crear-receta.html" id="subir-receta" class="nav-link hidden">
@@ -51,7 +51,7 @@
     <div class="about-container">
         <h1>Sobre Nosotros</h1>
         <p>
-            Bienvenido a <strong>Recetas Deliciosas</strong>, un lugar donde los apasionados de la cocina y la gastronomía
+            Bienvenido a <strong>GastroHub</strong>, un lugar donde los apasionados de la cocina y la gastronomía
             pueden descubrir, cocinar y compartir sus recetas favoritas. Nuestro objetivo es construir una comunidad
             de amantes de la comida, desde principiantes hasta expertos, que puedan inspirarse mutuamente para crear
             platos únicos y deliciosos.
@@ -97,9 +97,15 @@
                 </a>
             </li>
             <li>
-                <a href="/public-views/about.html" class="sidebar-link">
+                <a href="/public-views/about.html" class="sidebar-link active-side">
                     <i class="fas fa-info-circle fa-fw"></i>
                     about
+                </a>
+            </li>
+            <li>
+                <a href="/crear-receta.html" id="upload-recipe" class="sidebar-link hidden">
+                    <i class="fas fa-cookie"></i>
+                    crear receta
                 </a>
             </li>
         </ul>
@@ -109,7 +115,7 @@
 <!-- Footer Section -->
 <footer class="footer">
     <div class="footer-container">
-        <p>&copy; <span id="current-year"></span> Recetas Deliciosas. Todos los derechos reservados. Contacto: admin@receitas.es</p>
+        <p>&copy; <span id="current-year"></span> GastroHub. Todos los derechos reservados. Contacto: admin@gastrouhub.es</p>
         <p>
             Síguenos en nuestras redes sociales:
             <a href="https://es-es.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -122,6 +128,7 @@
 <script src="/js/usuario_logueado.js"></script>
 <script src="/js/auth.js" type="module"></script>
 <script src="/js/updateYear.js"></script>
+<script src="/js/sidebar.js"></script>
 
 </body>
 </html>

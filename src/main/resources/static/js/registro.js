@@ -115,7 +115,7 @@ function validatePassword(password) {
 //Validar que as contrasinais coincidan
 function validatePasswordsMatch(password, repeatPassword) {
     if (password !== repeatPassword) {
-        showError(document.querySelector('input[placeholder="Repeat your password"]'), 'Las contraseñas no coinciden.');
+        showError(document.querySelector('input[placeholder="Repite tu password"]'), 'Las contraseñas no coinciden.');
         return false;
     }
     return true;

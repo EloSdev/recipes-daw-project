@@ -122,7 +122,6 @@ public class RecipeController {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
-
         Optional<Usuario> optionalUsuario = usuarioRepository.findByNickname(username);
 
         if (optionalUsuario.isPresent()) {

@@ -10,7 +10,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
         const response = await fetch("/login", {
             method: "POST",
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded", //Tipo d contido esperado por Spring Security.
+                "Content-Type": "application/x-www-form-urlencoded", //Tipo de contido esperado por Spring Security.
             },
             body: new URLSearchParams({ username, password }), //Formatea os datos como formulario
         });

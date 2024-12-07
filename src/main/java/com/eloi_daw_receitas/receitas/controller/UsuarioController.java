@@ -29,7 +29,7 @@ public class UsuarioController {
     public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario) {
         try {
             usuarioService.registrarUsuario(usuario);
-            log.info("Usuario {} registrado con éxito", usuario.getNickname());
+            log.info("Usuario {} registrado con exito", usuario.getNickname());
             return ResponseEntity.ok("Usuario registrado exitosamente");
         } catch (Exception e) {
             log.info("Error al registrar un usuario");
