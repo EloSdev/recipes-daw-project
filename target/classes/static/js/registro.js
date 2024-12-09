@@ -48,19 +48,21 @@ document.getElementById('registro-form').addEventListener('submit', async functi
             alert('Usuario registrado exitosamente');
             window.location.href = '/index.html';
         } else if (response.status === 400) {
-            const errorData = await response.json();
-            console.log('Error 400:', errorData.message);
-            alert('El usuario ya está registrado.');
+            const errorText = await response.text(); 
+            console.log('Error 400:', errorText);
+
+            alert('El nickname elegido no está disponible. Pruebe con otro.'); 
         } else {
-            const errorData = await response.json();
-            alert(`Error al registrar: ${errorData.message}`);
+            const errorText = await response.text(); 
+            alert(`Error al registrar: ${errorText}`);
         }
     } catch (error) {
         console.error('Error:', error);
+        alert('Ocurrió un error de conexión. Por favor, inténtalo más tarde.');
     }
 });
 
-// Función para limpar mensaxes de erro previos
+//Función para limpar mensaxes de erro previos
 function clearErrors() {
     const errorMessages = document.querySelectorAll('.error-message');
     errorMessages.forEach(error => error.remove());

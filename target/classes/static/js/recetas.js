@@ -54,7 +54,7 @@ async function cargarRecetas(page = 0, orden = 'fechaDesc', search = '') {
     }
 }
 
-// Función para actualizar a paxinación
+//Función para actualizar a paxinación
 function actualizarPaginacion(totalPages, currentPage, orden, search) {
     const paginationContainer = document.querySelector('.pagination-container');
     paginationContainer.innerHTML = '';
@@ -84,7 +84,7 @@ function actualizarPaginacion(totalPages, currentPage, orden, search) {
     }
 }
 
-// Función para amosar as receitas na páxina
+//Función para amosar as receitas na páxina
 async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
     const recetasList = document.getElementById('recetas-list');
     recetasList.innerHTML = '';
@@ -137,7 +137,7 @@ async function mostrarRecetas(recetas, recetasVotadas = new Set()) {
     agregarModalEventListeners();
 }
 
-// Función para engadir eventos de "like"
+//Función para engadir eventos de "like"
 function agregarLikeEventListeners() {
     const likeButtons = document.querySelectorAll('.like-btn');
     likeButtons.forEach(button => {
@@ -148,7 +148,7 @@ function agregarLikeEventListeners() {
     });
 }
 
-// Función para manexar "like" en receitas
+//Función para manexar "like" en receitas
 function likeReceta(recetaId, likeButton) {
     fetch(`/api/recetas/${recetaId}/like`, {
         method: 'POST',
@@ -175,7 +175,7 @@ function likeReceta(recetaId, likeButton) {
     .catch(error => console.error('Error:', error));
 }
 
-// Función para obter as receitas que o usuario xa votou
+//Función para obter as receitas que o usuario xa votou
 async function obtenerRecetasVotadas(username) {
     try {
         const response = await fetch(`/api/votadas/${username}`);
@@ -190,20 +190,20 @@ async function obtenerRecetasVotadas(username) {
     }
 }
 
-// Escoitar o cambio no menú desplegable de orden
+//Escoitar o cambio no menú desplegable de orden
 document.getElementById("orden-recetas").addEventListener("change", function(event) {
     currentOrder = event.target.value;
     cargarRecetas(0, currentOrder, currentSearch);
 });
 
-// Evento para buscar en tempo real no campo de búsqueda
+//Evento para buscar en tempo real no campo de búsqueda
 document.querySelector('.search-input').addEventListener('input', function (event) {
     currentSearch = event.target.value;
     cargarRecetas(0, currentOrder, currentSearch);
 });
 
 //MODAL
-// función para agregar eventos aos botóns do modal
+//función para agregar eventos aos botóns do modal
 function agregarModalEventListeners() {
     const modalButtons = document.querySelectorAll('.modal-btn');
     modalButtons.forEach(button => {
@@ -230,7 +230,7 @@ async function cargarDetallesReceta(recetaId) {
     }
 }
 
-// función para amosar os detalles no modal
+//función para amosar os detalles no modal
 function mostrarDetallesEnModal(receta) {
     const modal = document.querySelector('.modal-overlay');
     const modalContent = document.querySelector('.modal-container');
@@ -250,7 +250,7 @@ function mostrarDetallesEnModal(receta) {
     });
 }
 
-// Cargar receitas inicialmente
+//Cargar receitas inicialmente
 window.onload = async () => {
     cargarRecetas(currentPage, currentOrder, currentSearch);
 }

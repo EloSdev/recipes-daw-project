@@ -7,12 +7,12 @@ const sidebarClose = document.querySelector('.sidebar-close');
 //función para amosar/ocultar a sidebar
 const toggleSidebar = () => {
   
-  if (sidebar.style.left === '-300px' || !sidebar.style.left) {
+  if (sidebar.style.left === '-200px' || !sidebar.style.left) {
     sidebar.style.left = '0';
     sidebarOverlay.style.display = 'block';
   } else {
     
-    sidebar.style.left = '-300px';
+    sidebar.style.left = '-200px';
     sidebarOverlay.style.display = 'none';
   }
 };
