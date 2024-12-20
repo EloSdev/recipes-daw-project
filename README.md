@@ -50,6 +50,9 @@ La aplicación consta de:
 git clone https://github.com/EloSdev/recipes-daw-project
 cd tu-repo
 Ejecutar la aplicación (en Visual Studio Code se recomienda tener instalado la extensión "Extension Pack for Java" )
+Necesario base de datos en mysql(ver applicacion.properties)
+Levantar los servicios en docker (docker-compose up)
+El dashboard para ser importado en grafana se encuentra en la ruta  ./static/docker-compose/grafana
 
 
 
